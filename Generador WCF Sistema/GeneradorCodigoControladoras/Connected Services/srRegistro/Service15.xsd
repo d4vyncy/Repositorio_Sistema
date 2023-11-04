@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfRegistro.Negocios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfRegistro.Negocios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WcfRegistro.Datos" />
+  <xs:complexType name="clsBoleta">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WcfRegistro.Datos" base="q1:clsBoletaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsBoleta" nillable="true" type="tns:clsBoleta" />
+</xs:schema>

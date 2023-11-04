@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfRegistro.Negocios" />
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WcfRegistro.Datos" />
+      <xsd:import schemaLocation="http://192.168.100.30/WcfRegistro/Service1.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/WcfRegistro.Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_ProcedureConParametro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcedureConParametro" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcedureConParametro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcedureConParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcedureParametro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcedureParametro" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcedureParametro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcedureParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EjecutaConsulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaConsulta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EjecutaConsulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneBoleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneBoleta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneBoleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaBoleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaBoleta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaBoleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaBoleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaBoleta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaBoleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaBoleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaBoleta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaBoleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavBoleta5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavBoleta5Response" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="ProcedureConParametro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProcedureConParametro" message="tns:IService1_ProcedureConParametro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProcedureConParametroResponse" message="tns:IService1_ProcedureConParametro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcedureParametro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProcedureParametro" message="tns:IService1_ProcedureParametro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProcedureParametroResponse" message="tns:IService1_ProcedureParametro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaConsulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EjecutaConsulta" message="tns:IService1_EjecutaConsulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EjecutaConsultaResponse" message="tns:IService1_EjecutaConsulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneBoleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneBoleta" message="tns:IService1_ObtieneBoleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneBoletaResponse" message="tns:IService1_ObtieneBoleta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaBoleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaBoleta" message="tns:IService1_AgregaBoleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaBoletaResponse" message="tns:IService1_AgregaBoleta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaBoleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaBoleta" message="tns:IService1_ModificaBoleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaBoletaResponse" message="tns:IService1_ModificaBoleta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaBoleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaBoleta" message="tns:IService1_EliminaBoleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaBoletaResponse" message="tns:IService1_EliminaBoleta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta1" message="tns:IService1_ObtienepavBoleta1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta1Response" message="tns:IService1_ObtienepavBoleta1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta2" message="tns:IService1_ObtienepavBoleta2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta2Response" message="tns:IService1_ObtienepavBoleta2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta3" message="tns:IService1_ObtienepavBoleta3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta3Response" message="tns:IService1_ObtienepavBoleta3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta4" message="tns:IService1_ObtienepavBoleta4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta4Response" message="tns:IService1_ObtienepavBoleta4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta5" message="tns:IService1_ObtienepavBoleta5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavBoleta5Response" message="tns:IService1_ObtienepavBoleta5_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcedureConParametro">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProcedureConParametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcedureParametro">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProcedureParametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaConsulta">
+      <soap:operation soapAction="http://tempuri.org/IService1/EjecutaConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneBoleta">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaBoleta">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaBoleta">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaBoleta">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavBoleta1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavBoleta2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavBoleta3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavBoleta4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavBoleta5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavBoleta5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://192.168.100.30/WcfRegistro/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
