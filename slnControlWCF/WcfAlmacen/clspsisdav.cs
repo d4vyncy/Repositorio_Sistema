@@ -7,13 +7,13 @@ using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Data;
 using System.Data.Common;
 
-namespace WcfAlmacen
+namespace Wcfsisdav
 {
-public class clspAlmacen
+public class clspsisdav
 {
 Database db = null;
-public clspAlmacen()
-{ db = DatabaseFactory.CreateDatabase("ConAlmacen"); }
+public clspsisdav()
+{ db = DatabaseFactory.CreateDatabase("Consisdav"); }
 public DataSet ProcedureParametro(string Procedimiento, params object[] pParametros)
 {
 DbCommand cmd = db.GetStoredProcCommand(Procedimiento, pParametros);

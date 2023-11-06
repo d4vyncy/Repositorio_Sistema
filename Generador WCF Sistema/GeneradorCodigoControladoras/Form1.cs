@@ -565,6 +565,10 @@ namespace GeneradorCodigoControladoras
             this.RTBCodigoGenerado.SaveFile(directorio + @"\clsp" + this.BaseDatos.NombreBaseDatos.ToString() + ".cs", RichTextBoxStreamType.PlainText);
             this.RTBCodigoGenerado.SaveFile(directorio + @"\clsp" + this.BaseDatos.NombreBaseDatos.ToString() + ".cs", RichTextBoxStreamType.PlainText);
         }
+        string devuelvePrefijo(string nombreTabla)
+        {
+            return nombreTabla.Substring(6);
+        }
 
         public void CrearWCF()
         {

@@ -86,10 +86,31 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clspAlmacen.cs" />
-    <Compile Include="Datos\clsMarcaDA.cs" />
-    <Compile Include="Entidades\clsMarcaBE.cs" />
-    <Compile Include="Negocios\clsMarca.cs" />
+    <Compile Include="clspsisdav.cs" />
+    <Compile Include="Datos\cls_tblInstitucionDA.cs" />
+    <Compile Include="Datos\cls_tblItemInstitucionDA.cs" />
+    <Compile Include="Datos\cls_tblPersonaDA.cs" />
+    <Compile Include="Datos\cls_tblRolDA.cs" />
+    <Compile Include="Datos\cls_tblRolUsuarioDA.cs" />
+    <Compile Include="Datos\cls_tblUnidadDA.cs" />
+    <Compile Include="Datos\cls_tblUsuarioDA.cs" />
+    <Compile Include="Datos\cls_tblUsuarioLogueadoDA.cs" />
+    <Compile Include="Entidades\cls_tblInstitucionBE.cs" />
+    <Compile Include="Entidades\cls_tblItemInstitucionBE.cs" />
+    <Compile Include="Entidades\cls_tblPersonaBE.cs" />
+    <Compile Include="Entidades\cls_tblRolBE.cs" />
+    <Compile Include="Entidades\cls_tblRolUsuarioBE.cs" />
+    <Compile Include="Entidades\cls_tblUnidadBE.cs" />
+    <Compile Include="Entidades\cls_tblUsuarioBE.cs" />
+    <Compile Include="Entidades\cls_tblUsuarioLogueadoBE.cs" />
+    <Compile Include="Negocios\cls_tblInstitucion.cs" />
+    <Compile Include="Negocios\cls_tblItemInstitucion.cs" />
+    <Compile Include="Negocios\cls_tblPersona.cs" />
+    <Compile Include="Negocios\cls_tblRol.cs" />
+    <Compile Include="Negocios\cls_tblRolUsuario.cs" />
+    <Compile Include="Negocios\cls_tblUnidad.cs" />
+    <Compile Include="Negocios\cls_tblUsuario.cs" />
+    <Compile Include="Negocios\cls_tblUsuarioLogueado.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
