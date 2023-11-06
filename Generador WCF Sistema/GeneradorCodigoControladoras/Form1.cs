@@ -1133,10 +1133,9 @@ namespace GeneradorCodigoControladoras
             // 
             this.Error2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Error2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Error2.Location = new System.Drawing.Point(31, 83);
-            this.Error2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Error2.Location = new System.Drawing.Point(23, 67);
             this.Error2.Name = "Error2";
-            this.Error2.Size = new System.Drawing.Size(847, 28);
+            this.Error2.Size = new System.Drawing.Size(635, 23);
             this.Error2.TabIndex = 23;
             this.Error2.Click += new System.EventHandler(this.Error2_Click);
             // 
@@ -1146,21 +1145,19 @@ namespace GeneradorCodigoControladoras
             this.TPAcercaDeD4VYNCY.Controls.Add(this.TPTablas);
             this.TPAcercaDeD4VYNCY.Controls.Add(this.TPGenerarCodigoPasos);
             this.TPAcercaDeD4VYNCY.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.TPAcercaDeD4VYNCY.Location = new System.Drawing.Point(24, 552);
-            this.TPAcercaDeD4VYNCY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TPAcercaDeD4VYNCY.Location = new System.Drawing.Point(18, 448);
             this.TPAcercaDeD4VYNCY.Name = "TPAcercaDeD4VYNCY";
             this.TPAcercaDeD4VYNCY.SelectedIndex = 0;
-            this.TPAcercaDeD4VYNCY.Size = new System.Drawing.Size(853, 148);
+            this.TPAcercaDeD4VYNCY.Size = new System.Drawing.Size(640, 120);
             this.TPAcercaDeD4VYNCY.TabIndex = 22;
             // 
             // TPFicheros
             // 
             this.TPFicheros.Controls.Add(this.Error1);
-            this.TPFicheros.Location = new System.Drawing.Point(4, 25);
-            this.TPFicheros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TPFicheros.Location = new System.Drawing.Point(4, 22);
             this.TPFicheros.Name = "TPFicheros";
-            this.TPFicheros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TPFicheros.Size = new System.Drawing.Size(845, 119);
+            this.TPFicheros.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TPFicheros.Size = new System.Drawing.Size(632, 94);
             this.TPFicheros.TabIndex = 4;
             this.TPFicheros.Text = "Ficheros";
             this.TPFicheros.UseVisualStyleBackColor = true;
@@ -1169,10 +1166,9 @@ namespace GeneradorCodigoControladoras
             // 
             this.Error1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.Error1.ForeColor = System.Drawing.Color.Red;
-            this.Error1.Location = new System.Drawing.Point(40, 308);
-            this.Error1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Error1.Location = new System.Drawing.Point(30, 250);
             this.Error1.Name = "Error1";
-            this.Error1.Size = new System.Drawing.Size(777, 28);
+            this.Error1.Size = new System.Drawing.Size(583, 23);
             this.Error1.TabIndex = 34;
             // 
             // TPTablas
@@ -1187,40 +1183,36 @@ namespace GeneradorCodigoControladoras
             this.TPTablas.Controls.Add(this.label5);
             this.TPTablas.Controls.Add(this.LBTablas);
             this.TPTablas.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.TPTablas.Location = new System.Drawing.Point(4, 25);
-            this.TPTablas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TPTablas.Location = new System.Drawing.Point(4, 22);
             this.TPTablas.Name = "TPTablas";
-            this.TPTablas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TPTablas.Size = new System.Drawing.Size(845, 119);
+            this.TPTablas.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TPTablas.Size = new System.Drawing.Size(632, 94);
             this.TPTablas.TabIndex = 1;
             this.TPTablas.Text = "Tablas";
             this.TPTablas.UseVisualStyleBackColor = true;
             // 
             // RTBCodigoGenerado
             // 
-            this.RTBCodigoGenerado.Location = new System.Drawing.Point(416, 43);
-            this.RTBCodigoGenerado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RTBCodigoGenerado.Location = new System.Drawing.Point(312, 35);
             this.RTBCodigoGenerado.Name = "RTBCodigoGenerado";
-            this.RTBCodigoGenerado.Size = new System.Drawing.Size(396, 260);
+            this.RTBCodigoGenerado.Size = new System.Drawing.Size(298, 212);
             this.RTBCodigoGenerado.TabIndex = 36;
             this.RTBCodigoGenerado.Text = "";
             // 
             // BTNCargarCampos
             // 
-            this.BTNCargarCampos.Location = new System.Drawing.Point(216, 312);
-            this.BTNCargarCampos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTNCargarCampos.Location = new System.Drawing.Point(162, 254);
             this.BTNCargarCampos.Name = "BTNCargarCampos";
-            this.BTNCargarCampos.Size = new System.Drawing.Size(192, 28);
+            this.BTNCargarCampos.Size = new System.Drawing.Size(144, 23);
             this.BTNCargarCampos.TabIndex = 35;
             this.BTNCargarCampos.Text = "Cargar Campos";
             this.BTNCargarCampos.Click += new System.EventHandler(this.BTNCargarCampos_Click);
             // 
             // guardarArchivoTexto
             // 
-            this.guardarArchivoTexto.Location = new System.Drawing.Point(713, 8);
-            this.guardarArchivoTexto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guardarArchivoTexto.Location = new System.Drawing.Point(535, 6);
             this.guardarArchivoTexto.Name = "guardarArchivoTexto";
-            this.guardarArchivoTexto.Size = new System.Drawing.Size(100, 28);
+            this.guardarArchivoTexto.Size = new System.Drawing.Size(75, 23);
             this.guardarArchivoTexto.TabIndex = 37;
             this.guardarArchivoTexto.Text = "Guardar como";
             this.guardarArchivoTexto.UseVisualStyleBackColor = true;
@@ -1228,57 +1220,49 @@ namespace GeneradorCodigoControladoras
             // 
             // LBCampos
             // 
-            this.LBCampos.ItemHeight = 16;
-            this.LBCampos.Location = new System.Drawing.Point(216, 43);
-            this.LBCampos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LBCampos.Location = new System.Drawing.Point(162, 35);
             this.LBCampos.Name = "LBCampos";
-            this.LBCampos.Size = new System.Drawing.Size(191, 260);
+            this.LBCampos.Size = new System.Drawing.Size(144, 212);
             this.LBCampos.TabIndex = 34;
             // 
             // BTNGenerarCodigo
             // 
-            this.BTNGenerarCodigo.Location = new System.Drawing.Point(416, 312);
-            this.BTNGenerarCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTNGenerarCodigo.Location = new System.Drawing.Point(312, 254);
             this.BTNGenerarCodigo.Name = "BTNGenerarCodigo";
-            this.BTNGenerarCodigo.Size = new System.Drawing.Size(397, 28);
+            this.BTNGenerarCodigo.Size = new System.Drawing.Size(298, 23);
             this.BTNGenerarCodigo.TabIndex = 33;
             this.BTNGenerarCodigo.Text = "GenerarCodigo";
             this.BTNGenerarCodigo.Click += new System.EventHandler(this.CargarCampos_Click);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(508, 11);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(381, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(261, 20);
+            this.label4.Size = new System.Drawing.Size(196, 16);
             this.label4.TabIndex = 30;
             this.label4.Text = "Controladora Generada";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(227, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(170, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 28;
             this.label3.Text = "Campos de la tabla";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(32, 11);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(24, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 20);
+            this.label5.Size = new System.Drawing.Size(100, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "Tablas Existentes";
             // 
             // LBTablas
             // 
-            this.LBTablas.ItemHeight = 16;
-            this.LBTablas.Location = new System.Drawing.Point(24, 43);
-            this.LBTablas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LBTablas.Location = new System.Drawing.Point(18, 35);
             this.LBTablas.Name = "LBTablas";
-            this.LBTablas.Size = new System.Drawing.Size(183, 292);
+            this.LBTablas.Size = new System.Drawing.Size(138, 238);
             this.LBTablas.TabIndex = 8;
             // 
             // TPGenerarCodigoPasos
@@ -1289,11 +1273,10 @@ namespace GeneradorCodigoControladoras
             this.TPGenerarCodigoPasos.Controls.Add(this.TXTUsuario);
             this.TPGenerarCodigoPasos.Controls.Add(this.TXTContrasena);
             this.TPGenerarCodigoPasos.Controls.Add(this.BTNAutenticar);
-            this.TPGenerarCodigoPasos.Location = new System.Drawing.Point(4, 25);
-            this.TPGenerarCodigoPasos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TPGenerarCodigoPasos.Location = new System.Drawing.Point(4, 22);
             this.TPGenerarCodigoPasos.Name = "TPGenerarCodigoPasos";
-            this.TPGenerarCodigoPasos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TPGenerarCodigoPasos.Size = new System.Drawing.Size(845, 119);
+            this.TPGenerarCodigoPasos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TPGenerarCodigoPasos.Size = new System.Drawing.Size(632, 94);
             this.TPGenerarCodigoPasos.TabIndex = 8;
             this.TPGenerarCodigoPasos.Text = "Acerca de Autenticarse :)";
             this.TPGenerarCodigoPasos.UseVisualStyleBackColor = true;
@@ -1301,8 +1284,7 @@ namespace GeneradorCodigoControladoras
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(453, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(340, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 600);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1313,50 +1295,45 @@ namespace GeneradorCodigoControladoras
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 128);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(63, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Usuarrio";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 163);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(63, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Contraseña";
             // 
             // TXTUsuario
             // 
             this.TXTUsuario.Enabled = false;
-            this.TXTUsuario.Location = new System.Drawing.Point(180, 128);
-            this.TXTUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTUsuario.Location = new System.Drawing.Point(135, 104);
             this.TXTUsuario.Name = "TXTUsuario";
             this.TXTUsuario.PasswordChar = '1';
-            this.TXTUsuario.Size = new System.Drawing.Size(240, 22);
+            this.TXTUsuario.Size = new System.Drawing.Size(181, 20);
             this.TXTUsuario.TabIndex = 22;
             // 
             // TXTContrasena
             // 
             this.TXTContrasena.Enabled = false;
-            this.TXTContrasena.Location = new System.Drawing.Point(180, 163);
-            this.TXTContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTContrasena.Location = new System.Drawing.Point(135, 132);
             this.TXTContrasena.Name = "TXTContrasena";
             this.TXTContrasena.PasswordChar = 'e';
-            this.TXTContrasena.Size = new System.Drawing.Size(240, 22);
+            this.TXTContrasena.Size = new System.Drawing.Size(181, 20);
             this.TXTContrasena.TabIndex = 21;
             // 
             // BTNAutenticar
             // 
             this.BTNAutenticar.Enabled = false;
-            this.BTNAutenticar.Location = new System.Drawing.Point(180, 195);
-            this.BTNAutenticar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTNAutenticar.Location = new System.Drawing.Point(135, 158);
             this.BTNAutenticar.Name = "BTNAutenticar";
-            this.BTNAutenticar.Size = new System.Drawing.Size(241, 29);
+            this.BTNAutenticar.Size = new System.Drawing.Size(181, 24);
             this.BTNAutenticar.TabIndex = 20;
             this.BTNAutenticar.Text = "&Autenticar";
             this.BTNAutenticar.Click += new System.EventHandler(this.BTNAutenticar_Click);
@@ -1365,29 +1342,25 @@ namespace GeneradorCodigoControladoras
             // 
             this.dataGrid1.DataMember = "";
             this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(577, 59);
-            this.dataGrid1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGrid1.Location = new System.Drawing.Point(433, 48);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ReadOnly = true;
-            this.dataGrid1.Size = new System.Drawing.Size(228, 197);
+            this.dataGrid1.Size = new System.Drawing.Size(171, 160);
             this.dataGrid1.TabIndex = 28;
             // 
             // LBBaseDatos
             // 
-            this.LBBaseDatos.ItemHeight = 16;
-            this.LBBaseDatos.Location = new System.Drawing.Point(311, 59);
-            this.LBBaseDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LBBaseDatos.Location = new System.Drawing.Point(233, 48);
             this.LBBaseDatos.Name = "LBBaseDatos";
-            this.LBBaseDatos.Size = new System.Drawing.Size(232, 196);
+            this.LBBaseDatos.Size = new System.Drawing.Size(175, 160);
             this.LBBaseDatos.TabIndex = 27;
             // 
             // BTNConectarBaseDeDatos
             // 
             this.BTNConectarBaseDeDatos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BTNConectarBaseDeDatos.Location = new System.Drawing.Point(173, 40);
-            this.BTNConectarBaseDeDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTNConectarBaseDeDatos.Location = new System.Drawing.Point(130, 32);
             this.BTNConectarBaseDeDatos.Name = "BTNConectarBaseDeDatos";
-            this.BTNConectarBaseDeDatos.Size = new System.Drawing.Size(85, 28);
+            this.BTNConectarBaseDeDatos.Size = new System.Drawing.Size(64, 23);
             this.BTNConectarBaseDeDatos.TabIndex = 26;
             this.BTNConectarBaseDeDatos.Text = "&Conectar Base de Datos";
             this.BTNConectarBaseDeDatos.UseVisualStyleBackColor = true;
@@ -1396,37 +1369,33 @@ namespace GeneradorCodigoControladoras
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(307, 36);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(230, 29);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(309, 20);
+            this.label19.Size = new System.Drawing.Size(232, 16);
             this.label19.TabIndex = 24;
             this.label19.Text = "Vista previa de los campos seleccionados";
             // 
             // TXTSever
             // 
-            this.TXTSever.Location = new System.Drawing.Point(35, 76);
-            this.TXTSever.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTSever.Location = new System.Drawing.Point(26, 62);
             this.TXTSever.Name = "TXTSever";
-            this.TXTSever.Size = new System.Drawing.Size(244, 22);
+            this.TXTSever.Size = new System.Drawing.Size(184, 20);
             this.TXTSever.TabIndex = 15;
-            this.TXTSever.Text = "192.168.100.28";
+            this.TXTSever.Text = "localhost";
             // 
             // label18
             // 
-            this.label18.Location = new System.Drawing.Point(31, 36);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(23, 29);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(133, 20);
+            this.label18.Size = new System.Drawing.Size(100, 16);
             this.label18.TabIndex = 21;
             this.label18.Text = "Nombre Servidor:";
             // 
             // BTNConectarServidor
             // 
-            this.BTNConectarServidor.Location = new System.Drawing.Point(35, 264);
-            this.BTNConectarServidor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTNConectarServidor.Location = new System.Drawing.Point(26, 214);
             this.BTNConectarServidor.Name = "BTNConectarServidor";
-            this.BTNConectarServidor.Size = new System.Drawing.Size(245, 28);
+            this.BTNConectarServidor.Size = new System.Drawing.Size(184, 23);
             this.BTNConectarServidor.TabIndex = 20;
             this.BTNConectarServidor.Text = "Coneccion Servidor";
             this.BTNConectarServidor.UseVisualStyleBackColor = true;
@@ -1434,55 +1403,49 @@ namespace GeneradorCodigoControladoras
             // 
             // TXTPass
             // 
-            this.TXTPass.Location = new System.Drawing.Point(37, 223);
-            this.TXTPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTPass.Location = new System.Drawing.Point(28, 181);
             this.TXTPass.Name = "TXTPass";
             this.TXTPass.PasswordChar = '*';
-            this.TXTPass.Size = new System.Drawing.Size(244, 22);
+            this.TXTPass.Size = new System.Drawing.Size(184, 20);
             this.TXTPass.TabIndex = 17;
             this.TXTPass.Text = "Password123$";
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(33, 193);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(25, 157);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 20);
+            this.label16.Size = new System.Drawing.Size(100, 16);
             this.label16.TabIndex = 19;
             this.label16.Text = "Contraseña";
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(33, 113);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(25, 92);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 20);
+            this.label17.Size = new System.Drawing.Size(48, 16);
             this.label17.TabIndex = 18;
             this.label17.Text = "Cuenta";
             // 
             // TXTUser
             // 
-            this.TXTUser.Location = new System.Drawing.Point(37, 147);
-            this.TXTUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTUser.Location = new System.Drawing.Point(28, 119);
             this.TXTUser.Name = "TXTUser";
-            this.TXTUser.Size = new System.Drawing.Size(244, 22);
+            this.TXTUser.Size = new System.Drawing.Size(184, 20);
             this.TXTUser.TabIndex = 16;
             this.TXTUser.Text = "sa";
             // 
             // TXTWebservices
             // 
-            this.TXTWebservices.Location = new System.Drawing.Point(35, 43);
-            this.TXTWebservices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTWebservices.Location = new System.Drawing.Point(26, 35);
             this.TXTWebservices.Name = "TXTWebservices";
-            this.TXTWebservices.Size = new System.Drawing.Size(152, 22);
+            this.TXTWebservices.Size = new System.Drawing.Size(115, 20);
             this.TXTWebservices.TabIndex = 36;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(31, 16);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(23, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 20);
+            this.label6.Size = new System.Drawing.Size(137, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Nombre de la Aplicacion";
             // 
@@ -1492,20 +1455,18 @@ namespace GeneradorCodigoControladoras
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(208, 16);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(156, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(344, 24);
+            this.label7.Size = new System.Drawing.Size(258, 20);
             this.label7.TabIndex = 39;
             this.label7.Text = "Ingrese la ruta donde se va a guardar el archivo";
             // 
             // TXTRutaArchivo
             // 
-            this.TXTRutaArchivo.Location = new System.Drawing.Point(212, 43);
-            this.TXTRutaArchivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTRutaArchivo.Location = new System.Drawing.Point(159, 35);
             this.TXTRutaArchivo.Name = "TXTRutaArchivo";
             this.TXTRutaArchivo.ReadOnly = true;
-            this.TXTRutaArchivo.Size = new System.Drawing.Size(339, 22);
+            this.TXTRutaArchivo.Size = new System.Drawing.Size(255, 20);
             this.TXTRutaArchivo.TabIndex = 38;
             this.TXTRutaArchivo.Text = "C:\\gen\\";
             // 
@@ -1516,18 +1477,16 @@ namespace GeneradorCodigoControladoras
             "Entidades",
             "Controladoras",
             "WebMetodos"});
-            this.CLBSeleccionCodigo.Location = new System.Drawing.Point(717, 8);
-            this.CLBSeleccionCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CLBSeleccionCodigo.Location = new System.Drawing.Point(538, 6);
             this.CLBSeleccionCodigo.Name = "CLBSeleccionCodigo";
-            this.CLBSeleccionCodigo.Size = new System.Drawing.Size(159, 21);
+            this.CLBSeleccionCodigo.Size = new System.Drawing.Size(120, 4);
             this.CLBSeleccionCodigo.TabIndex = 40;
             // 
             // BTGenerarAutomaticamente
             // 
-            this.BTGenerarAutomaticamente.Location = new System.Drawing.Point(311, 264);
-            this.BTGenerarAutomaticamente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTGenerarAutomaticamente.Location = new System.Drawing.Point(233, 214);
             this.BTGenerarAutomaticamente.Name = "BTGenerarAutomaticamente";
-            this.BTGenerarAutomaticamente.Size = new System.Drawing.Size(493, 28);
+            this.BTGenerarAutomaticamente.Size = new System.Drawing.Size(370, 23);
             this.BTGenerarAutomaticamente.TabIndex = 35;
             this.BTGenerarAutomaticamente.Text = "&Generar Automaticamente la Capa de Negocio";
             this.BTGenerarAutomaticamente.UseVisualStyleBackColor = true;
@@ -1535,10 +1494,9 @@ namespace GeneradorCodigoControladoras
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(560, 40);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(420, 32);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(116, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(87, 23);
             this.btnBuscar.TabIndex = 35;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -1559,20 +1517,18 @@ namespace GeneradorCodigoControladoras
             this.groupBox1.Controls.Add(this.TXTPass);
             this.groupBox1.Controls.Add(this.TXTSever);
             this.groupBox1.Controls.Add(this.BTNConectarServidor);
-            this.groupBox1.Location = new System.Drawing.Point(39, 154);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(29, 125);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(839, 300);
+            this.groupBox1.Size = new System.Drawing.Size(629, 244);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generar capa de Negocio";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 531);
+            this.ClientSize = new System.Drawing.Size(658, 431);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.CLBSeleccionCodigo);
@@ -1582,9 +1538,8 @@ namespace GeneradorCodigoControladoras
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TXTWebservices);
             this.Controls.Add(this.TPAcercaDeD4VYNCY);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(893, 593);
-            this.MinimumSize = new System.Drawing.Size(893, 488);
+            this.MaximumSize = new System.Drawing.Size(674, 489);
+            this.MinimumSize = new System.Drawing.Size(674, 404);
             this.Name = "Form1";
             this.Text = "Generador de codigo estandas para la capa de negocio \"davidserrudo@gmail.com\"";
             this.Load += new System.EventHandler(this.Form1_Load);

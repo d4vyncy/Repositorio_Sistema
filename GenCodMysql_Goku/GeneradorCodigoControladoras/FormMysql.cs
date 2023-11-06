@@ -252,6 +252,8 @@ namespace GeneradorCodigoControladoras
             { dato = "number"; }
             if (dato == "Byte[]")
             { dato = "string"; }
+            if (dato == "UInt64")
+            { dato = "boolean"; }
             return dato;
         }
         public string validarDatoMysqlValor(string dato)
@@ -277,6 +279,8 @@ namespace GeneradorCodigoControladoras
             if (dato == "Byte[]")
             { dato = "''"; }
             if (dato == "Boolean")
+            { dato = "false"; }
+            if (dato == "UInt64")
             { dato = "false"; }
             return dato;
         }

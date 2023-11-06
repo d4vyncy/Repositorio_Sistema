@@ -163,3 +163,13 @@ C:\David2021\Sistemas2021\Generador\Generador WCF Antiguo\GeneradorCodigoControl
 C:\David2021\Sistemas2021\Generador\Generador WCF Antiguo\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
 C:\David2021\Sistemas2021\Generador\Generador WCF Antiguo\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
 C:\David2021\Sistemas2021\Generador\Generador WCF Antiguo\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.AssemblyReference.cache
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\David\git\Repositorio_Sistema\Repositorio_Sistema\Generador WCF Sistema\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
