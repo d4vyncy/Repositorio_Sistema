@@ -46,13 +46,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\admin\Documents\EntLib50Src\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\dll\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\admin\Documents\EntLib50Src\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\dll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\dll\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -87,30 +85,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clspsisdav.cs" />
-    <Compile Include="Datos\cls_tblInstitucionDA.cs" />
-    <Compile Include="Datos\cls_tblItemInstitucionDA.cs" />
-    <Compile Include="Datos\cls_tblPersonaDA.cs" />
-    <Compile Include="Datos\cls_tblRolDA.cs" />
-    <Compile Include="Datos\cls_tblRolUsuarioDA.cs" />
-    <Compile Include="Datos\cls_tblUnidadDA.cs" />
-    <Compile Include="Datos\cls_tblUsuarioDA.cs" />
-    <Compile Include="Datos\cls_tblUsuarioLogueadoDA.cs" />
-    <Compile Include="Entidades\cls_tblInstitucionBE.cs" />
-    <Compile Include="Entidades\cls_tblItemInstitucionBE.cs" />
-    <Compile Include="Entidades\cls_tblPersonaBE.cs" />
-    <Compile Include="Entidades\cls_tblRolBE.cs" />
-    <Compile Include="Entidades\cls_tblRolUsuarioBE.cs" />
-    <Compile Include="Entidades\cls_tblUnidadBE.cs" />
-    <Compile Include="Entidades\cls_tblUsuarioBE.cs" />
-    <Compile Include="Entidades\cls_tblUsuarioLogueadoBE.cs" />
-    <Compile Include="Negocios\cls_tblInstitucion.cs" />
-    <Compile Include="Negocios\cls_tblItemInstitucion.cs" />
-    <Compile Include="Negocios\cls_tblPersona.cs" />
-    <Compile Include="Negocios\cls_tblRol.cs" />
-    <Compile Include="Negocios\cls_tblRolUsuario.cs" />
-    <Compile Include="Negocios\cls_tblUnidad.cs" />
-    <Compile Include="Negocios\cls_tblUsuario.cs" />
-    <Compile Include="Negocios\cls_tblUsuarioLogueado.cs" />
+    <Compile Include="Datos\clsInstitucionDA.cs" />
+    <Compile Include="Datos\clsItemInstitucionDA.cs" />
+    <Compile Include="Datos\clsPersonaDA.cs" />
+    <Compile Include="Datos\clsRolDA.cs" />
+    <Compile Include="Datos\clsRolUsuarioDA.cs" />
+    <Compile Include="Datos\clsUnidadDA.cs" />
+    <Compile Include="Datos\clsUsuarioDA.cs" />
+    <Compile Include="Datos\clsUsuarioLogueadoDA.cs" />
+    <Compile Include="Entidades\clsInstitucionBE.cs" />
+    <Compile Include="Entidades\clsItemInstitucionBE.cs" />
+    <Compile Include="Entidades\clsPersonaBE.cs" />
+    <Compile Include="Entidades\clsRolBE.cs" />
+    <Compile Include="Entidades\clsRolUsuarioBE.cs" />
+    <Compile Include="Entidades\clsUnidadBE.cs" />
+    <Compile Include="Entidades\clsUsuarioBE.cs" />
+    <Compile Include="Entidades\clsUsuarioLogueadoBE.cs" />
+    <Compile Include="Negocios\clsInstitucion.cs" />
+    <Compile Include="Negocios\clsItemInstitucion.cs" />
+    <Compile Include="Negocios\clsPersona.cs" />
+    <Compile Include="Negocios\clsRol.cs" />
+    <Compile Include="Negocios\clsRolUsuario.cs" />
+    <Compile Include="Negocios\clsUnidad.cs" />
+    <Compile Include="Negocios\clsUsuario.cs" />
+    <Compile Include="Negocios\clsUsuarioLogueado.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

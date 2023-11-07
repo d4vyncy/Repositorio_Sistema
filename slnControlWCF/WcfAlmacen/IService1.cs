@@ -21,236 +21,236 @@ DataSet ProcedureConParametro(string Procedimiento,object[] pParametros);
 DataSet ProcedureParametro(string Procedimiento, string Campo, string Valor, string Campo1, string Valor1, string Campo2, string Valor2, string Campo3, string Valor3, string Campo4, string Valor4, string Campo5, string Valor5, string Campo6, string Valor6, string Campo7, string Valor7);
 [OperationContract]
 int EjecutaConsulta(string Consulta);
-#region _tblRolUsuario
+#region RolUsuario
 [OperationContract]
-cls_tblRolUsuario Obtiene_tblRolUsuario(int Id_tblRolUsuario);
+clsRolUsuario ObtieneRolUsuario(int IdRolUsuario);
 
 [OperationContract]
-int Agrega_tblRolUsuario(cls_tblRolUsuario o_tblRolUsuario);
+int AgregaRolUsuario(clsRolUsuario oRolUsuario);
 
 [OperationContract]
-int Modifica_tblRolUsuario(cls_tblRolUsuario o_tblRolUsuario);
+int ModificaRolUsuario(clsRolUsuario oRolUsuario);
 
 [OperationContract]
-int Elimina_tblRolUsuario(int Id_tblRolUsuario);
+int EliminaRolUsuario(int IdRolUsuario);
 
 [OperationContract]
-DataSet Obtienepav_tblRolUsuario1(string Campo, string Valor);
+DataSet ObtienepavRolUsuario1(string Campo, string Valor);
 
 [OperationContract]
-DataSet Obtienepav_tblRolUsuario2(string Campo, string Valor,string Campo1, string Valor1);
+DataSet ObtienepavRolUsuario2(string Campo, string Valor,string Campo1, string Valor1);
 
 [OperationContract]
-DataSet Obtienepav_tblRolUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+DataSet ObtienepavRolUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
 
 [OperationContract]
-DataSet Obtienepav_tblRolUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+DataSet ObtienepavRolUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
 
 [OperationContract]
-DataSet Obtienepav_tblRolUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
-
-#endregion 
-#region _tblPersona
-[OperationContract]
-cls_tblPersona Obtiene_tblPersona(int Id_tblPersona);
-
-[OperationContract]
-int Agrega_tblPersona(cls_tblPersona o_tblPersona);
-
-[OperationContract]
-int Modifica_tblPersona(cls_tblPersona o_tblPersona);
-
-[OperationContract]
-int Elimina_tblPersona(int Id_tblPersona);
-
-[OperationContract]
-DataSet Obtienepav_tblPersona1(string Campo, string Valor);
-
-[OperationContract]
-DataSet Obtienepav_tblPersona2(string Campo, string Valor,string Campo1, string Valor1);
-
-[OperationContract]
-DataSet Obtienepav_tblPersona3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
-
-[OperationContract]
-DataSet Obtienepav_tblPersona4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
-
-[OperationContract]
-DataSet Obtienepav_tblPersona5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+DataSet ObtienepavRolUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
 
 #endregion 
-#region _tblInstitucion
+#region Persona
 [OperationContract]
-cls_tblInstitucion Obtiene_tblInstitucion(int Id_tblInstitucion);
+clsPersona ObtienePersona(int IdPersona);
 
 [OperationContract]
-int Agrega_tblInstitucion(cls_tblInstitucion o_tblInstitucion);
+int AgregaPersona(clsPersona oPersona);
 
 [OperationContract]
-int Modifica_tblInstitucion(cls_tblInstitucion o_tblInstitucion);
+int ModificaPersona(clsPersona oPersona);
 
 [OperationContract]
-int Elimina_tblInstitucion(int Id_tblInstitucion);
+int EliminaPersona(int IdPersona);
 
 [OperationContract]
-DataSet Obtienepav_tblInstitucion1(string Campo, string Valor);
+DataSet ObtienepavPersona1(string Campo, string Valor);
 
 [OperationContract]
-DataSet Obtienepav_tblInstitucion2(string Campo, string Valor,string Campo1, string Valor1);
+DataSet ObtienepavPersona2(string Campo, string Valor,string Campo1, string Valor1);
 
 [OperationContract]
-DataSet Obtienepav_tblInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+DataSet ObtienepavPersona3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
 
 [OperationContract]
-DataSet Obtienepav_tblInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+DataSet ObtienepavPersona4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
 
 [OperationContract]
-DataSet Obtienepav_tblInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
-
-#endregion 
-#region _tblItemInstitucion
-[OperationContract]
-cls_tblItemInstitucion Obtiene_tblItemInstitucion(int Id_tblItemInstitucion);
-
-[OperationContract]
-int Agrega_tblItemInstitucion(cls_tblItemInstitucion o_tblItemInstitucion);
-
-[OperationContract]
-int Modifica_tblItemInstitucion(cls_tblItemInstitucion o_tblItemInstitucion);
-
-[OperationContract]
-int Elimina_tblItemInstitucion(int Id_tblItemInstitucion);
-
-[OperationContract]
-DataSet Obtienepav_tblItemInstitucion1(string Campo, string Valor);
-
-[OperationContract]
-DataSet Obtienepav_tblItemInstitucion2(string Campo, string Valor,string Campo1, string Valor1);
-
-[OperationContract]
-DataSet Obtienepav_tblItemInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
-
-[OperationContract]
-DataSet Obtienepav_tblItemInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
-
-[OperationContract]
-DataSet Obtienepav_tblItemInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+DataSet ObtienepavPersona5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
 
 #endregion 
-#region _tblUnidad
+#region Institucion
 [OperationContract]
-cls_tblUnidad Obtiene_tblUnidad(int Id_tblUnidad);
+clsInstitucion ObtieneInstitucion(int IdInstitucion);
 
 [OperationContract]
-int Agrega_tblUnidad(cls_tblUnidad o_tblUnidad);
+int AgregaInstitucion(clsInstitucion oInstitucion);
 
 [OperationContract]
-int Modifica_tblUnidad(cls_tblUnidad o_tblUnidad);
+int ModificaInstitucion(clsInstitucion oInstitucion);
 
 [OperationContract]
-int Elimina_tblUnidad(int Id_tblUnidad);
+int EliminaInstitucion(int IdInstitucion);
 
 [OperationContract]
-DataSet Obtienepav_tblUnidad1(string Campo, string Valor);
+DataSet ObtienepavInstitucion1(string Campo, string Valor);
 
 [OperationContract]
-DataSet Obtienepav_tblUnidad2(string Campo, string Valor,string Campo1, string Valor1);
+DataSet ObtienepavInstitucion2(string Campo, string Valor,string Campo1, string Valor1);
 
 [OperationContract]
-DataSet Obtienepav_tblUnidad3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+DataSet ObtienepavInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
 
 [OperationContract]
-DataSet Obtienepav_tblUnidad4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+DataSet ObtienepavInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
 
 [OperationContract]
-DataSet Obtienepav_tblUnidad5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
-
-#endregion 
-#region _tblUsuario
-[OperationContract]
-cls_tblUsuario Obtiene_tblUsuario(int Id_tblUsuario);
-
-[OperationContract]
-int Agrega_tblUsuario(cls_tblUsuario o_tblUsuario);
-
-[OperationContract]
-int Modifica_tblUsuario(cls_tblUsuario o_tblUsuario);
-
-[OperationContract]
-int Elimina_tblUsuario(int Id_tblUsuario);
-
-[OperationContract]
-DataSet Obtienepav_tblUsuario1(string Campo, string Valor);
-
-[OperationContract]
-DataSet Obtienepav_tblUsuario2(string Campo, string Valor,string Campo1, string Valor1);
-
-[OperationContract]
-DataSet Obtienepav_tblUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
-
-[OperationContract]
-DataSet Obtienepav_tblUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
-
-[OperationContract]
-DataSet Obtienepav_tblUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+DataSet ObtienepavInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
 
 #endregion 
-#region _tblUsuarioLogueado
+#region ItemInstitucion
 [OperationContract]
-cls_tblUsuarioLogueado Obtiene_tblUsuarioLogueado(int Id_tblUsuarioLogueado);
+clsItemInstitucion ObtieneItemInstitucion(int IdItemInstitucion);
 
 [OperationContract]
-int Agrega_tblUsuarioLogueado(cls_tblUsuarioLogueado o_tblUsuarioLogueado);
+int AgregaItemInstitucion(clsItemInstitucion oItemInstitucion);
 
 [OperationContract]
-int Modifica_tblUsuarioLogueado(cls_tblUsuarioLogueado o_tblUsuarioLogueado);
+int ModificaItemInstitucion(clsItemInstitucion oItemInstitucion);
 
 [OperationContract]
-int Elimina_tblUsuarioLogueado(int Id_tblUsuarioLogueado);
+int EliminaItemInstitucion(int IdItemInstitucion);
 
 [OperationContract]
-DataSet Obtienepav_tblUsuarioLogueado1(string Campo, string Valor);
+DataSet ObtienepavItemInstitucion1(string Campo, string Valor);
 
 [OperationContract]
-DataSet Obtienepav_tblUsuarioLogueado2(string Campo, string Valor,string Campo1, string Valor1);
+DataSet ObtienepavItemInstitucion2(string Campo, string Valor,string Campo1, string Valor1);
 
 [OperationContract]
-DataSet Obtienepav_tblUsuarioLogueado3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+DataSet ObtienepavItemInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
 
 [OperationContract]
-DataSet Obtienepav_tblUsuarioLogueado4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+DataSet ObtienepavItemInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
 
 [OperationContract]
-DataSet Obtienepav_tblUsuarioLogueado5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+DataSet ObtienepavItemInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
 
 #endregion 
-#region _tblRol
+#region Unidad
 [OperationContract]
-cls_tblRol Obtiene_tblRol(int Id_tblRol);
+clsUnidad ObtieneUnidad(int IdUnidad);
 
 [OperationContract]
-int Agrega_tblRol(cls_tblRol o_tblRol);
+int AgregaUnidad(clsUnidad oUnidad);
 
 [OperationContract]
-int Modifica_tblRol(cls_tblRol o_tblRol);
+int ModificaUnidad(clsUnidad oUnidad);
 
 [OperationContract]
-int Elimina_tblRol(int Id_tblRol);
+int EliminaUnidad(int IdUnidad);
 
 [OperationContract]
-DataSet Obtienepav_tblRol1(string Campo, string Valor);
+DataSet ObtienepavUnidad1(string Campo, string Valor);
 
 [OperationContract]
-DataSet Obtienepav_tblRol2(string Campo, string Valor,string Campo1, string Valor1);
+DataSet ObtienepavUnidad2(string Campo, string Valor,string Campo1, string Valor1);
 
 [OperationContract]
-DataSet Obtienepav_tblRol3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+DataSet ObtienepavUnidad3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
 
 [OperationContract]
-DataSet Obtienepav_tblRol4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+DataSet ObtienepavUnidad4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
 
 [OperationContract]
-DataSet Obtienepav_tblRol5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+DataSet ObtienepavUnidad5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+
+#endregion 
+#region Usuario
+[OperationContract]
+clsUsuario ObtieneUsuario(int IdUsuario);
+
+[OperationContract]
+int AgregaUsuario(clsUsuario oUsuario);
+
+[OperationContract]
+int ModificaUsuario(clsUsuario oUsuario);
+
+[OperationContract]
+int EliminaUsuario(int IdUsuario);
+
+[OperationContract]
+DataSet ObtienepavUsuario1(string Campo, string Valor);
+
+[OperationContract]
+DataSet ObtienepavUsuario2(string Campo, string Valor,string Campo1, string Valor1);
+
+[OperationContract]
+DataSet ObtienepavUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+
+[OperationContract]
+DataSet ObtienepavUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+
+[OperationContract]
+DataSet ObtienepavUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+
+#endregion 
+#region UsuarioLogueado
+[OperationContract]
+clsUsuarioLogueado ObtieneUsuarioLogueado(int IdUsuarioLogueado);
+
+[OperationContract]
+int AgregaUsuarioLogueado(clsUsuarioLogueado oUsuarioLogueado);
+
+[OperationContract]
+int ModificaUsuarioLogueado(clsUsuarioLogueado oUsuarioLogueado);
+
+[OperationContract]
+int EliminaUsuarioLogueado(int IdUsuarioLogueado);
+
+[OperationContract]
+DataSet ObtienepavUsuarioLogueado1(string Campo, string Valor);
+
+[OperationContract]
+DataSet ObtienepavUsuarioLogueado2(string Campo, string Valor,string Campo1, string Valor1);
+
+[OperationContract]
+DataSet ObtienepavUsuarioLogueado3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+
+[OperationContract]
+DataSet ObtienepavUsuarioLogueado4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+
+[OperationContract]
+DataSet ObtienepavUsuarioLogueado5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
+
+#endregion 
+#region Rol
+[OperationContract]
+clsRol ObtieneRol(int IdRol);
+
+[OperationContract]
+int AgregaRol(clsRol oRol);
+
+[OperationContract]
+int ModificaRol(clsRol oRol);
+
+[OperationContract]
+int EliminaRol(int IdRol);
+
+[OperationContract]
+DataSet ObtienepavRol1(string Campo, string Valor);
+
+[OperationContract]
+DataSet ObtienepavRol2(string Campo, string Valor,string Campo1, string Valor1);
+
+[OperationContract]
+DataSet ObtienepavRol3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);
+
+[OperationContract]
+DataSet ObtienepavRol4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);
+
+[OperationContract]
+DataSet ObtienepavRol5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);
 
 #endregion 
 }

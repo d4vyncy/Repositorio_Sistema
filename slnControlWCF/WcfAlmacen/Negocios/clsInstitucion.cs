@@ -10,9 +10,9 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblInstitucion : cls_tblInstitucionDA
+public class clsInstitucion : clsInstitucionDA
 {
-public cls_tblInstitucion()
+public clsInstitucion()
 {
 this.IdInstitucion = 0;
 this.IdInstitucionPadre = 0;
@@ -20,14 +20,14 @@ this.NombreInstitucion = string.Empty;
 this.IdTipoInstitucion = 0;
 }
 
-public cls_tblInstitucion(int Id_tblInstitucion)
+public clsInstitucion(int IdInstitucion)
 {
 }
 
 
-public cls_tblInstitucion cls_tblInstitucionPorId_tblInstitucion()
+public clsInstitucion clsInstitucionPorIdInstitucion()
 {
-using (IDataReader dr = Obtiene_tblInstitucion(this))
+using (IDataReader dr = ObtieneInstitucion(this))
 {
 if (dr.Read())
 {
@@ -40,22 +40,22 @@ this.IdTipoInstitucion = Convert.ToInt32(dr["IdTipoInstitucion"]);
 return this;
 }
 
-public int Agrega_tblInstitucion()
+public int AgregaInstitucion()
 {
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Agrega_tblInstitucion(this);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.AgregaInstitucion(this);
 }
 
-public int Modifica_tblInstitucion()
+public int ModificaInstitucion()
 {
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Modifica_tblInstitucion(this);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.ModificaInstitucion(this);
 }
 
-public int Elimina_tblInstitucion()
+public int EliminaInstitucion()
 {
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Elimina_tblInstitucion(this);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.EliminaInstitucion(this);
 }
 
 }

@@ -23,7 +23,7 @@ namespace GeneradorCodigoControladoras
         public Entidades.EOrdenar eOrdenar = new GeneradorCodigoControladoras.Entidades.EOrdenar();
         public DataSet dts = new DataSet();
         public string CadenaConexion;
-        
+
         public FormMysql()
         {
             InitializeComponent();
@@ -254,6 +254,10 @@ namespace GeneradorCodigoControladoras
             { dato = "string"; }
             if (dato == "UInt64")
             { dato = "boolean"; }
+            if (dato == "DateTime")
+            { dato = "Date = new Date()"; }
+
+
             return dato;
         }
         public string validarDatoMysqlValor(string dato)
@@ -282,6 +286,8 @@ namespace GeneradorCodigoControladoras
             { dato = "false"; }
             if (dato == "UInt64")
             { dato = "false"; }
+            if (dato == "DateTime")
+            { dato = " new Date()"; }
             return dato;
         }
         public string valorInicialDato(string dato)
@@ -504,23 +510,22 @@ namespace GeneradorCodigoControladoras
             {
                 //tipoDato = this.ImportarSQL.TypoColumnasI[i].ToString();
                 tipoDato = validarDatoMysql(this.ImportarSQL.TypoColumnasI[i].ToString());
-                if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
-                    RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + ":Date = new Date();";
-                else
-                    RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + " : " + tipoDato + ';' + Environment.NewLine;
+                //if ((this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha")) || (this.ImportarSQL.ColumnasI[i].ToString().Substring(0, 4) == "hora"))
+                //    RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + ":Date = new Date();" + Environment.NewLine;
+                //else
+                RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + " : " + tipoDato + ';' + Environment.NewLine;
+
+
             }
 
             RTBCodigoGenerado.Text += "constructor() {" + Environment.NewLine;
 
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
-                //tipoDato = this.ImportarSQL.TypoColumnasI[i].ToString();
-                if (!this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
-                {
-                    tipoDato = validarDatoMysqlValor(this.ImportarSQL.TypoColumnasI[i].ToString());
-                    RTBCodigoGenerado.Text += "this." + this.ImportarSQL.ColumnasI[i] + " = " + tipoDato + ';' + Environment.NewLine;
-                }
+                tipoDato = validarDatoMysqlValor(this.ImportarSQL.TypoColumnasI[i].ToString());
+                RTBCodigoGenerado.Text += "this." + this.ImportarSQL.ColumnasI[i] + " = " + tipoDato + ';' + Environment.NewLine;
             }
+
             RTBCodigoGenerado.Text += "}";
 
             RTBCodigoGenerado.Text += "}";
@@ -567,7 +572,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'sel" + NombreTabla+ "',$f3)) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'sel" + NombreTabla + "',$f3)) {" + Environment.NewLine;
             //
             RTBCodigoGenerado.Text += "$pCampo0 = is_null($f3->get('POST.pCampo0')) ? 'T' : $f3->get('POST.pCampo0');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$pValor0 = is_null($f3->get('POST.pValor0')) ? '' : $f3->get('POST.pValor0');" + Environment.NewLine;
@@ -586,7 +591,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "$pCampo7 = is_null($f3->get('POST.pCampo7')) ? 'T' : $f3->get('POST.pCampo7');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$pValor7 = is_null($f3->get('POST.pValor7')) ? '' : $f3->get('POST.pValor7');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$oDav_Ctrol = new _Dav_Ctrol();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$Con = $oDav_Ctrol->fnDevuelveConsulta('" + NombreTablaSQL.Substring(0,4)+"vis"+ NombreTabla + "' , $pCampo0  , $pValor0  , $pCampo1  , $pValor1  , $pCampo2  , $pValor2  , $pCampo3  , $pValor3  , $pCampo4  , $pValor4  , $pCampo5  , $pValor5  , $pCampo6  , $pValor6  , $pCampo7  , $pValor7 );" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$Con = $oDav_Ctrol->fnDevuelveConsulta('" + NombreTablaSQL.Substring(0, 4) + "vis" + NombreTabla + "' , $pCampo0  , $pValor0  , $pCampo1  , $pValor1  , $pCampo2  , $pValor2  , $pCampo3  , $pValor3  , $pCampo4  , $pValor4  , $pCampo5  , $pValor5  , $pCampo6  , $pValor6  , $pCampo7  , $pValor7 );" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$sql = $Con;" + Environment.NewLine;
 
             //RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL pvi" + NombreTabla + "('" + commilla + " . $pCampo0 . " + commilla + "','" + commilla + ". $pValor0 . " + commilla + "','" + commilla + ". $pCampo1 . " + commilla + "','" + commilla + ". $pValor1 . " + commilla + "','" + commilla + ". $pCampo2 . " + commilla + "','" + commilla + ". $pValor2 . " + commilla + "','" + commilla + ". $pCampo3 . " + commilla + "','" + commilla + ". $pValor3 . " + commilla + "','" + commilla + ". $pCampo4 . " + commilla + "','" + commilla + ". $pValor4 . " + commilla + "','" + commilla + ". $pCampo5 . " + commilla + "','" + commilla + ". $pValor5 . " + commilla + "','" + commilla + ". $pCampo6 . " + commilla + "','" + commilla + ". $pValor6 . " + commilla + "','" + commilla + ". $pCampo7 . " + commilla + "','" + commilla + ". $pValor7 . " + commilla + "'); " + commilla + "; " + Environment.NewLine;
@@ -644,7 +649,7 @@ namespace GeneradorCodigoControladoras
             {
                 RTBCodigoGenerado.Text += "$" + this.ImportarSQL.ColumnasI[i] + " = is_null($f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "')) ? 'T' : $f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "');" + Environment.NewLine;
             }
-            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL "+ NombreTablaSQL.Substring(0,4)+"pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
+            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL " + NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 RTBCodigoGenerado.Text += ". $" + this.ImportarSQL.ColumnasI[i];
@@ -702,7 +707,7 @@ namespace GeneradorCodigoControladoras
             {
                 RTBCodigoGenerado.Text += "$" + this.ImportarSQL.ColumnasI[i] + " = is_null($f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "')) ? 'T' : $f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "');" + Environment.NewLine;
             }
-            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL " +NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
+            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL " + NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 RTBCodigoGenerado.Text += ". $" + this.ImportarSQL.ColumnasI[i];
@@ -760,7 +765,7 @@ namespace GeneradorCodigoControladoras
             {
                 RTBCodigoGenerado.Text += "$" + this.ImportarSQL.ColumnasI[i] + " = is_null($f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "')) ? 'T' : $f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "');" + Environment.NewLine;
             }
-            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL "+ NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
+            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL " + NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 RTBCodigoGenerado.Text += ". $" + this.ImportarSQL.ColumnasI[i];
@@ -808,7 +813,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             //personazalida
             RTBCodigoGenerado.Text += "" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "public function "+NombreTablaSQL.Substring(0,4)+"pap" + NombreTabla + "($f3)" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "public function " + NombreTablaSQL.Substring(0, 4) + "pap" + NombreTabla + "($f3)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
@@ -953,10 +958,12 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//parametros" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
-                if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
+
+                if (this.ImportarSQL.TypoColum[i].ToString().Contains("DateTime"))
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
+
             }
             //RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
@@ -994,10 +1001,11 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//parametros" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
-                if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
+                if (this.ImportarSQL.TypoColum[i].ToString().Contains("DateTime"))
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
+
             }
             RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
@@ -1035,10 +1043,11 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//parametros" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
-                if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
+                if (this.ImportarSQL.TypoColum[i].ToString().Contains("DateTime"))
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
+
             }
             RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
@@ -1078,10 +1087,11 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//parametros" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
-                if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
+                if (this.ImportarSQL.TypoColum[i].ToString().Contains("DateTime"))
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
+
             }
             RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
@@ -1143,7 +1153,7 @@ namespace GeneradorCodigoControladoras
             }
         }
         public string ParametroAcronimo = "_tbl";
-        private void acronimoretorna(ref string NombreTabla,string NombreTablaOrigen)
+        private void acronimoretorna(ref string NombreTabla, string NombreTablaOrigen)
         {
             //if (NombreTablaOrigen.Substring(0, 7) == ParametroAcronimo)
             //    NombreTabla = NombreTablaOrigen.Substring(7);
@@ -1166,7 +1176,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasMySqlServer(BaseDatos.ConnectionString, TXTWebservices.Text,ParametroAcronimo);
+                ds = ImportarSQL.TablasMySqlServer(BaseDatos.ConnectionString, TXTWebservices.Text, ParametroAcronimo);
                 dataGrid1.DataSource = ds.Tables["table"];
                 dataGrid1.Refresh();
                 LBTablas.DataSource = ds.Tables["table"];
@@ -1207,7 +1217,7 @@ namespace GeneradorCodigoControladoras
 
             #region cargamos los campo
             BTNGenerarCodigo.Enabled = true;
-            
+
             //creamos las entidades ok revizado
             for (int tab = 0; tab < LBTablas.Items.Count; tab++)
             {
@@ -1344,7 +1354,7 @@ namespace GeneradorCodigoControladoras
                 }
                 //dav
                 RTBCodigoGenerado.Text += "DELIMITER //" + Environment.NewLine;
-                RTBCodigoGenerado.Text += "CREATE PROCEDURE `"+ NombreTabla.Substring(0,4)+"pag" + NombreTablaSQL + "`(" + Environment.NewLine;
+                RTBCodigoGenerado.Text += "CREATE PROCEDURE `" + NombreTabla.Substring(0, 4) + "pag" + NombreTablaSQL + "`(" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "IN `pTipo` VARCHAR(1)," + Environment.NewLine;
                 //trabajando
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
@@ -1360,7 +1370,7 @@ namespace GeneradorCodigoControladoras
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                     RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + ",";
                 //RTBCodigoGenerado.Text += "fecharegistro,filaestado)	values (" + Environment.NewLine;
-                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length-1)+")	values (" + Environment.NewLine;
+                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ")	values (" + Environment.NewLine;
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                     RTBCodigoGenerado.Text += "p" + this.ImportarSQL.ColumnasI[i] + ",";
                 //RTBCodigoGenerado.Text += "NOW(),1);" + Environment.NewLine;
@@ -1374,9 +1384,9 @@ namespace GeneradorCodigoControladoras
                 RTBCodigoGenerado.Text += "END IF;" + Environment.NewLine;
                 //update
                 RTBCodigoGenerado.Text += "IF pTipo = 'U' then" + Environment.NewLine;
-                RTBCodigoGenerado.Text += "	update " + NombreTabla + " SET "+ Environment.NewLine ;                                
+                RTBCodigoGenerado.Text += "	update " + NombreTabla + " SET " + Environment.NewLine;
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
-                    RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i]+"=p" + this.ImportarSQL.ColumnasI[i] + ",";
+                    RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + "=p" + this.ImportarSQL.ColumnasI[i] + ",";
                 RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + Environment.NewLine;
                 RTBCodigoGenerado.Text += "	WHERE p" + this.ImportarSQL.ColumnasI[0].ToString() + " = " + this.ImportarSQL.ColumnasI[0].ToString() + "; " + Environment.NewLine;
                 RTBCodigoGenerado.Text += "SELECT p" + this.ImportarSQL.ColumnasI[0].ToString() + " AS " + this.ImportarSQL.ColumnasI[0].ToString() + ";" + Environment.NewLine;
@@ -1404,10 +1414,10 @@ namespace GeneradorCodigoControladoras
                 acronimoretorna(ref NombreTabla, LBTablas.SelectedValue.ToString());
                 RTBCodigoGenerado.Text += "#" + NombreTabla + "s" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "POST /sel" + NombreTabla + " = " + LBTablas.SelectedValue.ToString() + "_Ctrl->sel" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /add" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->add" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /get" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->get" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /upd" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->upd" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /pap" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->pap" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /add" + NombreTabla + " = " + LBTablas.SelectedValue.ToString() + "_Ctrl->add" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /get" + NombreTabla + " = " + LBTablas.SelectedValue.ToString() + "_Ctrl->get" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /upd" + NombreTabla + " = " + LBTablas.SelectedValue.ToString() + "_Ctrl->upd" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /pap" + NombreTabla + " = " + LBTablas.SelectedValue.ToString() + "_Ctrl->pap" + NombreTabla + Environment.NewLine;
             }
             RTBCodigoGenerado.SaveFile(directorio + "\\routes.ini", RichTextBoxStreamType.PlainText);
             RTBCodigoGenerado.SaveFile(directorio + "\\routes.ini", RichTextBoxStreamType.PlainText);

@@ -6,7 +6,7 @@ using System.Text;
 namespace Wcfsisdav.Entidades 
 {
 
-public class cls_tblUsuarioBE
+public class clsUsuarioBE
 {
 public int IdUsuario { get; set; }
 public int IdPersona { get; set; }

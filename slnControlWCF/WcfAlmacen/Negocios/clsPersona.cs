@@ -10,9 +10,9 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblPersona : cls_tblPersonaDA
+public class clsPersona : clsPersonaDA
 {
-public cls_tblPersona()
+public clsPersona()
 {
 this.IdPersona = 0;
 this.Paterno = string.Empty;
@@ -40,14 +40,14 @@ this.IdTipoPersona = 0;
 this.IdItemInstitucion = 0;
 }
 
-public cls_tblPersona(int Id_tblPersona)
+public clsPersona(int IdPersona)
 {
 }
 
 
-public cls_tblPersona cls_tblPersonaPorId_tblPersona()
+public clsPersona clsPersonaPorIdPersona()
 {
-using (IDataReader dr = Obtiene_tblPersona(this))
+using (IDataReader dr = ObtienePersona(this))
 {
 if (dr.Read())
 {
@@ -80,22 +80,22 @@ this.IdItemInstitucion = Convert.ToInt32(dr["IdItemInstitucion"]);
 return this;
 }
 
-public int Agrega_tblPersona()
+public int AgregaPersona()
 {
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Agrega_tblPersona(this);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.AgregaPersona(this);
 }
 
-public int Modifica_tblPersona()
+public int ModificaPersona()
 {
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Modifica_tblPersona(this);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.ModificaPersona(this);
 }
 
-public int Elimina_tblPersona()
+public int EliminaPersona()
 {
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Elimina_tblPersona(this);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.EliminaPersona(this);
 }
 
 }

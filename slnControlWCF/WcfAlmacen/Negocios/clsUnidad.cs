@@ -10,9 +10,9 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblUnidad : cls_tblUnidadDA
+public class clsUnidad : clsUnidadDA
 {
-public cls_tblUnidad()
+public clsUnidad()
 {
 this.IdUnidad = 0;
 this.NombreUnidad = string.Empty;
@@ -22,14 +22,14 @@ this.Orden = 0;
 this.IdEntidad = 0;
 }
 
-public cls_tblUnidad(int Id_tblUnidad)
+public clsUnidad(int IdUnidad)
 {
 }
 
 
-public cls_tblUnidad cls_tblUnidadPorId_tblUnidad()
+public clsUnidad clsUnidadPorIdUnidad()
 {
-using (IDataReader dr = Obtiene_tblUnidad(this))
+using (IDataReader dr = ObtieneUnidad(this))
 {
 if (dr.Read())
 {
@@ -44,22 +44,22 @@ this.IdEntidad = Convert.ToInt32(dr["IdEntidad"]);
 return this;
 }
 
-public int Agrega_tblUnidad()
+public int AgregaUnidad()
 {
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Agrega_tblUnidad(this);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.AgregaUnidad(this);
 }
 
-public int Modifica_tblUnidad()
+public int ModificaUnidad()
 {
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Modifica_tblUnidad(this);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.ModificaUnidad(this);
 }
 
-public int Elimina_tblUnidad()
+public int EliminaUnidad()
 {
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Elimina_tblUnidad(this);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.EliminaUnidad(this);
 }
 
 }

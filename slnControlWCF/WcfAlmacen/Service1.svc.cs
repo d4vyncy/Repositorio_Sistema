@@ -48,28 +48,28 @@ public int EjecutaConsulta(string Consulta)
 clspsisdav ad = new clspsisdav();
 return ad.EjecutaConsulta(Consulta);
 }
-#region _tblRolUsuario
-public cls_tblRolUsuario Obtiene_tblRolUsuario(int Id_tblRolUsuario)
+#region RolUsuario
+public clsRolUsuario ObtieneRolUsuario(int IdRolUsuario)
 {
-cls_tblRolUsuario o_tblRolUsuario = new cls_tblRolUsuario();
-o_tblRolUsuario.Id_tblRolUsuario = Id_tblRolUsuario;
-return o_tblRolUsuario.cls_tblRolUsuarioPorId_tblRolUsuario();
+clsRolUsuario oRolUsuario = new clsRolUsuario();
+oRolUsuario.IdRolUsuario = IdRolUsuario;
+return oRolUsuario.clsRolUsuarioPorIdRolUsuario();
 }
 
-public int Agrega_tblRolUsuario(cls_tblRolUsuario o_tblRolUsuario)
-{return o_tblRolUsuario.Agrega_tblRolUsuario();}
+public int AgregaRolUsuario(clsRolUsuario oRolUsuario)
+{return oRolUsuario.AgregaRolUsuario();}
 
-public int Modifica_tblRolUsuario(cls_tblRolUsuario o_tblRolUsuario)
-{return o_tblRolUsuario.Modifica_tblRolUsuario();}
+public int ModificaRolUsuario(clsRolUsuario oRolUsuario)
+{return oRolUsuario.ModificaRolUsuario();}
 
-public int Elimina_tblRolUsuario(int Id_tblRolUsuario)
+public int EliminaRolUsuario(int IdRolUsuario)
 {
-cls_tblRolUsuario o_tblRolUsuario = new cls_tblRolUsuario();
-o_tblRolUsuario.Id_tblRolUsuario = Id_tblRolUsuario;
-return o_tblRolUsuario.Elimina_tblRolUsuario();}
+clsRolUsuario oRolUsuario = new clsRolUsuario();
+oRolUsuario.IdRolUsuario = IdRolUsuario;
+return oRolUsuario.EliminaRolUsuario();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblRolUsuario1(string Campo, string Valor)
+public DataSet ObtienepavRolUsuario1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -88,10 +88,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Obtienepav_tblRolUsuario(pParametros);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.ObtienepavRolUsuario(pParametros);
 }
-public DataSet Obtienepav_tblRolUsuario2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavRolUsuario2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -110,10 +110,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Obtienepav_tblRolUsuario(pParametros);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.ObtienepavRolUsuario(pParametros);
 }
-public DataSet Obtienepav_tblRolUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavRolUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -132,10 +132,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Obtienepav_tblRolUsuario(pParametros);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.ObtienepavRolUsuario(pParametros);
 }
-public DataSet Obtienepav_tblRolUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavRolUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -154,10 +154,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Obtienepav_tblRolUsuario(pParametros);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.ObtienepavRolUsuario(pParametros);
 }
-public DataSet Obtienepav_tblRolUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavRolUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -176,32 +176,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Obtienepav_tblRolUsuario(pParametros);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.ObtienepavRolUsuario(pParametros);
 }
 #endregion 
-#region _tblPersona
-public cls_tblPersona Obtiene_tblPersona(int Id_tblPersona)
+#region Persona
+public clsPersona ObtienePersona(int IdPersona)
 {
-cls_tblPersona o_tblPersona = new cls_tblPersona();
-o_tblPersona.Id_tblPersona = Id_tblPersona;
-return o_tblPersona.cls_tblPersonaPorId_tblPersona();
+clsPersona oPersona = new clsPersona();
+oPersona.IdPersona = IdPersona;
+return oPersona.clsPersonaPorIdPersona();
 }
 
-public int Agrega_tblPersona(cls_tblPersona o_tblPersona)
-{return o_tblPersona.Agrega_tblPersona();}
+public int AgregaPersona(clsPersona oPersona)
+{return oPersona.AgregaPersona();}
 
-public int Modifica_tblPersona(cls_tblPersona o_tblPersona)
-{return o_tblPersona.Modifica_tblPersona();}
+public int ModificaPersona(clsPersona oPersona)
+{return oPersona.ModificaPersona();}
 
-public int Elimina_tblPersona(int Id_tblPersona)
+public int EliminaPersona(int IdPersona)
 {
-cls_tblPersona o_tblPersona = new cls_tblPersona();
-o_tblPersona.Id_tblPersona = Id_tblPersona;
-return o_tblPersona.Elimina_tblPersona();}
+clsPersona oPersona = new clsPersona();
+oPersona.IdPersona = IdPersona;
+return oPersona.EliminaPersona();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblPersona1(string Campo, string Valor)
+public DataSet ObtienepavPersona1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -220,10 +220,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Obtienepav_tblPersona(pParametros);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.ObtienepavPersona(pParametros);
 }
-public DataSet Obtienepav_tblPersona2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavPersona2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -242,10 +242,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Obtienepav_tblPersona(pParametros);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.ObtienepavPersona(pParametros);
 }
-public DataSet Obtienepav_tblPersona3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavPersona3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -264,10 +264,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Obtienepav_tblPersona(pParametros);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.ObtienepavPersona(pParametros);
 }
-public DataSet Obtienepav_tblPersona4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavPersona4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -286,10 +286,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Obtienepav_tblPersona(pParametros);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.ObtienepavPersona(pParametros);
 }
-public DataSet Obtienepav_tblPersona5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavPersona5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -308,32 +308,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblPersonaDA ad = new cls_tblPersonaDA();
-return ad.Obtienepav_tblPersona(pParametros);
+clsPersonaDA ad = new clsPersonaDA();
+return ad.ObtienepavPersona(pParametros);
 }
 #endregion 
-#region _tblInstitucion
-public cls_tblInstitucion Obtiene_tblInstitucion(int Id_tblInstitucion)
+#region Institucion
+public clsInstitucion ObtieneInstitucion(int IdInstitucion)
 {
-cls_tblInstitucion o_tblInstitucion = new cls_tblInstitucion();
-o_tblInstitucion.Id_tblInstitucion = Id_tblInstitucion;
-return o_tblInstitucion.cls_tblInstitucionPorId_tblInstitucion();
+clsInstitucion oInstitucion = new clsInstitucion();
+oInstitucion.IdInstitucion = IdInstitucion;
+return oInstitucion.clsInstitucionPorIdInstitucion();
 }
 
-public int Agrega_tblInstitucion(cls_tblInstitucion o_tblInstitucion)
-{return o_tblInstitucion.Agrega_tblInstitucion();}
+public int AgregaInstitucion(clsInstitucion oInstitucion)
+{return oInstitucion.AgregaInstitucion();}
 
-public int Modifica_tblInstitucion(cls_tblInstitucion o_tblInstitucion)
-{return o_tblInstitucion.Modifica_tblInstitucion();}
+public int ModificaInstitucion(clsInstitucion oInstitucion)
+{return oInstitucion.ModificaInstitucion();}
 
-public int Elimina_tblInstitucion(int Id_tblInstitucion)
+public int EliminaInstitucion(int IdInstitucion)
 {
-cls_tblInstitucion o_tblInstitucion = new cls_tblInstitucion();
-o_tblInstitucion.Id_tblInstitucion = Id_tblInstitucion;
-return o_tblInstitucion.Elimina_tblInstitucion();}
+clsInstitucion oInstitucion = new clsInstitucion();
+oInstitucion.IdInstitucion = IdInstitucion;
+return oInstitucion.EliminaInstitucion();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblInstitucion1(string Campo, string Valor)
+public DataSet ObtienepavInstitucion1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -352,10 +352,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Obtienepav_tblInstitucion(pParametros);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.ObtienepavInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblInstitucion2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavInstitucion2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -374,10 +374,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Obtienepav_tblInstitucion(pParametros);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.ObtienepavInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -396,10 +396,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Obtienepav_tblInstitucion(pParametros);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.ObtienepavInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -418,10 +418,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Obtienepav_tblInstitucion(pParametros);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.ObtienepavInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -440,32 +440,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblInstitucionDA ad = new cls_tblInstitucionDA();
-return ad.Obtienepav_tblInstitucion(pParametros);
+clsInstitucionDA ad = new clsInstitucionDA();
+return ad.ObtienepavInstitucion(pParametros);
 }
 #endregion 
-#region _tblItemInstitucion
-public cls_tblItemInstitucion Obtiene_tblItemInstitucion(int Id_tblItemInstitucion)
+#region ItemInstitucion
+public clsItemInstitucion ObtieneItemInstitucion(int IdItemInstitucion)
 {
-cls_tblItemInstitucion o_tblItemInstitucion = new cls_tblItemInstitucion();
-o_tblItemInstitucion.Id_tblItemInstitucion = Id_tblItemInstitucion;
-return o_tblItemInstitucion.cls_tblItemInstitucionPorId_tblItemInstitucion();
+clsItemInstitucion oItemInstitucion = new clsItemInstitucion();
+oItemInstitucion.IdItemInstitucion = IdItemInstitucion;
+return oItemInstitucion.clsItemInstitucionPorIdItemInstitucion();
 }
 
-public int Agrega_tblItemInstitucion(cls_tblItemInstitucion o_tblItemInstitucion)
-{return o_tblItemInstitucion.Agrega_tblItemInstitucion();}
+public int AgregaItemInstitucion(clsItemInstitucion oItemInstitucion)
+{return oItemInstitucion.AgregaItemInstitucion();}
 
-public int Modifica_tblItemInstitucion(cls_tblItemInstitucion o_tblItemInstitucion)
-{return o_tblItemInstitucion.Modifica_tblItemInstitucion();}
+public int ModificaItemInstitucion(clsItemInstitucion oItemInstitucion)
+{return oItemInstitucion.ModificaItemInstitucion();}
 
-public int Elimina_tblItemInstitucion(int Id_tblItemInstitucion)
+public int EliminaItemInstitucion(int IdItemInstitucion)
 {
-cls_tblItemInstitucion o_tblItemInstitucion = new cls_tblItemInstitucion();
-o_tblItemInstitucion.Id_tblItemInstitucion = Id_tblItemInstitucion;
-return o_tblItemInstitucion.Elimina_tblItemInstitucion();}
+clsItemInstitucion oItemInstitucion = new clsItemInstitucion();
+oItemInstitucion.IdItemInstitucion = IdItemInstitucion;
+return oItemInstitucion.EliminaItemInstitucion();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblItemInstitucion1(string Campo, string Valor)
+public DataSet ObtienepavItemInstitucion1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -484,10 +484,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblItemInstitucionDA ad = new cls_tblItemInstitucionDA();
-return ad.Obtienepav_tblItemInstitucion(pParametros);
+clsItemInstitucionDA ad = new clsItemInstitucionDA();
+return ad.ObtienepavItemInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblItemInstitucion2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavItemInstitucion2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -506,10 +506,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblItemInstitucionDA ad = new cls_tblItemInstitucionDA();
-return ad.Obtienepav_tblItemInstitucion(pParametros);
+clsItemInstitucionDA ad = new clsItemInstitucionDA();
+return ad.ObtienepavItemInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblItemInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavItemInstitucion3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -528,10 +528,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblItemInstitucionDA ad = new cls_tblItemInstitucionDA();
-return ad.Obtienepav_tblItemInstitucion(pParametros);
+clsItemInstitucionDA ad = new clsItemInstitucionDA();
+return ad.ObtienepavItemInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblItemInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavItemInstitucion4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -550,10 +550,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblItemInstitucionDA ad = new cls_tblItemInstitucionDA();
-return ad.Obtienepav_tblItemInstitucion(pParametros);
+clsItemInstitucionDA ad = new clsItemInstitucionDA();
+return ad.ObtienepavItemInstitucion(pParametros);
 }
-public DataSet Obtienepav_tblItemInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavItemInstitucion5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -572,32 +572,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblItemInstitucionDA ad = new cls_tblItemInstitucionDA();
-return ad.Obtienepav_tblItemInstitucion(pParametros);
+clsItemInstitucionDA ad = new clsItemInstitucionDA();
+return ad.ObtienepavItemInstitucion(pParametros);
 }
 #endregion 
-#region _tblUnidad
-public cls_tblUnidad Obtiene_tblUnidad(int Id_tblUnidad)
+#region Unidad
+public clsUnidad ObtieneUnidad(int IdUnidad)
 {
-cls_tblUnidad o_tblUnidad = new cls_tblUnidad();
-o_tblUnidad.Id_tblUnidad = Id_tblUnidad;
-return o_tblUnidad.cls_tblUnidadPorId_tblUnidad();
+clsUnidad oUnidad = new clsUnidad();
+oUnidad.IdUnidad = IdUnidad;
+return oUnidad.clsUnidadPorIdUnidad();
 }
 
-public int Agrega_tblUnidad(cls_tblUnidad o_tblUnidad)
-{return o_tblUnidad.Agrega_tblUnidad();}
+public int AgregaUnidad(clsUnidad oUnidad)
+{return oUnidad.AgregaUnidad();}
 
-public int Modifica_tblUnidad(cls_tblUnidad o_tblUnidad)
-{return o_tblUnidad.Modifica_tblUnidad();}
+public int ModificaUnidad(clsUnidad oUnidad)
+{return oUnidad.ModificaUnidad();}
 
-public int Elimina_tblUnidad(int Id_tblUnidad)
+public int EliminaUnidad(int IdUnidad)
 {
-cls_tblUnidad o_tblUnidad = new cls_tblUnidad();
-o_tblUnidad.Id_tblUnidad = Id_tblUnidad;
-return o_tblUnidad.Elimina_tblUnidad();}
+clsUnidad oUnidad = new clsUnidad();
+oUnidad.IdUnidad = IdUnidad;
+return oUnidad.EliminaUnidad();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblUnidad1(string Campo, string Valor)
+public DataSet ObtienepavUnidad1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -616,10 +616,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Obtienepav_tblUnidad(pParametros);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.ObtienepavUnidad(pParametros);
 }
-public DataSet Obtienepav_tblUnidad2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavUnidad2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -638,10 +638,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Obtienepav_tblUnidad(pParametros);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.ObtienepavUnidad(pParametros);
 }
-public DataSet Obtienepav_tblUnidad3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavUnidad3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -660,10 +660,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Obtienepav_tblUnidad(pParametros);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.ObtienepavUnidad(pParametros);
 }
-public DataSet Obtienepav_tblUnidad4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavUnidad4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -682,10 +682,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Obtienepav_tblUnidad(pParametros);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.ObtienepavUnidad(pParametros);
 }
-public DataSet Obtienepav_tblUnidad5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavUnidad5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -704,32 +704,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblUnidadDA ad = new cls_tblUnidadDA();
-return ad.Obtienepav_tblUnidad(pParametros);
+clsUnidadDA ad = new clsUnidadDA();
+return ad.ObtienepavUnidad(pParametros);
 }
 #endregion 
-#region _tblUsuario
-public cls_tblUsuario Obtiene_tblUsuario(int Id_tblUsuario)
+#region Usuario
+public clsUsuario ObtieneUsuario(int IdUsuario)
 {
-cls_tblUsuario o_tblUsuario = new cls_tblUsuario();
-o_tblUsuario.Id_tblUsuario = Id_tblUsuario;
-return o_tblUsuario.cls_tblUsuarioPorId_tblUsuario();
+clsUsuario oUsuario = new clsUsuario();
+oUsuario.IdUsuario = IdUsuario;
+return oUsuario.clsUsuarioPorIdUsuario();
 }
 
-public int Agrega_tblUsuario(cls_tblUsuario o_tblUsuario)
-{return o_tblUsuario.Agrega_tblUsuario();}
+public int AgregaUsuario(clsUsuario oUsuario)
+{return oUsuario.AgregaUsuario();}
 
-public int Modifica_tblUsuario(cls_tblUsuario o_tblUsuario)
-{return o_tblUsuario.Modifica_tblUsuario();}
+public int ModificaUsuario(clsUsuario oUsuario)
+{return oUsuario.ModificaUsuario();}
 
-public int Elimina_tblUsuario(int Id_tblUsuario)
+public int EliminaUsuario(int IdUsuario)
 {
-cls_tblUsuario o_tblUsuario = new cls_tblUsuario();
-o_tblUsuario.Id_tblUsuario = Id_tblUsuario;
-return o_tblUsuario.Elimina_tblUsuario();}
+clsUsuario oUsuario = new clsUsuario();
+oUsuario.IdUsuario = IdUsuario;
+return oUsuario.EliminaUsuario();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblUsuario1(string Campo, string Valor)
+public DataSet ObtienepavUsuario1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -748,10 +748,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Obtienepav_tblUsuario(pParametros);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.ObtienepavUsuario(pParametros);
 }
-public DataSet Obtienepav_tblUsuario2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavUsuario2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -770,10 +770,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Obtienepav_tblUsuario(pParametros);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.ObtienepavUsuario(pParametros);
 }
-public DataSet Obtienepav_tblUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavUsuario3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -792,10 +792,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Obtienepav_tblUsuario(pParametros);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.ObtienepavUsuario(pParametros);
 }
-public DataSet Obtienepav_tblUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavUsuario4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -814,10 +814,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Obtienepav_tblUsuario(pParametros);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.ObtienepavUsuario(pParametros);
 }
-public DataSet Obtienepav_tblUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavUsuario5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -836,32 +836,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Obtienepav_tblUsuario(pParametros);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.ObtienepavUsuario(pParametros);
 }
 #endregion 
-#region _tblUsuarioLogueado
-public cls_tblUsuarioLogueado Obtiene_tblUsuarioLogueado(int Id_tblUsuarioLogueado)
+#region UsuarioLogueado
+public clsUsuarioLogueado ObtieneUsuarioLogueado(int IdUsuarioLogueado)
 {
-cls_tblUsuarioLogueado o_tblUsuarioLogueado = new cls_tblUsuarioLogueado();
-o_tblUsuarioLogueado.Id_tblUsuarioLogueado = Id_tblUsuarioLogueado;
-return o_tblUsuarioLogueado.cls_tblUsuarioLogueadoPorId_tblUsuarioLogueado();
+clsUsuarioLogueado oUsuarioLogueado = new clsUsuarioLogueado();
+oUsuarioLogueado.IdUsuarioLogueado = IdUsuarioLogueado;
+return oUsuarioLogueado.clsUsuarioLogueadoPorIdUsuarioLogueado();
 }
 
-public int Agrega_tblUsuarioLogueado(cls_tblUsuarioLogueado o_tblUsuarioLogueado)
-{return o_tblUsuarioLogueado.Agrega_tblUsuarioLogueado();}
+public int AgregaUsuarioLogueado(clsUsuarioLogueado oUsuarioLogueado)
+{return oUsuarioLogueado.AgregaUsuarioLogueado();}
 
-public int Modifica_tblUsuarioLogueado(cls_tblUsuarioLogueado o_tblUsuarioLogueado)
-{return o_tblUsuarioLogueado.Modifica_tblUsuarioLogueado();}
+public int ModificaUsuarioLogueado(clsUsuarioLogueado oUsuarioLogueado)
+{return oUsuarioLogueado.ModificaUsuarioLogueado();}
 
-public int Elimina_tblUsuarioLogueado(int Id_tblUsuarioLogueado)
+public int EliminaUsuarioLogueado(int IdUsuarioLogueado)
 {
-cls_tblUsuarioLogueado o_tblUsuarioLogueado = new cls_tblUsuarioLogueado();
-o_tblUsuarioLogueado.Id_tblUsuarioLogueado = Id_tblUsuarioLogueado;
-return o_tblUsuarioLogueado.Elimina_tblUsuarioLogueado();}
+clsUsuarioLogueado oUsuarioLogueado = new clsUsuarioLogueado();
+oUsuarioLogueado.IdUsuarioLogueado = IdUsuarioLogueado;
+return oUsuarioLogueado.EliminaUsuarioLogueado();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblUsuarioLogueado1(string Campo, string Valor)
+public DataSet ObtienepavUsuarioLogueado1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -880,10 +880,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Obtienepav_tblUsuarioLogueado(pParametros);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.ObtienepavUsuarioLogueado(pParametros);
 }
-public DataSet Obtienepav_tblUsuarioLogueado2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavUsuarioLogueado2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -902,10 +902,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Obtienepav_tblUsuarioLogueado(pParametros);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.ObtienepavUsuarioLogueado(pParametros);
 }
-public DataSet Obtienepav_tblUsuarioLogueado3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavUsuarioLogueado3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -924,10 +924,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Obtienepav_tblUsuarioLogueado(pParametros);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.ObtienepavUsuarioLogueado(pParametros);
 }
-public DataSet Obtienepav_tblUsuarioLogueado4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavUsuarioLogueado4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -946,10 +946,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Obtienepav_tblUsuarioLogueado(pParametros);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.ObtienepavUsuarioLogueado(pParametros);
 }
-public DataSet Obtienepav_tblUsuarioLogueado5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavUsuarioLogueado5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -968,32 +968,32 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Obtienepav_tblUsuarioLogueado(pParametros);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.ObtienepavUsuarioLogueado(pParametros);
 }
 #endregion 
-#region _tblRol
-public cls_tblRol Obtiene_tblRol(int Id_tblRol)
+#region Rol
+public clsRol ObtieneRol(int IdRol)
 {
-cls_tblRol o_tblRol = new cls_tblRol();
-o_tblRol.Id_tblRol = Id_tblRol;
-return o_tblRol.cls_tblRolPorId_tblRol();
+clsRol oRol = new clsRol();
+oRol.IdRol = IdRol;
+return oRol.clsRolPorIdRol();
 }
 
-public int Agrega_tblRol(cls_tblRol o_tblRol)
-{return o_tblRol.Agrega_tblRol();}
+public int AgregaRol(clsRol oRol)
+{return oRol.AgregaRol();}
 
-public int Modifica_tblRol(cls_tblRol o_tblRol)
-{return o_tblRol.Modifica_tblRol();}
+public int ModificaRol(clsRol oRol)
+{return oRol.ModificaRol();}
 
-public int Elimina_tblRol(int Id_tblRol)
+public int EliminaRol(int IdRol)
 {
-cls_tblRol o_tblRol = new cls_tblRol();
-o_tblRol.Id_tblRol = Id_tblRol;
-return o_tblRol.Elimina_tblRol();}
+clsRol oRol = new clsRol();
+oRol.IdRol = IdRol;
+return oRol.EliminaRol();}
 
 //seleccion con parametros
-public DataSet Obtienepav_tblRol1(string Campo, string Valor)
+public DataSet ObtienepavRol1(string Campo, string Valor)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -1012,10 +1012,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Obtienepav_tblRol(pParametros);
+clsRolDA ad = new clsRolDA();
+return ad.ObtienepavRol(pParametros);
 }
-public DataSet Obtienepav_tblRol2(string Campo, string Valor,string Campo1, string Valor1)
+public DataSet ObtienepavRol2(string Campo, string Valor,string Campo1, string Valor1)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -1034,10 +1034,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Obtienepav_tblRol(pParametros);
+clsRolDA ad = new clsRolDA();
+return ad.ObtienepavRol(pParametros);
 }
-public DataSet Obtienepav_tblRol3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
+public DataSet ObtienepavRol3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -1056,10 +1056,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Obtienepav_tblRol(pParametros);
+clsRolDA ad = new clsRolDA();
+return ad.ObtienepavRol(pParametros);
 }
-public DataSet Obtienepav_tblRol4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
+public DataSet ObtienepavRol4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -1078,10 +1078,10 @@ pParametros[12] = "T";
 pParametros[13] = "";
 pParametros[14] = "T";
 pParametros[15] = "";
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Obtienepav_tblRol(pParametros);
+clsRolDA ad = new clsRolDA();
+return ad.ObtienepavRol(pParametros);
 }
-public DataSet Obtienepav_tblRol5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
+public DataSet ObtienepavRol5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)
 {
 object[] pParametros = new object[] { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 pParametros[0] = Campo;
@@ -1100,8 +1100,8 @@ pParametros[12] = Campo6;
 pParametros[13] = Valor6;
 pParametros[14] = Campo7;
 pParametros[15] = Valor7;
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Obtienepav_tblRol(pParametros);
+clsRolDA ad = new clsRolDA();
+return ad.ObtienepavRol(pParametros);
 }
 #endregion 
 }

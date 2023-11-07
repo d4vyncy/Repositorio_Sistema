@@ -6,7 +6,7 @@ using System.Text;
 namespace Wcfsisdav.Entidades 
 {
 
-public class cls_tblRolBE
+public class clsRolBE
 {
 public int IdRol { get; set; }
 public string NombreRol { get; set; }

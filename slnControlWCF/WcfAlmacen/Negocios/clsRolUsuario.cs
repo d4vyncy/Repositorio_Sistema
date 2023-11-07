@@ -10,9 +10,9 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblRolUsuario : cls_tblRolUsuarioDA
+public class clsRolUsuario : clsRolUsuarioDA
 {
-public cls_tblRolUsuario()
+public clsRolUsuario()
 {
 this.IdRolUsuario = 0;
 this.IdRol = 0;
@@ -23,14 +23,14 @@ this.IdUsuarioCreacion = 0;
 this.FechaBaja = DateTime.Now;
 }
 
-public cls_tblRolUsuario(int Id_tblRolUsuario)
+public clsRolUsuario(int IdRolUsuario)
 {
 }
 
 
-public cls_tblRolUsuario cls_tblRolUsuarioPorId_tblRolUsuario()
+public clsRolUsuario clsRolUsuarioPorIdRolUsuario()
 {
-using (IDataReader dr = Obtiene_tblRolUsuario(this))
+using (IDataReader dr = ObtieneRolUsuario(this))
 {
 if (dr.Read())
 {
@@ -46,22 +46,22 @@ this.FechaBaja = Convert.ToDateTime(dr["FechaBaja"]);
 return this;
 }
 
-public int Agrega_tblRolUsuario()
+public int AgregaRolUsuario()
 {
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Agrega_tblRolUsuario(this);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.AgregaRolUsuario(this);
 }
 
-public int Modifica_tblRolUsuario()
+public int ModificaRolUsuario()
 {
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Modifica_tblRolUsuario(this);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.ModificaRolUsuario(this);
 }
 
-public int Elimina_tblRolUsuario()
+public int EliminaRolUsuario()
 {
-cls_tblRolUsuarioDA ad = new cls_tblRolUsuarioDA();
-return ad.Elimina_tblRolUsuario(this);
+clsRolUsuarioDA ad = new clsRolUsuarioDA();
+return ad.EliminaRolUsuario(this);
 }
 
 }

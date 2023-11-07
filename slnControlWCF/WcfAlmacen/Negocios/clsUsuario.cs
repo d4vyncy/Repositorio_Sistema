@@ -10,9 +10,9 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblUsuario : cls_tblUsuarioDA
+public class clsUsuario : clsUsuarioDA
 {
-public cls_tblUsuario()
+public clsUsuario()
 {
 this.IdUsuario = 0;
 this.IdPersona = 0;
@@ -25,14 +25,14 @@ this.IdTipoUsuario = 0;
 this.Estilo = string.Empty;
 }
 
-public cls_tblUsuario(int Id_tblUsuario)
+public clsUsuario(int IdUsuario)
 {
 }
 
 
-public cls_tblUsuario cls_tblUsuarioPorId_tblUsuario()
+public clsUsuario clsUsuarioPorIdUsuario()
 {
-using (IDataReader dr = Obtiene_tblUsuario(this))
+using (IDataReader dr = ObtieneUsuario(this))
 {
 if (dr.Read())
 {
@@ -50,22 +50,22 @@ this.Estilo = Convert.ToString(dr["Estilo"]);
 return this;
 }
 
-public int Agrega_tblUsuario()
+public int AgregaUsuario()
 {
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Agrega_tblUsuario(this);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.AgregaUsuario(this);
 }
 
-public int Modifica_tblUsuario()
+public int ModificaUsuario()
 {
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Modifica_tblUsuario(this);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.ModificaUsuario(this);
 }
 
-public int Elimina_tblUsuario()
+public int EliminaUsuario()
 {
-cls_tblUsuarioDA ad = new cls_tblUsuarioDA();
-return ad.Elimina_tblUsuario(this);
+clsUsuarioDA ad = new clsUsuarioDA();
+return ad.EliminaUsuario(this);
 }
 
 }

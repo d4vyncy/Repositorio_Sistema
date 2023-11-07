@@ -10,23 +10,23 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblRol : cls_tblRolDA
+public class clsRol : clsRolDA
 {
-public cls_tblRol()
+public clsRol()
 {
 this.IdRol = 0;
 this.NombreRol = string.Empty;
 this.IdSistema = 0;
 }
 
-public cls_tblRol(int Id_tblRol)
+public clsRol(int IdRol)
 {
 }
 
 
-public cls_tblRol cls_tblRolPorId_tblRol()
+public clsRol clsRolPorIdRol()
 {
-using (IDataReader dr = Obtiene_tblRol(this))
+using (IDataReader dr = ObtieneRol(this))
 {
 if (dr.Read())
 {
@@ -38,22 +38,22 @@ this.IdSistema = Convert.ToInt32(dr["IdSistema"]);
 return this;
 }
 
-public int Agrega_tblRol()
+public int AgregaRol()
 {
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Agrega_tblRol(this);
+clsRolDA ad = new clsRolDA();
+return ad.AgregaRol(this);
 }
 
-public int Modifica_tblRol()
+public int ModificaRol()
 {
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Modifica_tblRol(this);
+clsRolDA ad = new clsRolDA();
+return ad.ModificaRol(this);
 }
 
-public int Elimina_tblRol()
+public int EliminaRol()
 {
-cls_tblRolDA ad = new cls_tblRolDA();
-return ad.Elimina_tblRol(this);
+clsRolDA ad = new clsRolDA();
+return ad.EliminaRol(this);
 }
 
 }

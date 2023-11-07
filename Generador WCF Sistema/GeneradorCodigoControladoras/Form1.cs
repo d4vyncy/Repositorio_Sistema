@@ -89,14 +89,16 @@ namespace GeneradorCodigoControladoras
                 this.ImportarSQL.TypoColumnasI.Clear();
                 this.ImportarSQL.CargarColumnas(conect, this.BaseDatos.Tablas[0].ToString());
                 this.LBCampos.Items.Clear();
-                if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
-                {
-                    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(2);
-                }
-                else
-                {
-                    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(3);
-                }
+                //if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
+                //{
+                //    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(2);
+                //}
+                //else
+                //{
+                //    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(3);
+                //}
+                this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString();
+                this.ImportarSQL.tablaNombre = devuelvePrefijo(this.ImportarSQL.tablaNombre);
                 i = 0;
                 while (i <= (this.ImportarSQL.ColumnasI.Count - 1))
                 {
@@ -122,14 +124,16 @@ namespace GeneradorCodigoControladoras
                 this.ImportarSQL.TypoColumnasI.Clear();
                 this.ImportarSQL.CargarColumnas(conect, this.BaseDatos.Tablas[0].ToString());
                 this.LBCampos.Items.Clear();
-                if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
-                {
-                    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(2);
-                }
-                else
-                {
-                    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(3);
-                }
+                //if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
+                //{
+                //    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(2);
+                //}
+                //else
+                //{
+                //    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(3);
+                //}
+                this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString();
+                this.ImportarSQL.tablaNombre = devuelvePrefijo(this.ImportarSQL.tablaNombre);
                 i = 0;
                 while (i <= (this.ImportarSQL.ColumnasI.Count - 1))
                 {
@@ -155,14 +159,16 @@ namespace GeneradorCodigoControladoras
                 this.ImportarSQL.TypoColumnasI.Clear();
                 this.ImportarSQL.CargarColumnas(conect, this.BaseDatos.Tablas[0].ToString());
                 this.LBCampos.Items.Clear();
-                if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
-                {
-                    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(2);
-                }
-                else
-                {
-                    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(3);
-                }
+                //if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
+                //{
+                //    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(2);
+                //}
+                //else
+                //{
+                //    this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString().Substring(3);
+                //}
+                this.ImportarSQL.tablaNombre = this.LBTablas.SelectedValue.ToString();
+                this.ImportarSQL.tablaNombre = devuelvePrefijo(this.ImportarSQL.tablaNombre);
                 for (i = 0; i <= (this.ImportarSQL.ColumnasI.Count - 1); i++)
                 {
                     this.LBCampos.Items.Add(this.ImportarSQL.ColumnasI[i]);
@@ -398,7 +404,7 @@ namespace GeneradorCodigoControladoras
             this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
             this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
         }
-        private string comi=@"""";
+        private string comi = @"""";
         public void CrearLasControladoras()
         {
             int i;
@@ -518,6 +524,7 @@ namespace GeneradorCodigoControladoras
             this.RTBCodigoGenerado.Text = strCadena1 + "namespace Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + ".Entidades " + Environment.NewLine + "{" + Environment.NewLine;
             this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
             strCadena1 = this.RTBCodigoGenerado.Text;
+            this.RTBCodigoGenerado.Text += "//codigo davidserrudo@gmail.com" + Environment.NewLine;
             this.RTBCodigoGenerado.Text = strCadena1 + "public class cls" + this.ImportarSQL.tablaNombre + "BE" + Environment.NewLine + "{" + Environment.NewLine;
             for (int i = 0; i <= (this.ImportarSQL.ColumnasI.Count - 1); i++)
             {
@@ -567,7 +574,9 @@ namespace GeneradorCodigoControladoras
         }
         string devuelvePrefijo(string nombreTabla)
         {
-            return nombreTabla.Substring(6);
+            if (nombreTabla.Length <= 7)
+                return nombreTabla;
+            return nombreTabla.Substring(7);
         }
 
         public void CrearWCF()
@@ -633,14 +642,16 @@ namespace GeneradorCodigoControladoras
             for (int tab = 0; tab < this.LBTablas.Items.Count; tab++)
             {
                 this.LBTablas.SelectedIndex = tab;
-                if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
-                {
-                    NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(2);
-                }
-                else
-                {
-                    NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(3);
-                }
+                //if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
+                //{
+                //    NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(2);
+                //}
+                //else
+                //{
+                //    NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(3);
+                //}
+                NombreTabla = this.LBTablas.SelectedValue.ToString();
+                NombreTabla = devuelvePrefijo(NombreTabla);
                 if (NombreTabla != "dtproperties")
                 {
                     this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#region " + NombreTabla + Environment.NewLine;
@@ -649,438 +660,440 @@ namespace GeneradorCodigoControladoras
                     this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
                     strCadena1 = this.RTBCodigoGenerado.Text;
                     this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + " o" + NombreTabla + " = new cls" + NombreTabla + "();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "o" + NombreTabla + ".Id" + NombreTabla + " = Id" + NombreTabla + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return o" + NombreTabla + ".cls" + NombreTabla + "PorId" + NombreTabla + "();" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public int Agrega" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ")" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "{return o" + NombreTabla + ".Agrega" + NombreTabla + "();}" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public int Modifica" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ")" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "{return o" + NombreTabla + ".Modifica" + NombreTabla + "();}" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public int Elimina" + NombreTabla + "(int Id" + NombreTabla + ")" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + " o" + NombreTabla + " = new cls" + NombreTabla + "();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "o" + NombreTabla + ".Id" + NombreTabla + " = Id" + NombreTabla + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return o" + NombreTabla + ".Elimina" + NombreTabla + "();}" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "//seleccion con parametros" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "1(string Campo, string Valor)" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[2] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[3] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[4] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[5] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[6] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[7] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "2(string Campo, string Valor,string Campo1, string Valor1)" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[4] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[5] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[6] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[7] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[4] = Campo2;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[5] = Valor2;" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[6] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[7] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[4] = Campo2;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[5] = Valor2;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[6] = Campo3;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[7] = Valor3;" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[4] = Campo2;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[5] = Valor2;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[6] = Campo3;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[7] = Valor3;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[8] = Campo4;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[9] = Valor4;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[10] = Campo5;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[11] = Valor5;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[12] = Campo6;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[13] = Valor6;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[14] = Campo7;" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[15] = Valor7;" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#endregion " + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "o" + NombreTabla + ".Id" + NombreTabla + " = Id" + NombreTabla + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return o" + NombreTabla + ".cls" + NombreTabla + "PorId" + NombreTabla + "();" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public int Agrega" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ")" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "{return o" + NombreTabla + ".Agrega" + NombreTabla + "();}" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public int Modifica" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ")" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "{return o" + NombreTabla + ".Modifica" + NombreTabla + "();}" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public int Elimina" + NombreTabla + "(int Id" + NombreTabla + ")" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + " o" + NombreTabla + " = new cls" + NombreTabla + "();" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "o" + NombreTabla + ".Id" + NombreTabla + " = Id" + NombreTabla + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return o" + NombreTabla + ".Elimina" + NombreTabla + "();}" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "//seleccion con parametros" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "1(string Campo, string Valor)" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[2] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[3] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[4] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[5] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[6] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[7] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "2(string Campo, string Valor,string Campo1, string Valor1)" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[4] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[5] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[6] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[7] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2)" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[4] = Campo2;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[5] = Valor2;" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[6] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[7] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3)" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[4] = Campo2;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[5] = Valor2;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[6] = Campo3;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[7] = Valor3;" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[8] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[9] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[10] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[11] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[12] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[13] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[14] = " + this.comi + "T" + this.comi + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "pParametros[15] = " + comillasSeguidas + ";" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "public DataSet Obtienepav" + NombreTabla + "5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7)" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "object[] pParametros = new object[] { " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + ", " + comillasSeguidas + " };" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[0] = Campo;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[1] = Valor;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[2] = Campo1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[3] = Valor1;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[4] = Campo2;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[5] = Valor2;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[6] = Campo3;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[7] = Valor3;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[8] = Campo4;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[9] = Valor4;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[10] = Campo5;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[11] = Valor5;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[12] = Campo6;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[13] = Valor6;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[14] = Campo7;" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "pParametros[15] = Valor7;" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + "DA ad = new cls" + NombreTabla + "DA();" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "return ad.Obtienepav" + NombreTabla + "(pParametros);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#endregion " + Environment.NewLine;
+                }
             }
-        }
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-        string directorio = this.TXTRutaArchivo.Text + @"\cls" + this.BaseDatos.NombreBaseDatos.ToString();
-        if (NombreTabla != "dtproperties")
-        {
-            this.RTBCodigoGenerado.SaveFile(directorio + @"\Service1.svc.cs", RichTextBoxStreamType.PlainText);
-            this.RTBCodigoGenerado.SaveFile(directorio + @"\Service1.svc.cs", RichTextBoxStreamType.PlainText);
-        }
-    }
-
-    public void CrearWCFInterface()
-    {
-        this.RTBCodigoGenerado.Text = "//CODIGO GENERADO POR davidserrudo@gmail.com" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Collections.Generic;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Linq;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Runtime.Serialization;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.ServiceModel;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.ServiceModel.Web;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Text;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Data;" + Environment.NewLine;
-        string strCadena1 = this.RTBCodigoGenerado.Text;
-        this.RTBCodigoGenerado.Text = strCadena1 + "using Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + ".Negocios;" + Environment.NewLine;
-        strCadena1 = this.RTBCodigoGenerado.Text;
-        this.RTBCodigoGenerado.Text = strCadena1 + "using Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + ".Datos;" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "namespace Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[ServiceContract]" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "public interface IService1" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "DataSet ProcedureConParametro(string Procedimiento,object[] pParametros);" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "DataSet ProcedureParametro(string Procedimiento, string Campo, string Valor, string Campo1, string Valor1, string Campo2, string Valor2, string Campo3, string Valor3, string Campo4, string Valor4, string Campo5, string Valor5, string Campo6, string Valor6, string Campo7, string Valor7);" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "int EjecutaConsulta(string Consulta);" + Environment.NewLine;
-        string NombreTabla = "";
-        for (int tab = 0; tab < this.LBTablas.Items.Count; tab++)
-        {
-            this.LBTablas.SelectedIndex = tab;
-            if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
-            {
-                NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(2);
-            }
-            else
-            {
-                NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(3);
-            }
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+            string directorio = this.TXTRutaArchivo.Text + @"\cls" + this.BaseDatos.NombreBaseDatos.ToString();
             if (NombreTabla != "dtproperties")
             {
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#region " + NombreTabla + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + " Obtiene" + NombreTabla + "(int Id" + NombreTabla + ");" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "int Agrega" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ");" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "int Modifica" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ");" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "int Elimina" + NombreTabla + "(int Id" + NombreTabla + ");" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "1(string Campo, string Valor);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "2(string Campo, string Valor,string Campo1, string Valor1);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
-                strCadena1 = this.RTBCodigoGenerado.Text;
-                this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);" + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
-                this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#endregion " + Environment.NewLine;
+                this.RTBCodigoGenerado.SaveFile(directorio + @"\Service1.svc.cs", RichTextBoxStreamType.PlainText);
+                this.RTBCodigoGenerado.SaveFile(directorio + @"\Service1.svc.cs", RichTextBoxStreamType.PlainText);
             }
         }
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
-        string directorio = this.TXTRutaArchivo.Text + @"\cls" + this.BaseDatos.NombreBaseDatos.ToString();
-        if (NombreTabla != "dtproperties")
-        {
-            this.RTBCodigoGenerado.SaveFile(directorio + @"\IService1.cs", RichTextBoxStreamType.PlainText);
-            this.RTBCodigoGenerado.SaveFile(directorio + @"\IService1.cs", RichTextBoxStreamType.PlainText);
-        }
-    }
 
-    public string datoSQL(string dato)
-    {
-        if (dato == "text")
+        public void CrearWCFInterface()
         {
-            dato = "Text";
-        }
-        if (dato == "varchar")
-        {
-            dato = "NVarChar,50";
-        }
-        if (dato == "numeric")
-        {
-            dato = "Decimal,0";
-        }
-        if (dato == "Int32")
-        {
-            dato = "Int,0";
-        }
-        if (dato == "Int16")
-        {
-            dato = "Int,0";
-        }
-        if (dato == "Decimal")
-        {
-            dato = "Decimal,0";
-        }
-        if (dato == "Char")
-        {
-            dato = "Char";
-        }
-        if (dato == "String")
-        {
-            dato = "NVarChar,50";
-        }
-        if (dato == "Text")
-        {
-            dato = "Text";
-        }
-        if (dato == "DateTime")
-        {
-            dato = "DateTime,0";
-        }
-        if (dato == "Boolean")
-        {
-            dato = "Bit";
-        }
-        if (dato == "Double")
-        {
-            dato = "Float";
-        }
-        return dato;
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        if (disposing && (this.components != null))
-        {
-            this.components.Dispose();
-        }
-        base.Dispose(disposing);
-    }
-
-    private void Error2_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            DataSet ds = new DataSet("Tabla");
-            ds = this.ImportarSQL.TablasSqlServer(this.Error2.Text.ToString());
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            this.RTBCodigoGenerado.Text = "//CODIGO GENERADO POR davidserrudo@gmail.com" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Collections.Generic;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Linq;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Runtime.Serialization;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.ServiceModel;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.ServiceModel.Web;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Text;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Data;" + Environment.NewLine;
+            string strCadena1 = this.RTBCodigoGenerado.Text;
+            this.RTBCodigoGenerado.Text = strCadena1 + "using Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + ".Negocios;" + Environment.NewLine;
+            strCadena1 = this.RTBCodigoGenerado.Text;
+            this.RTBCodigoGenerado.Text = strCadena1 + "using Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + ".Datos;" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "namespace Wcf" + this.BaseDatos.NombreBaseDatos.ToString() + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[ServiceContract]" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "public interface IService1" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "DataSet ProcedureConParametro(string Procedimiento,object[] pParametros);" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "DataSet ProcedureParametro(string Procedimiento, string Campo, string Valor, string Campo1, string Valor1, string Campo2, string Valor2, string Campo3, string Valor3, string Campo4, string Valor4, string Campo5, string Valor5, string Campo6, string Valor6, string Campo7, string Valor7);" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "int EjecutaConsulta(string Consulta);" + Environment.NewLine;
+            string NombreTabla = "";
+            for (int tab = 0; tab < this.LBTablas.Items.Count; tab++)
             {
-                MessageBox.Show(ds.Tables[0].Columns[0].Table.Rows[i].ToString());
+                this.LBTablas.SelectedIndex = tab;
+                //if (this.LBTablas.SelectedValue.ToString().Substring(0, 2) == "cl")
+                //{
+                //    NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(2);
+                //}
+                //else
+                //{
+                //    NombreTabla = this.LBTablas.SelectedValue.ToString().Substring(3);
+                //}
+                NombreTabla = this.LBTablas.SelectedValue.ToString();
+                NombreTabla = devuelvePrefijo(NombreTabla);
+                if (NombreTabla != "dtproperties")
+                {
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#region " + NombreTabla + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "cls" + NombreTabla + " Obtiene" + NombreTabla + "(int Id" + NombreTabla + ");" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "int Agrega" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ");" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "int Modifica" + NombreTabla + "(cls" + NombreTabla + " o" + NombreTabla + ");" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "int Elimina" + NombreTabla + "(int Id" + NombreTabla + ");" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "1(string Campo, string Valor);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "2(string Campo, string Valor,string Campo1, string Valor1);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "3(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "4(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[OperationContract]" + Environment.NewLine;
+                    strCadena1 = this.RTBCodigoGenerado.Text;
+                    this.RTBCodigoGenerado.Text = strCadena1 + "DataSet Obtienepav" + NombreTabla + "5(string Campo, string Valor,string Campo1, string Valor1,string Campo2, string Valor2,string Campo3, string Valor3,string Campo4, string Valor4,string Campo5, string Valor5,string Campo6, string Valor6,string Campo7, string Valor7);" + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + Environment.NewLine;
+                    this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "#endregion " + Environment.NewLine;
+                }
+            }
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}" + Environment.NewLine;
+            string directorio = this.TXTRutaArchivo.Text + @"\cls" + this.BaseDatos.NombreBaseDatos.ToString();
+            if (NombreTabla != "dtproperties")
+            {
+                this.RTBCodigoGenerado.SaveFile(directorio + @"\IService1.cs", RichTextBoxStreamType.PlainText);
+                this.RTBCodigoGenerado.SaveFile(directorio + @"\IService1.cs", RichTextBoxStreamType.PlainText);
             }
         }
-        catch
-        {
-            this.Error1.Text = "falla al momento de cargar los datos";
-        }
-    }
 
-    private void Form1_Load(object sender, EventArgs e)
-    {
-    }
+        public string datoSQL(string dato)
+        {
+            if (dato == "text")
+            {
+                dato = "Text";
+            }
+            if (dato == "varchar")
+            {
+                dato = "NVarChar,50";
+            }
+            if (dato == "numeric")
+            {
+                dato = "Decimal,0";
+            }
+            if (dato == "Int32")
+            {
+                dato = "Int,0";
+            }
+            if (dato == "Int16")
+            {
+                dato = "Int,0";
+            }
+            if (dato == "Decimal")
+            {
+                dato = "Decimal,0";
+            }
+            if (dato == "Char")
+            {
+                dato = "Char";
+            }
+            if (dato == "String")
+            {
+                dato = "NVarChar,50";
+            }
+            if (dato == "Text")
+            {
+                dato = "Text";
+            }
+            if (dato == "DateTime")
+            {
+                dato = "DateTime,0";
+            }
+            if (dato == "Boolean")
+            {
+                dato = "Bit";
+            }
+            if (dato == "Double")
+            {
+                dato = "Float";
+            }
+            return dato;
+        }
 
-    private void GenerarWebServices()
-    {
-        this.RTBCodigoGenerado.Text = "CODIGO GENERADO POR davidserrudo@gmail.com";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System;";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Web;";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Web.Services;";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Web.Services.Protocols;";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[WebService(Namespace =http://tempuri.org/)] ";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "public class Service : System.Web.Services.WebService";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "public Service () {";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "//GENERADOR DE WEB SERVICES V 1.0";
-        this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}";
-    }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (this.components != null))
+            {
+                this.components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-    private void guardarArchivoTexto_Click(object sender, EventArgs e)
-    {
-        string Nombreclase = "";
-        if (this.CLBSeleccionCodigo.SelectedItem.ToString() == "Entidades")
+        private void Error2_Click(object sender, EventArgs e)
         {
-            Nombreclase = "EDI" + this.LBTablas.SelectedValue;
+            try
+            {
+                DataSet ds = new DataSet("Tabla");
+                ds = this.ImportarSQL.TablasSqlServer(this.Error2.Text.ToString());
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    MessageBox.Show(ds.Tables[0].Columns[0].Table.Rows[i].ToString());
+                }
+            }
+            catch
+            {
+                this.Error1.Text = "falla al momento de cargar los datos";
+            }
         }
-        if (this.CLBSeleccionCodigo.SelectedItem.ToString() == "Controladoras")
-        {
-            Nombreclase = "C" + this.LBTablas.SelectedValue;
-        }
-        if (this.CLBSeleccionCodigo.SelectedItem.ToString() == "WebMetodos")
-        {
-            Nombreclase = "WEBMETODO" + this.LBTablas.SelectedValue;
-        }
-        try
-        {
-            string nombre = this.TXTRutaArchivo.Text + @"\" + Nombreclase + ".cs";
-            this.RTBCodigoGenerado.SaveFile(nombre, RichTextBoxStreamType.PlainText);
-        }
-        catch
-        {
-            MessageBox.Show("No se encontro la ruta para guardar este archivo");
-        }
-    }
 
-    private void InitializeComponent()
-    {
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void GenerarWebServices()
+        {
+            this.RTBCodigoGenerado.Text = "CODIGO GENERADO POR davidserrudo@gmail.com";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System;";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Web;";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Web.Services;";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "using System.Web.Services.Protocols;";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[WebService(Namespace =http://tempuri.org/)] ";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "public class Service : System.Web.Services.WebService";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "{";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "public Service () {";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "//GENERADOR DE WEB SERVICES V 1.0";
+            this.RTBCodigoGenerado.Text = this.RTBCodigoGenerado.Text + "}";
+        }
+
+        private void guardarArchivoTexto_Click(object sender, EventArgs e)
+        {
+            string Nombreclase = "";
+            if (this.CLBSeleccionCodigo.SelectedItem.ToString() == "Entidades")
+            {
+                Nombreclase = "EDI" + this.LBTablas.SelectedValue;
+            }
+            if (this.CLBSeleccionCodigo.SelectedItem.ToString() == "Controladoras")
+            {
+                Nombreclase = "C" + this.LBTablas.SelectedValue;
+            }
+            if (this.CLBSeleccionCodigo.SelectedItem.ToString() == "WebMetodos")
+            {
+                Nombreclase = "WEBMETODO" + this.LBTablas.SelectedValue;
+            }
+            try
+            {
+                string nombre = this.TXTRutaArchivo.Text + @"\" + Nombreclase + ".cs";
+                this.RTBCodigoGenerado.SaveFile(nombre, RichTextBoxStreamType.PlainText);
+            }
+            catch
+            {
+                MessageBox.Show("No se encontro la ruta para guardar este archivo");
+            }
+        }
+
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Error2 = new System.Windows.Forms.Label();
             this.TPAcercaDeD4VYNCY = new System.Windows.Forms.TabControl();
@@ -1559,320 +1572,320 @@ namespace GeneradorCodigoControladoras
             this.ResumeLayout(false);
             this.PerformLayout();
 
-    }
+        }
 
-    private void NOTA()
-    {
-        Note[] Mary = new Note[] { new Note(Tone.B, Duration.QUARTER), new Note(Tone.A, Duration.QUARTER), new Note(Tone.GbelowC, Duration.QUARTER), new Note(Tone.A, Duration.QUARTER), new Note(Tone.B, Duration.QUARTER), new Note(Tone.B, Duration.QUARTER), new Note(Tone.B, Duration.HALF), new Note(Tone.A, Duration.QUARTER), new Note(Tone.A, Duration.QUARTER), new Note(Tone.A, Duration.HALF), new Note(Tone.B, Duration.QUARTER), new Note(Tone.D, Duration.QUARTER), new Note(Tone.D, Duration.HALF) };
-        Play(Mary);
-    }
-
-    private void pictureBox1_Click(object sender, EventArgs e)
-    {
-        this.TXTUsuario.Enabled = true;
-        this.TXTContrasena.Enabled = true;
-        this.BTNAutenticar.Enabled = true;
-    }
-
-    protected static void Play(Note[] tune)
-    {
-        foreach (Note n in tune)
+        private void NOTA()
         {
-            if (n.NoteTone == Tone.REST)
+            Note[] Mary = new Note[] { new Note(Tone.B, Duration.QUARTER), new Note(Tone.A, Duration.QUARTER), new Note(Tone.GbelowC, Duration.QUARTER), new Note(Tone.A, Duration.QUARTER), new Note(Tone.B, Duration.QUARTER), new Note(Tone.B, Duration.QUARTER), new Note(Tone.B, Duration.HALF), new Note(Tone.A, Duration.QUARTER), new Note(Tone.A, Duration.QUARTER), new Note(Tone.A, Duration.HALF), new Note(Tone.B, Duration.QUARTER), new Note(Tone.D, Duration.QUARTER), new Note(Tone.D, Duration.HALF) };
+            Play(Mary);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.TXTUsuario.Enabled = true;
+            this.TXTContrasena.Enabled = true;
+            this.BTNAutenticar.Enabled = true;
+        }
+
+        protected static void Play(Note[] tune)
+        {
+            foreach (Note n in tune)
             {
-                Thread.Sleep((int) n.NoteDuration);
-            }
-            else
-            {
-                Console.Beep((int) n.NoteTone, (int) n.NoteDuration);
-            }
-        }
-    }
-
-    public string TipoDeDatoDataRow(string dato, string NombreCampo, string NombreTabla)
-    {
-        if (dato == "text")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "varchar")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "numeric")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Int32")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToInt32(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Int16")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToInt16(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Decimal")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Char")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "String")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Text")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "DateTime")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToDateTime(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Boolean")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToBoolean(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Double")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToDouble(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Byte[]")
-        {
-            dato = "item." + NombreCampo + " = (byte[])dr[" + this.comi + NombreCampo + this.comi + "];";
-        }
-        if (dato == "Byte")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToByte(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Int64")
-        {
-            dato = "item." + NombreCampo + " = Convert.ToInt64(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        return dato;
-    }
-
-    public string TipoDeDatoDataRowParaLaData(string dato, string NombreCampo, string NombreTabla)
-    {
-        if (dato == "text")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "varchar")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "numeric")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Int32")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToInt32(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Int16")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToInt16(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Decimal")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Char")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "String")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Text")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "DateTime")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToDateTime(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Boolean")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToBoolean(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Double")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToDouble(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Byte[]")
-        {
-            dato = "this." + NombreCampo + " = (byte[])dr[" + this.comi + NombreCampo + this.comi + "];";
-        }
-        if (dato == "Byte")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToByte(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        if (dato == "Int64")
-        {
-            dato = "this." + NombreCampo + " = Convert.ToInt64(dr[" + this.comi + NombreCampo + this.comi + "]);";
-        }
-        return dato;
-    }
-
-    public string validarDato(string dato)
-    {
-        if (dato == "text")
-        {
-            dato = "string";
-        }
-        if (dato == "varchar")
-        {
-            dato = "string";
-        }
-        if (dato == "numeric")
-        {
-            dato = "decimal";
-        }
-        if (dato == "Int32")
-        {
-            dato = "int";
-        }
-        if (dato == "Decimal")
-        {
-            dato = "decimal";
-        }
-        if (dato == "Char")
-        {
-            dato = "string";
-        }
-        if (dato == "String")
-        {
-            dato = "string";
-        }
-        if (dato == "Int16")
-        {
-            dato = "int";
-        }
-        if (dato == "Double")
-        {
-            dato = "double";
-        }
-        return dato;
-    }
-
-    public string valorInicialDato(string dato)
-    {
-        if (dato == "text")
-        {
-            dato = "string.Empty";
-        }
-        if (dato == "varchar")
-        {
-            dato = "string.Empty";
-        }
-        if (dato == "numeric")
-        {
-            dato = "0";
-        }
-        if (dato == "Int32")
-        {
-            dato = "0";
-        }
-        if (dato == "Decimal")
-        {
-            dato = "0";
-        }
-        if (dato == "Char")
-        {
-            dato = "string.Empty";
-        }
-        if (dato == "string")
-        {
-            dato = "string.Empty";
-        }
-        if (dato == "String")
-        {
-            dato = "string.Empty";
-        }
-        if (dato == "Boolean")
-        {
-            dato = "true";
-        }
-        if (dato == "DateTime")
-        {
-            dato = "DateTime.Now";
-        }
-        if (dato == "Int16")
-        {
-            dato = "0";
-        }
-        if (dato == "Int64")
-        {
-            dato = "0";
-        }
-        if (dato == "Double")
-        {
-            dato = "0";
-        }
-        return dato;
-    }
-
-    // Nested Types
-    protected enum Duration
-    {
-        EIGHTH = 200,
-        HALF = 800,
-        QUARTER = 400,
-        SIXTEENTH = 100,
-        WHOLE = 0x640
-    }
-
-    
-    protected struct Note
-    {
-        private Form1.Tone toneVal;
-        private Form1.Duration durVal;
-        public Note(Form1.Tone frequency, Form1.Duration time)
-        {
-            this.toneVal = frequency;
-            this.durVal = time;
-        }
-
-        public Form1.Tone NoteTone
-        {
-            get
-            {
-                return this.toneVal;
+                if (n.NoteTone == Tone.REST)
+                {
+                    Thread.Sleep((int)n.NoteDuration);
+                }
+                else
+                {
+                    Console.Beep((int)n.NoteTone, (int)n.NoteDuration);
+                }
             }
         }
-        public Form1.Duration NoteDuration
+
+        public string TipoDeDatoDataRow(string dato, string NombreCampo, string NombreTabla)
         {
-            get
+            if (dato == "text")
             {
-                return this.durVal;
+                dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
             }
+            if (dato == "varchar")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "numeric")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Int32")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToInt32(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Int16")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToInt16(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Decimal")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Char")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "String")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Text")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "DateTime")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToDateTime(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Boolean")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToBoolean(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Double")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToDouble(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Byte[]")
+            {
+                dato = "item." + NombreCampo + " = (byte[])dr[" + this.comi + NombreCampo + this.comi + "];";
+            }
+            if (dato == "Byte")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToByte(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Int64")
+            {
+                dato = "item." + NombreCampo + " = Convert.ToInt64(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            return dato;
+        }
+
+        public string TipoDeDatoDataRowParaLaData(string dato, string NombreCampo, string NombreTabla)
+        {
+            if (dato == "text")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "varchar")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "numeric")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Int32")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToInt32(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Int16")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToInt16(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Decimal")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToDecimal(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Char")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "String")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Text")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToString(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "DateTime")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToDateTime(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Boolean")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToBoolean(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Double")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToDouble(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Byte[]")
+            {
+                dato = "this." + NombreCampo + " = (byte[])dr[" + this.comi + NombreCampo + this.comi + "];";
+            }
+            if (dato == "Byte")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToByte(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            if (dato == "Int64")
+            {
+                dato = "this." + NombreCampo + " = Convert.ToInt64(dr[" + this.comi + NombreCampo + this.comi + "]);";
+            }
+            return dato;
+        }
+
+        public string validarDato(string dato)
+        {
+            if (dato == "text")
+            {
+                dato = "string";
+            }
+            if (dato == "varchar")
+            {
+                dato = "string";
+            }
+            if (dato == "numeric")
+            {
+                dato = "decimal";
+            }
+            if (dato == "Int32")
+            {
+                dato = "int";
+            }
+            if (dato == "Decimal")
+            {
+                dato = "decimal";
+            }
+            if (dato == "Char")
+            {
+                dato = "string";
+            }
+            if (dato == "String")
+            {
+                dato = "string";
+            }
+            if (dato == "Int16")
+            {
+                dato = "int";
+            }
+            if (dato == "Double")
+            {
+                dato = "double";
+            }
+            return dato;
+        }
+
+        public string valorInicialDato(string dato)
+        {
+            if (dato == "text")
+            {
+                dato = "string.Empty";
+            }
+            if (dato == "varchar")
+            {
+                dato = "string.Empty";
+            }
+            if (dato == "numeric")
+            {
+                dato = "0";
+            }
+            if (dato == "Int32")
+            {
+                dato = "0";
+            }
+            if (dato == "Decimal")
+            {
+                dato = "0";
+            }
+            if (dato == "Char")
+            {
+                dato = "string.Empty";
+            }
+            if (dato == "string")
+            {
+                dato = "string.Empty";
+            }
+            if (dato == "String")
+            {
+                dato = "string.Empty";
+            }
+            if (dato == "Boolean")
+            {
+                dato = "true";
+            }
+            if (dato == "DateTime")
+            {
+                dato = "DateTime.Now";
+            }
+            if (dato == "Int16")
+            {
+                dato = "0";
+            }
+            if (dato == "Int64")
+            {
+                dato = "0";
+            }
+            if (dato == "Double")
+            {
+                dato = "0";
+            }
+            return dato;
+        }
+
+        // Nested Types
+        protected enum Duration
+        {
+            EIGHTH = 200,
+            HALF = 800,
+            QUARTER = 400,
+            SIXTEENTH = 100,
+            WHOLE = 0x640
+        }
+
+
+        protected struct Note
+        {
+            private Form1.Tone toneVal;
+            private Form1.Duration durVal;
+            public Note(Form1.Tone frequency, Form1.Duration time)
+            {
+                this.toneVal = frequency;
+                this.durVal = time;
+            }
+
+            public Form1.Tone NoteTone
+            {
+                get
+                {
+                    return this.toneVal;
+                }
+            }
+            public Form1.Duration NoteDuration
+            {
+                get
+                {
+                    return this.durVal;
+                }
+            }
+        }
+
+        protected enum Tone
+        {
+            A = 220,
+            Asharp = 0xe9,
+            B = 0xf7,
+            C = 0x106,
+            Csharp = 0x115,
+            D = 0x126,
+            Dsharp = 0x137,
+            E = 330,
+            F = 0x15d,
+            Fsharp = 370,
+            G = 0x188,
+            GbelowC = 0xc4,
+            Gsharp = 0x19f,
+            REST = 0
         }
     }
 
-    protected enum Tone
-    {
-        A = 220,
-        Asharp = 0xe9,
-        B = 0xf7,
-        C = 0x106,
-        Csharp = 0x115,
-        D = 0x126,
-        Dsharp = 0x137,
-        E = 330,
-        F = 0x15d,
-        Fsharp = 370,
-        G = 0x188,
-        GbelowC = 0xc4,
-        Gsharp = 0x19f,
-        REST = 0
-    }
-}
 
- 
 
 }

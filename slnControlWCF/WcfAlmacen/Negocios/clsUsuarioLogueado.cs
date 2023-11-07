@@ -10,9 +10,9 @@ using Wcfsisdav.Datos;
 namespace Wcfsisdav.Negocios 
 {
 
-public class cls_tblUsuarioLogueado : cls_tblUsuarioLogueadoDA
+public class clsUsuarioLogueado : clsUsuarioLogueadoDA
 {
-public cls_tblUsuarioLogueado()
+public clsUsuarioLogueado()
 {
 this.IdUsuarioLogueado = 0;
 this.IdUsuario = 0;
@@ -25,14 +25,14 @@ this.DireccionHost = string.Empty;
 this.DireccionDest = string.Empty;
 }
 
-public cls_tblUsuarioLogueado(int Id_tblUsuarioLogueado)
+public clsUsuarioLogueado(int IdUsuarioLogueado)
 {
 }
 
 
-public cls_tblUsuarioLogueado cls_tblUsuarioLogueadoPorId_tblUsuarioLogueado()
+public clsUsuarioLogueado clsUsuarioLogueadoPorIdUsuarioLogueado()
 {
-using (IDataReader dr = Obtiene_tblUsuarioLogueado(this))
+using (IDataReader dr = ObtieneUsuarioLogueado(this))
 {
 if (dr.Read())
 {
@@ -50,22 +50,22 @@ this.DireccionDest = Convert.ToString(dr["DireccionDest"]);
 return this;
 }
 
-public int Agrega_tblUsuarioLogueado()
+public int AgregaUsuarioLogueado()
 {
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Agrega_tblUsuarioLogueado(this);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.AgregaUsuarioLogueado(this);
 }
 
-public int Modifica_tblUsuarioLogueado()
+public int ModificaUsuarioLogueado()
 {
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Modifica_tblUsuarioLogueado(this);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.ModificaUsuarioLogueado(this);
 }
 
-public int Elimina_tblUsuarioLogueado()
+public int EliminaUsuarioLogueado()
 {
-cls_tblUsuarioLogueadoDA ad = new cls_tblUsuarioLogueadoDA();
-return ad.Elimina_tblUsuarioLogueado(this);
+clsUsuarioLogueadoDA ad = new clsUsuarioLogueadoDA();
+return ad.EliminaUsuarioLogueado(this);
 }
 
 }
