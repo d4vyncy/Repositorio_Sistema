@@ -1,0 +1,251 @@
+
+--metodos para adicionar 15122016
+
+declare @var_id as int 
+declare @var_name as varchar (50)
+declare @var_name_campo as varchar (50)
+declare @var_long as varchar (50)
+declare @var_AUX as varchar (50)
+declare @var_cadena as varchar (8000)
+declare @var_cadena_i as varchar (8000)
+declare @var_cadena_pe as varchar (8000)
+declare @var_cadena_pe2 as varchar (8000)
+declare @var_cadena_pe2_i as varchar (8000)
+declare @var_cadena_pe2_d as varchar (8000)
+declare @var_cadena_pe3 as varchar (8000)
+declare @var_cadena_pe3_i as varchar (8000)
+declare @var_name_xtype as varchar (50)
+declare @var_length as int
+declare @var_contador as int
+declare @cadena_respuesta varchar (8000)
+declare @cadena_respuesta1 varchar (8000)
+DECLARE tablas_Cursor CURSOR FOR
+SELECT name, id FROM sysobjects where xtype= 'U' and name <> 'dtproperties' AND NAME <> 'sysdiagrams' and name not like 'TEMPORAL%' and  name not like 'trnTemp%' AND NAME != 'resultados' order by name--solo por lo de la base venecia
+OPEN tablas_Cursor
+FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	
+     print 'IF EXISTS(SELECT name FROM sysobjects WHERE name = ' +''''  + 'pag'+ substring(@var_name,4,len(@var_name))  + ''''  + ' AND type = ' + ''''  + 'P' +''''  + ')' 
+     print 'DROP PROCEDURE pag' +  substring(@var_name,8,len(@var_name)) 
+     print 'GO'
+     print ''
+     print 'CREATE PROCEDURE pag'+ substring(@var_name,8,len(@var_name))  
+     
+   
+	set @var_cadena = ''
+	set @var_cadena_i = ''
+	set @var_cadena_pe = ''
+	set @var_cadena_pe2 = ''
+	set @var_cadena_pe2_i = ''
+	set @var_cadena_pe3_i = ''
+	set @var_cadena_pe3 = ''
+	set @var_contador = 1
+	DECLARE campos_Cursor CURSOR FOR
+	select a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and a.id = @var_id  and b.name<>'sysname' and a.name not in ('FechaRegistro','EstadoRegistro')  and  a.name not like 'trnTemp%' order by a.colid
+	OPEN campos_Cursor
+	FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+		set @var_long = ''
+		IF(@var_name_xtype = 'varchar')
+		begin
+			set @var_long = '('+cast(@var_length as varchar(50))+')'
+		end
+		IF(@var_name_xtype = 'nvarchar')
+		begin
+			set @var_long = '('+cast(@var_length/2 as varchar(50))+')'
+		end
+		IF(@var_name_xtype = 'char')
+		begin
+			set @var_long = '('+cast(@var_length as varchar(50))+')'
+		end
+		IF(@var_long = '(0)')
+		begin
+			set @var_long = '(max)'
+		end
+		IF(@var_long = '(-1)')
+		begin
+			set @var_long = '(max)'
+		end
+		
+		SET @VAR_AUX = ' = NULL'
+		set @var_cadena_pe = @var_cadena_pe +', '+ '@' + @var_name_campo +' as '+upper( @var_name_xtype+ @var_long) --+ @var_aux)   -- declara parametros
+		if  (@var_contador = 1) 
+		begin
+			set @var_cadena_pe = @var_cadena_pe --+ ' output'  -- PARAMETRO D SALIDA
+			if substring(@var_name, 1, 2) ='cl'
+			begin
+				set @cadena_respuesta = 'SELECT @' + @var_name_campo + ' = (ISNULL(MAX(' + @var_name_campo + ') + 1,1)) FROM ' + @var_name
+			end
+			else
+			begin
+				  set @cadena_respuesta = 'SELECT @' + @var_name_campo + ' = (ISNULL(MAX(' + @var_name_campo + ') + 1,1)) FROM ' + @var_name
+				--set @cadena_respuesta = 'SELECT @' + @var_name_campo + ' = (ISNULL(MAX(' + @var_name_campo + ') + 1,SUBSTRING(cast(@' + @var_name_campo + ' as CHAR),0,3)+'+ ''''+ '0000001' +'''' +')) FROM ' + @var_name + ' WHERE SUBSTRING(cast(' + @var_name_campo + ' as CHAR),0,3) = SUBSTRING(cast(@' + @var_name_campo + ' as CHAR),0,3)' + ' AND LEN(' + @var_name_campo + ')>7' 
+			end
+			--SELECT @pIdOrganigramaEntidad = (ISNULL(MAX(IdOrganigramaEntidad) + 1,SAC.dbo.fnDevuelveIdBase())) FROM trnOrganigramaEntidad WHERE SUBSTRING(cast(IdOrganigramaEntidad as CHAR),0,3) = SAC.dbo.fnDevuelveIdPrefijoInt()
+			
+			set @cadena_respuesta1 = 'SELECT @' + @var_name_campo + ' AS Id' + substring(@var_name_campo, 3, len(@var_name_campo)-1)
+			set @var_cadena_pe3 = ' WHERE ' + @var_name_campo + '=' + '@' + @var_name_campo --usa el primer campo para actualizar o borrar
+			set @var_Contador = @var_contador +1
+		end
+		
+			set @var_cadena_pe=@var_cadena_pe+' = null'
+			if (@var_name_campo NOT IN ( 'FechaRegistro','FilaEstado'))
+			BEGIN
+			set @var_cadena = @var_cadena + @var_name_campo + ', ' -- inserta
+--CON TIPOS DE CAMPO
+--			set @var_cadena_pe2_i =  @var_cadena_pe2_i + '@pe_' + substring(@var_name_xtype,1,1) + '_'+ @var_name_campo + ', '  --inserta
+			set @var_cadena_pe2_i =  @var_cadena_pe2_i + '@' + @var_name_campo + ', '  --inserta
+			END
+--CON TIPOS DE CAMPO
+--			set @var_cadena_pe2 = @var_cadena_pe2 + @var_name_campo + '=' + '@pe_' + substring(@var_name_xtype,1,1) + '_' + @var_name_campo + ', ' -- actualiza
+			set @var_cadena_pe2 = @var_cadena_pe2 + @var_name_campo + '=' + '@' + @var_name_campo + ', ' -- actualiza
+		
+
+		FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	END
+	CLOSE campos_Cursor
+	DEALLOCATE campos_Cursor
+   print '@Tipo as INT = null,'+ substring(@var_cadena_pe, 2, len(@var_cadena_pe))
+   print 'with encryption'
+   print  'AS'
+--   print 'IF @PE_TIPO_OP = ' +char(39) + 'I'+CHAR(39)
+--   print @var_cadena_pe3_i
+   print '	IF (@Tipo=1)'
+   print '	BEGIN'
+   print '	'+@cadena_respuesta   
+   print '	INSERT INTO ' + @var_name + '(' + substring(@var_cadena, 1, len(@var_cadena)-1) + ',FechaRegistro,EstadoRegistro) values ('+ substring(@var_cadena_pe2_i, 1, len(@var_cadena_pe2_i)-1)+',getdate(),1)'   
+   print '	'+@cadena_respuesta1
+   print '	END'
+   print ' '
+   print '	IF (@Tipo=2)'
+   print '	BEGIN'
+   print '	SELECT  ' + substring(@var_cadena,0,len(@var_cadena)) + ' from  '+ @var_name --+ ' where FilaEstado = @dato or FilaEstado = 1' --+ @var_cadena_pe3 + ''
+   print '  ' + @var_cadena_pe3 + ' AND EstadoRegistro = 1'     
+   print '	END'
+   print ' '
+   print '	IF (@Tipo=3)'
+   print '	BEGIN'
+   print '  UPDATE ' + @var_name + ' set EstadoRegistro = 0' + @var_cadena_pe3 + ' AND EstadoRegistro = 1'
+   print '  INSERT INTO ' + @var_name + '(' + substring(@var_cadena, 1, len(@var_cadena)-1) + ',FechaRegistro,EstadoRegistro) values ('+ substring(@var_cadena_pe2_i, 1, len(@var_cadena_pe2_i)-1)+',getdate(),1)'
+   print '	'+@cadena_respuesta1 
+   print '	END'
+   print '	IF (@Tipo=4)'
+   print '	BEGIN'
+   print '  UPDATE ' + @var_name + ' set EstadoRegistro = 0' + @var_cadena_pe3 + ' AND EstadoRegistro = 1'   
+   print '	END'
+   print 'GO'
+   FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+END
+CLOSE tablas_Cursor
+DEALLOCATE tablas_Cursor
+GO
+--cerramos porcedimiento generico
+
+
+
+-----metodos para seleccionar
+declare @var_id as int 
+declare @var_name as varchar (50)
+declare @var_name_campo as varchar (50)
+declare @var_long as varchar (50)
+declare @var_AUX as varchar (50)
+declare @var_cadena as varchar (8000)
+declare @var_cadena_i as varchar (8000)
+declare @var_cadena_pe as varchar (8000)
+declare @var_cadena_pe2 as varchar (8000)
+declare @var_cadena_pe2_i as varchar (8000)
+declare @var_cadena_pe2_d as varchar (8000)
+declare @var_cadena_pe3 as varchar (8000)
+declare @var_cadena_pe3_i as varchar (8000)
+declare @var_name_xtype as varchar (50)
+declare @var_length as int
+declare @var_contador as int
+
+DECLARE tablas_Cursor CURSOR FOR
+SELECT name, id FROM sysobjects where xtype= 'v' and name <> 'dtproperties' AND NAME <> 'sysdiagrams' and name not like 'TEMPORAL%' 
+AND NAME != 'resultados' 
+AND NAME like 'v%' 
+order by name--solo por lo de la base venecia
+OPEN tablas_Cursor
+FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+
+     print 'IF EXISTS(SELECT name FROM sysobjects WHERE name = ' +''''  + 'pa' + @var_name + ''''  + ' AND type = ' + ''''  + 'P' +''''  + ')'
+     print 'DROP PROCEDURE pa' +  @var_name 
+     print 'GO'
+     print ''
+     print 'CREATE PROCEDURE pa' + @var_name 
+
+	set @var_cadena = ''
+	set @var_cadena_i = ''
+	set @var_cadena_pe = ''
+	set @var_cadena_pe2 = ''
+	set @var_cadena_pe2_i = ''
+	set @var_cadena_pe3_i = ''
+	set @var_cadena_pe3 = ''
+	set @var_contador = 1
+	DECLARE campos_Cursor CURSOR FOR
+	--SELECT a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and id = @var_id  and (a.name not in ('FechaRegistro','FilaEstado'))
+	SELECT a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and a.id = @var_id  and b.name<>'sysname' order by a.colid
+	OPEN campos_Cursor
+	FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+		set @var_long = ''
+		 IF(@var_name_xtype = 'varchar')
+		begin
+			set @var_long = '('+cast(@var_length as varchar(50))+')'
+		end
+		IF(@var_name_xtype = 'nvarchar')
+		begin
+			set @var_long = '('+cast(@var_length as varchar(50))+')'
+		end
+		
+		SET @VAR_AUX = ' = NULL'
+		set @var_cadena_pe =  @var_cadena_pe + '@pe_' + @var_name_campo + ' as ' + @var_name_xtype+ @var_long + @var_aux+ ', '  -- declara parametros
+			set @var_cadena_pe3 = ' where ' + @var_name_campo + '=' + '@pe_' + @var_name_campo --usa el primer campo para actualizar o borrar
+			set @var_Contador = @var_contador +1		
+			
+			set @var_cadena = @var_cadena + '[' + @var_name_campo + '], ' -- inserta
+			set @var_cadena_pe2_i =  @var_cadena_pe2_i + '@pe_' + @var_name_campo + ', '  --inserta			
+			set @var_cadena_pe2 = @var_cadena_pe2 + @var_name_campo + '=' + '@pe_' + @var_name_campo + ', ' -- actualiza
+		FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	END
+	CLOSE campos_Cursor
+	DEALLOCATE campos_Cursor
+   print  '@pCampo0 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor0 as varchar(150) = null,@pCampo1 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor1 as varchar(150) = null,@pCampo2 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor2 as varchar(150) = null,@pCampo3 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor3 as varchar(150) = null,'
+   print  '@pCampo4 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor4 as varchar(150) = null,@pCampo5 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor5 as varchar(150) = null,@pCampo6 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor6 as varchar(150) = null,@pCampo7 as varchar(150) = ' + '''' + 'T' + '''' + ',@pValor7 as varchar(150) = null'
+   print  'with encryption'
+   print  'AS'   
+   print  'declare @Sql as nvarchar (4000)'
+   print  'SET @Sql = master.dbo.fnDevuelveCondicion(@pCampo0,@pValor0)'   
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo1,' + '''' + '.' + ''''  + ' + @pValor1)'
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo2,' + '''' + '.' + ''''  + ' + @pValor2)'
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo3,' + '''' + '.' + ''''  + ' + @pValor3)'
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo4,' + '''' + '.' + ''''  + ' + @pValor4)'
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo5,' + '''' + '.' + ''''  + ' + @pValor5)'
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo6,' + '''' + '.' + ''''  + ' + @pValor6)'
+   print  'if(@Sql<>' + '''' + '''' +')'
+   print  '		SET @Sql = @Sql + master.dbo.fnDevuelveCondicion(@pCampo7,' + '''' + '.' + ''''  + ' + @pValor7)'
+   --print 'set @Sql =' + '''' + 'SELECT  ' + substring(@var_cadena,0,len(@var_cadena)) + ' from  '+ @var_name  + '''' + ' + @Sql'--+ ' where FilaEstado = @dato or FilaEstado = 1' --+ @var_cadena_pe3 + ''
+   print 'set @Sql =' + '''' + 'SELECT  * from  '+ @var_name  + '''' + ' + @Sql'--+ ' where FilaEstado = @dato or FilaEstado = 1' --+ @var_cadena_pe3 + ''
+   print  'EXEC sp_executesql @Sql'   
+   print  'go'
+print  ''
+print  '--'
+print  ''
+   FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+END
+CLOSE tablas_Cursor
+DEALLOCATE tablas_Cursor
