@@ -1,0 +1,7 @@
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\bin\Debug\rwinSeguridad.exe.config
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\bin\Debug\rwinSeguridad.exe
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\bin\Debug\rwinSeguridad.pdb
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\obj\x86\Debug\rwinSeguridad.Properties.Resources.resources
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\obj\x86\Debug\rwinSeguridad.csproj.GenerateResource.Cache
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\obj\x86\Debug\rwinSeguridad.exe
+E:\Proyectos\Seguridad\slnSeguridad\rwinSeguridad\obj\x86\Debug\rwinSeguridad.pdb

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfPersonal.Negocios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfPersonal.Negocios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.100.30/WcfPersonal/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" />
+  <xs:complexType name="clsContrato">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q1:clsContratoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsContrato" nillable="true" type="tns:clsContrato" />
+  <xs:complexType name="clsCargo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q2:clsCargoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsCargo" nillable="true" type="tns:clsCargo" />
+  <xs:complexType name="clsTipoPuesto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q3:clsTipoPuestoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoPuesto" nillable="true" type="tns:clsTipoPuesto" />
+  <xs:complexType name="clsItemInstitucion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q4:clsItemInstitucionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsItemInstitucion" nillable="true" type="tns:clsItemInstitucion" />
+  <xs:complexType name="clsTipoCas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q5:clsTipoCasDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoCas" nillable="true" type="tns:clsTipoCas" />
+  <xs:complexType name="clsHistorial">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q6:clsHistorialDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsHistorial" nillable="true" type="tns:clsHistorial" />
+  <xs:complexType name="clsReloj">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q7:clsRelojDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsReloj" nillable="true" type="tns:clsReloj" />
+  <xs:complexType name="clsPersonaHistorial">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q8:clsPersonaHistorialDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersonaHistorial" nillable="true" type="tns:clsPersonaHistorial" />
+  <xs:complexType name="clsLlamada">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q9:clsLlamadaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsLlamada" nillable="true" type="tns:clsLlamada" />
+  <xs:complexType name="clsTipoPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q10:clsTipoPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoPersona" nillable="true" type="tns:clsTipoPersona" />
+  <xs:complexType name="clsEstadoFechaIngreso">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q11:clsEstadoFechaIngresoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoFechaIngreso" nillable="true" type="tns:clsEstadoFechaIngreso" />
+  <xs:complexType name="clsTipoFechaRegistroIngreso">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q12:clsTipoFechaRegistroIngresoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoFechaRegistroIngreso" nillable="true" type="tns:clsTipoFechaRegistroIngreso" />
+  <xs:complexType name="clsRegistroFechaIngreso">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q13:clsRegistroFechaIngresoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRegistroFechaIngreso" nillable="true" type="tns:clsRegistroFechaIngreso" />
+  <xs:complexType name="clsReporteLlamada">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q14:clsReporteLlamadaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsReporteLlamada" nillable="true" type="tns:clsReporteLlamada" />
+  <xs:complexType name="clsSolicitudBoletaDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q15:clsSolicitudBoletaDetalleDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSolicitudBoletaDetalle" nillable="true" type="tns:clsSolicitudBoletaDetalle" />
+  <xs:complexType name="clsEstadoSolicitudBoleta">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q16:clsEstadoSolicitudBoletaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoSolicitudBoleta" nillable="true" type="tns:clsEstadoSolicitudBoleta" />
+  <xs:complexType name="clsSolicitudBoleta">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q17:clsSolicitudBoletaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSolicitudBoleta" nillable="true" type="tns:clsSolicitudBoleta" />
+  <xs:complexType name="clsTipoFormulario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q18:clsTipoFormularioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoFormulario" nillable="true" type="tns:clsTipoFormulario" />
+  <xs:complexType name="clsEstadoSolicitudVehiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q19:clsEstadoSolicitudVehiculoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoSolicitudVehiculo" nillable="true" type="tns:clsEstadoSolicitudVehiculo" />
+  <xs:complexType name="clsEstadoCivil">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q20:clsEstadoCivilDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoCivil" nillable="true" type="tns:clsEstadoCivil" />
+  <xs:complexType name="clsPais">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q21:clsPaisDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPais" nillable="true" type="tns:clsPais" />
+  <xs:complexType name="clsDepartamento">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q22:clsDepartamentoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDepartamento" nillable="true" type="tns:clsDepartamento" />
+  <xs:complexType name="clsInstitucion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q23:clsInstitucionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsInstitucion" nillable="true" type="tns:clsInstitucion" />
+  <xs:complexType name="clsHistorialPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q24:clsHistorialPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsHistorialPersona" nillable="true" type="tns:clsHistorialPersona" />
+  <xs:complexType name="clsEntidad">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q25:clsEntidadDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEntidad" nillable="true" type="tns:clsEntidad" />
+  <xs:complexType name="clsMarcasBSS">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q26:clsMarcasBSSDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsMarcasBSS" nillable="true" type="tns:clsMarcasBSS" />
+  <xs:complexType name="clsEdificio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q27:clsEdificioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEdificio" nillable="true" type="tns:clsEdificio" />
+  <xs:complexType name="clsBitacoraReloj">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q28:clsBitacoraRelojDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsBitacoraReloj" nillable="true" type="tns:clsBitacoraReloj" />
+  <xs:complexType name="clsTipoConsulta">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q29:clsTipoConsultaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoConsulta" nillable="true" type="tns:clsTipoConsulta" />
+  <xs:complexType name="clsConsulta">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q30:clsConsultaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsConsulta" nillable="true" type="tns:clsConsulta" />
+  <xs:complexType name="clsDocumento">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q31:clsDocumentoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDocumento" nillable="true" type="tns:clsDocumento" />
+  <xs:complexType name="clsPuesto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q32:clsPuestoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPuesto" nillable="true" type="tns:clsPuesto" />
+  <xs:complexType name="clsEstadoContrato">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q33:clsEstadoContratoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoContrato" nillable="true" type="tns:clsEstadoContrato" />
+  <xs:complexType name="clsHorario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q34:clsHorarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsHorario" nillable="true" type="tns:clsHorario" />
+  <xs:complexType name="clsPersonaFoto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q35:clsPersonaFotoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersonaFoto" nillable="true" type="tns:clsPersonaFoto" />
+  <xs:complexType name="clsFeriado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q36:clsFeriadoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsFeriado" nillable="true" type="tns:clsFeriado" />
+  <xs:complexType name="clsPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q37:clsPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersona" nillable="true" type="tns:clsPersona" />
+  <xs:complexType name="clsTipoFeriado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q38:clsTipoFeriadoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoFeriado" nillable="true" type="tns:clsTipoFeriado" />
+  <xs:complexType name="clsServidorPublico">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q39:clsServidorPublicoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsServidorPublico" nillable="true" type="tns:clsServidorPublico" />
+  <xs:complexType name="clsProcesoContratacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q40:clsProcesoContratacionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsProcesoContratacion" nillable="true" type="tns:clsProcesoContratacion" />
+  <xs:complexType name="clsTipoServidorPublico">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q41:clsTipoServidorPublicoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoServidorPublico" nillable="true" type="tns:clsTipoServidorPublico" />
+  <xs:complexType name="clsPersonaDato">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q42:clsPersonaDatoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersonaDato" nillable="true" type="tns:clsPersonaDato" />
+  <xs:complexType name="clsEstadoServidorPublico">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q43:clsEstadoServidorPublicoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoServidorPublico" nillable="true" type="tns:clsEstadoServidorPublico" />
+  <xs:complexType name="clsPersonaDatoTipo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q44:clsPersonaDatoTipoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersonaDatoTipo" nillable="true" type="tns:clsPersonaDatoTipo" />
+  <xs:complexType name="clsPersonaDatoValor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q45:clsPersonaDatoValorDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersonaDatoValor" nillable="true" type="tns:clsPersonaDatoValor" />
+  <xs:complexType name="clsTipoEntidad">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q46:clsTipoEntidadDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoEntidad" nillable="true" type="tns:clsTipoEntidad" />
+  <xs:complexType name="clsEstadoGestion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q47:clsEstadoGestionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoGestion" nillable="true" type="tns:clsEstadoGestion" />
+  <xs:complexType name="clsRegistroDiasVacacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q48="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q48:clsRegistroDiasVacacionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRegistroDiasVacacion" nillable="true" type="tns:clsRegistroDiasVacacion" />
+  <xs:complexType name="clsTipoVehiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q49="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q49:clsTipoVehiculoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoVehiculo" nillable="true" type="tns:clsTipoVehiculo" />
+  <xs:complexType name="clsRegistroTempDiasVacaciones">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q50="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q50:clsRegistroTempDiasVacacionesDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRegistroTempDiasVacaciones" nillable="true" type="tns:clsRegistroTempDiasVacaciones" />
+  <xs:complexType name="clsTipoFecha">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q51="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q51:clsTipoFechaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoFecha" nillable="true" type="tns:clsTipoFecha" />
+  <xs:complexType name="clsSeccion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q52="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q52:clsSeccionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSeccion" nillable="true" type="tns:clsSeccion" />
+  <xs:complexType name="clsTipoRegistroDeAsistencia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q53:clsTipoRegistroDeAsistenciaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoRegistroDeAsistencia" nillable="true" type="tns:clsTipoRegistroDeAsistencia" />
+  <xs:complexType name="clsTipoSolicitud">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q54="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q54:clsTipoSolicitudDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoSolicitud" nillable="true" type="tns:clsTipoSolicitud" />
+  <xs:complexType name="clsHorarioGeneral">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q55="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q55:clsHorarioGeneralDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsHorarioGeneral" nillable="true" type="tns:clsHorarioGeneral" />
+  <xs:complexType name="clsSolicitudEvento">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q56:clsSolicitudEventoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSolicitudEvento" nillable="true" type="tns:clsSolicitudEvento" />
+  <xs:complexType name="clsDocumentoPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q57="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q57:clsDocumentoPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDocumentoPersona" nillable="true" type="tns:clsDocumentoPersona" />
+  <xs:complexType name="clsTelefonoPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q58="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q58:clsTelefonoPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTelefonoPersona" nillable="true" type="tns:clsTelefonoPersona" />
+  <xs:complexType name="clsRegistroCas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q59="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q59:clsRegistroCasDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRegistroCas" nillable="true" type="tns:clsRegistroCas" />
+  <xs:complexType name="clsRegistroDeAsistencia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q60="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q60:clsRegistroDeAsistenciaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRegistroDeAsistencia" nillable="true" type="tns:clsRegistroDeAsistencia" />
+  <xs:complexType name="clsSolicitudVehiculoDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q61="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q61:clsSolicitudVehiculoDetalleDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSolicitudVehiculoDetalle" nillable="true" type="tns:clsSolicitudVehiculoDetalle" />
+  <xs:complexType name="clsRegistroDiasVacacionDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q62="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q62:clsRegistroDiasVacacionDetalleDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRegistroDiasVacacionDetalle" nillable="true" type="tns:clsRegistroDiasVacacionDetalle" />
+  <xs:complexType name="clsSolicitudVehiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q63="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q63:clsSolicitudVehiculoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSolicitudVehiculo" nillable="true" type="tns:clsSolicitudVehiculo" />
+  <xs:complexType name="clsVehiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q64="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q64:clsVehiculoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsVehiculo" nillable="true" type="tns:clsVehiculo" />
+  <xs:complexType name="clsMarca">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q65="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q65:clsMarcaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsMarca" nillable="true" type="tns:clsMarca" />
+  <xs:complexType name="clsTipoTiempo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q66="http://schemas.datacontract.org/2004/07/WcfPersonal.Datos" base="q66:clsTipoTiempoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoTiempo" nillable="true" type="tns:clsTipoTiempo" />
+</xs:schema>

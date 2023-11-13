@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PersonalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PersonalConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.rwinVerifica.Properties.Settings.GlobalReference.Default.PersonalConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vBitacoraRelojTableAdapter" GeneratorDataComponentClassName="vBitacoraRelojTableAdapter" Name="vBitacoraReloj" UserDataComponentName="vBitacoraRelojTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PersonalConnectionString (Settings)" DbObjectName="Personal.dbo.vBitacoraReloj" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdBitacoraReloj, Fecha, Hora, NombreReloj, EstadoComAbrir, EstadoExpArchivo, EstadoComCerrar, EstadoExito, Observaciones, MarcasLeidas, MarcasDescargadas FROM dbo.vBitacoraReloj</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdBitacoraReloj" DataSetColumn="IdBitacoraReloj" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Hora" DataSetColumn="Hora" />
+              <Mapping SourceColumn="NombreReloj" DataSetColumn="NombreReloj" />
+              <Mapping SourceColumn="EstadoComAbrir" DataSetColumn="EstadoComAbrir" />
+              <Mapping SourceColumn="EstadoExpArchivo" DataSetColumn="EstadoExpArchivo" />
+              <Mapping SourceColumn="EstadoComCerrar" DataSetColumn="EstadoComCerrar" />
+              <Mapping SourceColumn="EstadoExito" DataSetColumn="EstadoExito" />
+              <Mapping SourceColumn="Observaciones" DataSetColumn="Observaciones" />
+              <Mapping SourceColumn="MarcasLeidas" DataSetColumn="MarcasLeidas" />
+              <Mapping SourceColumn="MarcasDescargadas" DataSetColumn="MarcasDescargadas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vBitacoraReloj" msprop:Generator_TableClassName="vBitacoraRelojDataTable" msprop:Generator_TableVarName="tablevBitacoraReloj" msprop:Generator_TablePropName="vBitacoraReloj" msprop:Generator_RowDeletingName="vBitacoraRelojRowDeleting" msprop:Generator_RowChangingName="vBitacoraRelojRowChanging" msprop:Generator_RowEvHandlerName="vBitacoraRelojRowChangeEventHandler" msprop:Generator_RowDeletedName="vBitacoraRelojRowDeleted" msprop:Generator_UserTableName="vBitacoraReloj" msprop:Generator_RowChangedName="vBitacoraRelojRowChanged" msprop:Generator_RowEvArgName="vBitacoraRelojRowChangeEvent" msprop:Generator_RowClassName="vBitacoraRelojRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdBitacoraReloj" msprop:Generator_ColumnVarNameInTable="columnIdBitacoraReloj" msprop:Generator_ColumnPropNameInRow="IdBitacoraReloj" msprop:Generator_ColumnPropNameInTable="IdBitacoraRelojColumn" msprop:Generator_UserColumnName="IdBitacoraReloj" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+              <xs:element name="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_UserColumnName="Hora" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NombreReloj" msprop:Generator_ColumnVarNameInTable="columnNombreReloj" msprop:Generator_ColumnPropNameInRow="NombreReloj" msprop:Generator_ColumnPropNameInTable="NombreRelojColumn" msprop:Generator_UserColumnName="NombreReloj">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EstadoComAbrir" msprop:Generator_ColumnVarNameInTable="columnEstadoComAbrir" msprop:Generator_ColumnPropNameInRow="EstadoComAbrir" msprop:Generator_ColumnPropNameInTable="EstadoComAbrirColumn" msprop:Generator_UserColumnName="EstadoComAbrir">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EstadoExpArchivo" msprop:Generator_ColumnVarNameInTable="columnEstadoExpArchivo" msprop:Generator_ColumnPropNameInRow="EstadoExpArchivo" msprop:Generator_ColumnPropNameInTable="EstadoExpArchivoColumn" msprop:Generator_UserColumnName="EstadoExpArchivo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EstadoComCerrar" msprop:Generator_ColumnVarNameInTable="columnEstadoComCerrar" msprop:Generator_ColumnPropNameInRow="EstadoComCerrar" msprop:Generator_ColumnPropNameInTable="EstadoComCerrarColumn" msprop:Generator_UserColumnName="EstadoComCerrar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EstadoExito" msprop:Generator_ColumnVarNameInTable="columnEstadoExito" msprop:Generator_ColumnPropNameInRow="EstadoExito" msprop:Generator_ColumnPropNameInTable="EstadoExitoColumn" msprop:Generator_UserColumnName="EstadoExito" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" msprop:Generator_UserColumnName="Observaciones" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MarcasLeidas" msprop:Generator_ColumnVarNameInTable="columnMarcasLeidas" msprop:Generator_ColumnPropNameInRow="MarcasLeidas" msprop:Generator_ColumnPropNameInTable="MarcasLeidasColumn" msprop:Generator_UserColumnName="MarcasLeidas" type="xs:int" minOccurs="0" />
+              <xs:element name="MarcasDescargadas" msprop:Generator_ColumnVarNameInTable="columnMarcasDescargadas" msprop:Generator_ColumnPropNameInRow="MarcasDescargadas" msprop:Generator_ColumnPropNameInTable="MarcasDescargadasColumn" msprop:Generator_UserColumnName="MarcasDescargadas" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

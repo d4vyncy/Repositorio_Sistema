@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="clsObservacionBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdObservacion" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreObservacionMesa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsObservacionBE" nillable="true" type="tns:clsObservacionBE" />
+  <xs:complexType name="clsObservacionMesaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdMesa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdObservacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdObservacionMesa" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsObservacionMesaBE" nillable="true" type="tns:clsObservacionMesaBE" />
+  <xs:complexType name="clsRecintoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AsientoEle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CircunDist" type="xs:double" />
+      <xs:element minOccurs="0" name="CodSecc" type="xs:double" />
+      <xs:element minOccurs="0" name="Dep" type="xs:double" />
+      <xs:element minOccurs="0" name="DepLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="DepSec" type="xs:double" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dist" type="xs:double" />
+      <xs:element minOccurs="0" name="DistZona" type="xs:double" />
+      <xs:element minOccurs="0" name="IdLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="IdLocReci" type="xs:double" />
+      <xs:element minOccurs="0" name="IdProcesoE" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecinto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRuta" type="xs:int" />
+      <xs:element minOccurs="0" name="Loc" type="xs:double" />
+      <xs:element minOccurs="0" name="MarcaLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxMesasRe" type="xs:double" />
+      <xs:element minOccurs="0" name="NomDep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomDist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomProv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomZona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreMuni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreReci" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDeMesas" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroDeNotarios" type="xs:int" />
+      <xs:element minOccurs="0" name="Prov" type="xs:double" />
+      <xs:element minOccurs="0" name="ProvLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="ProvSec" type="xs:double" />
+      <xs:element minOccurs="0" name="Reci" type="xs:double" />
+      <xs:element minOccurs="0" name="Sec" type="xs:double" />
+      <xs:element minOccurs="0" name="SecLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="TipoLocLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="Zona" type="xs:double" />
+      <xs:element minOccurs="0" name="ZonaReci" type="xs:double" />
+      <xs:element minOccurs="0" name="codprov" type="xs:double" />
+      <xs:element minOccurs="0" name="estado" type="xs:double" />
+      <xs:element minOccurs="0" name="latitud" type="xs:double" />
+      <xs:element minOccurs="0" name="longitud" type="xs:double" />
+      <xs:element minOccurs="0" name="tipoRecint" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsRecintoBE" nillable="true" type="tns:clsRecintoBE" />
+  <xs:complexType name="clsLibroUnidadBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CabeceraCite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdGestion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdLibroUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreLibroUnidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsLibroUnidadBE" nillable="true" type="tns:clsLibroUnidadBE" />
+  <xs:complexType name="clsasientoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AsientoEle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodBaseLeg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodSecc" type="xs:double" />
+      <xs:element minOccurs="0" name="Dep" type="xs:double" />
+      <xs:element minOccurs="0" name="DepLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="DepSec" type="xs:double" />
+      <xs:element minOccurs="0" name="IdLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="Idasiento" type="xs:int" />
+      <xs:element minOccurs="0" name="Loc" type="xs:double" />
+      <xs:element minOccurs="0" name="MarcaLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="NomDep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomProv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreMuni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoblacionC" type="xs:double" />
+      <xs:element minOccurs="0" name="PoblacionE" type="xs:double" />
+      <xs:element minOccurs="0" name="Prov" type="xs:double" />
+      <xs:element minOccurs="0" name="ProvLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="ProvSec" type="xs:double" />
+      <xs:element minOccurs="0" name="Sec" type="xs:double" />
+      <xs:element minOccurs="0" name="SecLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="TipoLocLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="codprov" type="xs:double" />
+      <xs:element minOccurs="0" name="latitud" type="xs:double" />
+      <xs:element minOccurs="0" name="longitud" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsasientoBE" nillable="true" type="tns:clsasientoBE" />
+  <xs:complexType name="clsLibroUnidadRegistroBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HostEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdLibroUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="IdLibroUnidadRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="IpEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreLibroUnidadRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroLibroRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsLibroUnidadRegistroBE" nillable="true" type="tns:clsLibroUnidadRegistroBE" />
+  <xs:complexType name="clsProcesoEBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdProcesoE" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreProcesoE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsProcesoEBE" nillable="true" type="tns:clsProcesoEBE" />
+  <xs:complexType name="clsNotarioMesaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Circun" type="xs:double" />
+      <xs:element minOccurs="0" name="CodigoMesa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdDepartamento" type="xs:double" />
+      <xs:element minOccurs="0" name="IdDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdLocalidad" type="xs:double" />
+      <xs:element minOccurs="0" name="IdMunicipio" type="xs:double" />
+      <xs:element minOccurs="0" name="IdNotarioMesa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdProvincia" type="xs:double" />
+      <xs:element minOccurs="0" name="IdRecinto" type="xs:double" />
+      <xs:element minOccurs="0" name="IdZona" type="xs:double" />
+      <xs:element minOccurs="0" name="ListaMesasAsignadas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreLocalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreMunicipio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreRecinto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreZona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumMesa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroMesa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroTelefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTelefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsNotarioMesaBE" nillable="true" type="tns:clsNotarioMesaBE" />
+  <xs:complexType name="clsRecintoNotarioBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdEstadoRecintoNotario" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdProcesoE" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPuesto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecinto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecintoNotario" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsRecintoNotarioBE" nillable="true" type="tns:clsRecintoNotarioBE" />
+  <xs:complexType name="clsRecintoEsquelaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HostEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdProcesoElectoral" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecinto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecintoEsquela" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="IpEquipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReunionCapacitacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReunionCapacitacionFecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReunionCapacitacionHora" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReunionGranJunta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReunionGranJuntaFecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReunionGranJuntaHora" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsRecintoEsquelaBE" nillable="true" type="tns:clsRecintoEsquelaBE" />
+  <xs:complexType name="clsEstadoRecintoNotarioBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEstadoRecintoNotario" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreEstadoRecintoNotario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsEstadoRecintoNotarioBE" nillable="true" type="tns:clsEstadoRecintoNotarioBE" />
+  <xs:complexType name="clsRutaPersonaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRuta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRutaPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsRutaPersonaBE" nillable="true" type="tns:clsRutaPersonaBE" />
+  <xs:complexType name="clsRecintoCorrespondeBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CiPersona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecinto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRecintoCorresponde" type="xs:int" />
+      <xs:element minOccurs="0" name="Materno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreRecintoInscripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreRecintoTrabajo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotarioAntiguo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NotarioAntiguoConsulta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NroCelular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecintoCorresponde" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RecintoCorrespondeConsulta" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsRecintoCorrespondeBE" nillable="true" type="tns:clsRecintoCorrespondeBE" />
+  <xs:complexType name="clsIntegranteBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaCancela" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdEstadoIntegrante" type="xs:int" />
+      <xs:element minOccurs="0" name="IdIntegrante" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoCancelacion" type="xs:int" />
+      <xs:element minOccurs="0" name="Materno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroHojaRuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sigla" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsIntegranteBE" nillable="true" type="tns:clsIntegranteBE" />
+  <xs:complexType name="clsRutaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbreviacionRuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdRuta" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreRuta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsRutaBE" nillable="true" type="tns:clsRutaBE" />
+  <xs:complexType name="clsCertificadoLibroBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCertificadoLibro" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreLibro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroLibro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsCertificadoLibroBE" nillable="true" type="tns:clsCertificadoLibroBE" />
+  <xs:complexType name="clsCertificadoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoMesa" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Esposo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCertificado" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCertificadoLibro" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEstadoCertificado" type="xs:int" />
+      <xs:element minOccurs="0" name="Materno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroPagina" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paterno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsCertificadoBE" nillable="true" type="tns:clsCertificadoBE" />
+  <xs:complexType name="clsEstadoCertificadoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEstadoCertificado" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreEstadoCertificado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsEstadoCertificadoBE" nillable="true" type="tns:clsEstadoCertificadoBE" />
+  <xs:complexType name="clsIntegranteArchivoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstadoAsignacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdIntegrante" type="xs:int" />
+      <xs:element minOccurs="0" name="IdIntegranteArchivo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistra" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreArchivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreNuevoArchivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsIntegranteArchivoBE" nillable="true" type="tns:clsIntegranteArchivoBE" />
+  <xs:complexType name="clsMesaGeografiaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Circun" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoMesa" type="xs:double" />
+      <xs:element minOccurs="0" name="Dep" type="xs:double" />
+      <xs:element minOccurs="0" name="Dist" type="xs:double" />
+      <xs:element minOccurs="0" name="IdEstadoMesaGeografia" type="xs:double" />
+      <xs:element minOccurs="0" name="IdLoc" type="xs:double" />
+      <xs:element minOccurs="0" name="IdMesaGeografia" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPais" type="xs:double" />
+      <xs:element minOccurs="0" name="IdProcesoElectoral" type="xs:double" />
+      <xs:element minOccurs="0" name="IdTipoMesa" type="xs:double" />
+      <xs:element minOccurs="0" name="InscritosHabilitados" type="xs:double" />
+      <xs:element minOccurs="0" name="NomDep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomDist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomLoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomMun" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomProv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomReci" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomZona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumMesa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroMesa" type="xs:double" />
+      <xs:element minOccurs="0" name="Observada" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ObservadaN" type="xs:int" />
+      <xs:element minOccurs="0" name="Prov" type="xs:double" />
+      <xs:element minOccurs="0" name="Reci" type="xs:double" />
+      <xs:element minOccurs="0" name="Sec" type="xs:double" />
+      <xs:element minOccurs="0" name="Zona" type="xs:double" />
+      <xs:element minOccurs="0" name="llave" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsMesaGeografiaBE" nillable="true" type="tns:clsMesaGeografiaBE" />
+</xs:schema>

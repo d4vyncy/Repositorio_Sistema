@@ -1,0 +1,2797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfSeguridad.Negocios" />
+      <xsd:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" />
+      <xsd:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfSeguridad.Entidades" />
+      <xsd:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd5" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_ObtieneUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuario5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuario5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneUsuarioLogueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneUsuarioLogueado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneUsuarioLogueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneUsuarioLogueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaUsuarioLogueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaUsuarioLogueado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaUsuarioLogueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaUsuarioLogueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaUsuarioLogueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaUsuarioLogueado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaUsuarioLogueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaUsuarioLogueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaUsuarioLogueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaUsuarioLogueado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaUsuarioLogueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaUsuarioLogueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavUsuarioLogueado5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavUsuarioLogueado5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcedureParametro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcedureParametro" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcedureParametro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcedureParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EjecutaConsulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaConsulta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EjecutaConsulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRolUsuario5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRolUsuario5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneRol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaRol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaRol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaRol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavRol5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavRol5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneTipoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneTipoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneTipoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneTipoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaTipoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaTipoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaTipoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaTipoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaTipoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaTipoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaTipoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaTipoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaTipoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaTipoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaTipoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaTipoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoRolUsuario5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoRolUsuario5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoUsuario5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoUsuario5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEstadoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEstadoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEstadoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEstadoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEstadoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEstadoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEstadoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEstadoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEstadoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEstadoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEstadoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEstadoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEstadoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEstadoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEstadoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEstadoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoUsuario5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoUsuario5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEstadoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEstadoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEstadoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEstadoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEstadoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEstadoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEstadoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEstadoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEstadoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEstadoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEstadoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEstadoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEstadoRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEstadoRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEstadoRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEstadoRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoRolUsuario5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoRolUsuario5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienePermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienePermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienePermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienePermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavPermiso5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavPermiso5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneTipoPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneTipoPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneTipoPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneTipoPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaTipoPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaTipoPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaTipoPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaTipoPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaTipoPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaTipoPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaTipoPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaTipoPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaTipoPermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaTipoPermiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaTipoPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaTipoPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavTipoPermiso5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavTipoPermiso5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEstadoLlave_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEstadoLlave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEstadoLlave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEstadoLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEstadoLlave_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEstadoLlave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEstadoLlave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEstadoLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEstadoLlave_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEstadoLlave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEstadoLlave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEstadoLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEstadoLlave_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEstadoLlave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEstadoLlave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEstadoLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEstadoLlave5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEstadoLlave5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneSistema_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneSistema" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneSistema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaSistema_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaSistema" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaSistema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaSistema_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaSistema" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaSistema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaSistema_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaSistema" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaSistema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavSistema5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavSistema5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneReporte" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaReporte" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaReporte" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaReporte" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavReporte5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavReporte5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipo5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipo5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEquipoDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEquipoDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneEquipoDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneEquipoDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEquipoDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEquipoDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaEquipoDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaEquipoDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEquipoDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEquipoDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaEquipoDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaEquipoDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEquipoDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEquipoDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaEquipoDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaEquipoDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavEquipoDetalle5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavEquipoDetalle5Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneMenu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtieneMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaMenu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregaMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregaMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaMenu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModificaMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaMenu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminaMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu4" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu5" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtienepavMenu5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtienepavMenu5Response" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="ObtieneUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneUsuario" message="tns:IService1_ObtieneUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneUsuarioResponse" message="tns:IService1_ObtieneUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaUsuario" message="tns:IService1_AgregaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaUsuarioResponse" message="tns:IService1_AgregaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaUsuario" message="tns:IService1_ModificaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaUsuarioResponse" message="tns:IService1_ModificaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaUsuario" message="tns:IService1_EliminaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaUsuarioResponse" message="tns:IService1_EliminaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario1" message="tns:IService1_ObtienepavUsuario1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario1Response" message="tns:IService1_ObtienepavUsuario1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario2" message="tns:IService1_ObtienepavUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario2Response" message="tns:IService1_ObtienepavUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario3" message="tns:IService1_ObtienepavUsuario3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario3Response" message="tns:IService1_ObtienepavUsuario3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario4" message="tns:IService1_ObtienepavUsuario4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario4Response" message="tns:IService1_ObtienepavUsuario4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario5" message="tns:IService1_ObtienepavUsuario5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuario5Response" message="tns:IService1_ObtienepavUsuario5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneUsuarioLogueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneUsuarioLogueado" message="tns:IService1_ObtieneUsuarioLogueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneUsuarioLogueadoResponse" message="tns:IService1_ObtieneUsuarioLogueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaUsuarioLogueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaUsuarioLogueado" message="tns:IService1_AgregaUsuarioLogueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaUsuarioLogueadoResponse" message="tns:IService1_AgregaUsuarioLogueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaUsuarioLogueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaUsuarioLogueado" message="tns:IService1_ModificaUsuarioLogueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaUsuarioLogueadoResponse" message="tns:IService1_ModificaUsuarioLogueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaUsuarioLogueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaUsuarioLogueado" message="tns:IService1_EliminaUsuarioLogueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaUsuarioLogueadoResponse" message="tns:IService1_EliminaUsuarioLogueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado1" message="tns:IService1_ObtienepavUsuarioLogueado1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado1Response" message="tns:IService1_ObtienepavUsuarioLogueado1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado2" message="tns:IService1_ObtienepavUsuarioLogueado2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado2Response" message="tns:IService1_ObtienepavUsuarioLogueado2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado3" message="tns:IService1_ObtienepavUsuarioLogueado3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado3Response" message="tns:IService1_ObtienepavUsuarioLogueado3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado4" message="tns:IService1_ObtienepavUsuarioLogueado4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado4Response" message="tns:IService1_ObtienepavUsuarioLogueado4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado5" message="tns:IService1_ObtienepavUsuarioLogueado5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavUsuarioLogueado5Response" message="tns:IService1_ObtienepavUsuarioLogueado5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcedureParametro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProcedureParametro" message="tns:IService1_ProcedureParametro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProcedureParametroResponse" message="tns:IService1_ProcedureParametro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaConsulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EjecutaConsulta" message="tns:IService1_EjecutaConsulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EjecutaConsultaResponse" message="tns:IService1_EjecutaConsulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneRolUsuario" message="tns:IService1_ObtieneRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneRolUsuarioResponse" message="tns:IService1_ObtieneRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaRolUsuario" message="tns:IService1_AgregaRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaRolUsuarioResponse" message="tns:IService1_AgregaRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaRolUsuario" message="tns:IService1_ModificaRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaRolUsuarioResponse" message="tns:IService1_ModificaRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaRolUsuario" message="tns:IService1_EliminaRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaRolUsuarioResponse" message="tns:IService1_EliminaRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario1" message="tns:IService1_ObtienepavRolUsuario1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario1Response" message="tns:IService1_ObtienepavRolUsuario1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario2" message="tns:IService1_ObtienepavRolUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario2Response" message="tns:IService1_ObtienepavRolUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario3" message="tns:IService1_ObtienepavRolUsuario3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario3Response" message="tns:IService1_ObtienepavRolUsuario3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario4" message="tns:IService1_ObtienepavRolUsuario4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario4Response" message="tns:IService1_ObtienepavRolUsuario4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario5" message="tns:IService1_ObtienepavRolUsuario5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRolUsuario5Response" message="tns:IService1_ObtienepavRolUsuario5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneRol" message="tns:IService1_ObtieneRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneRolResponse" message="tns:IService1_ObtieneRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaRol" message="tns:IService1_AgregaRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaRolResponse" message="tns:IService1_AgregaRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaRol" message="tns:IService1_ModificaRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaRolResponse" message="tns:IService1_ModificaRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaRol" message="tns:IService1_EliminaRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaRolResponse" message="tns:IService1_EliminaRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRol1" message="tns:IService1_ObtienepavRol1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRol1Response" message="tns:IService1_ObtienepavRol1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRol2" message="tns:IService1_ObtienepavRol2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRol2Response" message="tns:IService1_ObtienepavRol2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRol3" message="tns:IService1_ObtienepavRol3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRol3Response" message="tns:IService1_ObtienepavRol3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRol4" message="tns:IService1_ObtienepavRol4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRol4Response" message="tns:IService1_ObtienepavRol4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavRol5" message="tns:IService1_ObtienepavRol5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavRol5Response" message="tns:IService1_ObtienepavRol5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneTipoRolUsuario" message="tns:IService1_ObtieneTipoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneTipoRolUsuarioResponse" message="tns:IService1_ObtieneTipoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTipoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaTipoRolUsuario" message="tns:IService1_AgregaTipoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaTipoRolUsuarioResponse" message="tns:IService1_AgregaTipoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaTipoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaTipoRolUsuario" message="tns:IService1_ModificaTipoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaTipoRolUsuarioResponse" message="tns:IService1_ModificaTipoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaTipoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaTipoRolUsuario" message="tns:IService1_EliminaTipoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaTipoRolUsuarioResponse" message="tns:IService1_EliminaTipoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario1" message="tns:IService1_ObtienepavTipoRolUsuario1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario1Response" message="tns:IService1_ObtienepavTipoRolUsuario1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario2" message="tns:IService1_ObtienepavTipoRolUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario2Response" message="tns:IService1_ObtienepavTipoRolUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario3" message="tns:IService1_ObtienepavTipoRolUsuario3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario3Response" message="tns:IService1_ObtienepavTipoRolUsuario3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario4" message="tns:IService1_ObtienepavTipoRolUsuario4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario4Response" message="tns:IService1_ObtienepavTipoRolUsuario4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario5" message="tns:IService1_ObtienepavTipoRolUsuario5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoRolUsuario5Response" message="tns:IService1_ObtienepavTipoRolUsuario5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneTipoUsuario" message="tns:IService1_ObtieneTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneTipoUsuarioResponse" message="tns:IService1_ObtieneTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaTipoUsuario" message="tns:IService1_AgregaTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaTipoUsuarioResponse" message="tns:IService1_AgregaTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaTipoUsuario" message="tns:IService1_ModificaTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaTipoUsuarioResponse" message="tns:IService1_ModificaTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaTipoUsuario" message="tns:IService1_EliminaTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaTipoUsuarioResponse" message="tns:IService1_EliminaTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario1" message="tns:IService1_ObtienepavTipoUsuario1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario1Response" message="tns:IService1_ObtienepavTipoUsuario1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario2" message="tns:IService1_ObtienepavTipoUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario2Response" message="tns:IService1_ObtienepavTipoUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario3" message="tns:IService1_ObtienepavTipoUsuario3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario3Response" message="tns:IService1_ObtienepavTipoUsuario3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario4" message="tns:IService1_ObtienepavTipoUsuario4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario4Response" message="tns:IService1_ObtienepavTipoUsuario4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario5" message="tns:IService1_ObtienepavTipoUsuario5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoUsuario5Response" message="tns:IService1_ObtienepavTipoUsuario5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEstadoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneEstadoUsuario" message="tns:IService1_ObtieneEstadoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneEstadoUsuarioResponse" message="tns:IService1_ObtieneEstadoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEstadoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaEstadoUsuario" message="tns:IService1_AgregaEstadoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaEstadoUsuarioResponse" message="tns:IService1_AgregaEstadoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEstadoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaEstadoUsuario" message="tns:IService1_ModificaEstadoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaEstadoUsuarioResponse" message="tns:IService1_ModificaEstadoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEstadoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaEstadoUsuario" message="tns:IService1_EliminaEstadoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaEstadoUsuarioResponse" message="tns:IService1_EliminaEstadoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario1" message="tns:IService1_ObtienepavEstadoUsuario1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario1Response" message="tns:IService1_ObtienepavEstadoUsuario1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario2" message="tns:IService1_ObtienepavEstadoUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario2Response" message="tns:IService1_ObtienepavEstadoUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario3" message="tns:IService1_ObtienepavEstadoUsuario3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario3Response" message="tns:IService1_ObtienepavEstadoUsuario3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario4" message="tns:IService1_ObtienepavEstadoUsuario4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario4Response" message="tns:IService1_ObtienepavEstadoUsuario4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario5" message="tns:IService1_ObtienepavEstadoUsuario5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoUsuario5Response" message="tns:IService1_ObtienepavEstadoUsuario5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEstadoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneEstadoRolUsuario" message="tns:IService1_ObtieneEstadoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneEstadoRolUsuarioResponse" message="tns:IService1_ObtieneEstadoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEstadoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaEstadoRolUsuario" message="tns:IService1_AgregaEstadoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaEstadoRolUsuarioResponse" message="tns:IService1_AgregaEstadoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEstadoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaEstadoRolUsuario" message="tns:IService1_ModificaEstadoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaEstadoRolUsuarioResponse" message="tns:IService1_ModificaEstadoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEstadoRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaEstadoRolUsuario" message="tns:IService1_EliminaEstadoRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaEstadoRolUsuarioResponse" message="tns:IService1_EliminaEstadoRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario1" message="tns:IService1_ObtienepavEstadoRolUsuario1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario1Response" message="tns:IService1_ObtienepavEstadoRolUsuario1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario2" message="tns:IService1_ObtienepavEstadoRolUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario2Response" message="tns:IService1_ObtienepavEstadoRolUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario3" message="tns:IService1_ObtienepavEstadoRolUsuario3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario3Response" message="tns:IService1_ObtienepavEstadoRolUsuario3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario4" message="tns:IService1_ObtienepavEstadoRolUsuario4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario4Response" message="tns:IService1_ObtienepavEstadoRolUsuario4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario5" message="tns:IService1_ObtienepavEstadoRolUsuario5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario5Response" message="tns:IService1_ObtienepavEstadoRolUsuario5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienePermiso" message="tns:IService1_ObtienePermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienePermisoResponse" message="tns:IService1_ObtienePermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaPermiso" message="tns:IService1_AgregaPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaPermisoResponse" message="tns:IService1_AgregaPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaPermiso" message="tns:IService1_ModificaPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaPermisoResponse" message="tns:IService1_ModificaPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaPermiso" message="tns:IService1_EliminaPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaPermisoResponse" message="tns:IService1_EliminaPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso1" message="tns:IService1_ObtienepavPermiso1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso1Response" message="tns:IService1_ObtienepavPermiso1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso2" message="tns:IService1_ObtienepavPermiso2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso2Response" message="tns:IService1_ObtienepavPermiso2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso3" message="tns:IService1_ObtienepavPermiso3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso3Response" message="tns:IService1_ObtienepavPermiso3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso4" message="tns:IService1_ObtienepavPermiso4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso4Response" message="tns:IService1_ObtienepavPermiso4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso5" message="tns:IService1_ObtienepavPermiso5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavPermiso5Response" message="tns:IService1_ObtienepavPermiso5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneTipoPermiso" message="tns:IService1_ObtieneTipoPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneTipoPermisoResponse" message="tns:IService1_ObtieneTipoPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTipoPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaTipoPermiso" message="tns:IService1_AgregaTipoPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaTipoPermisoResponse" message="tns:IService1_AgregaTipoPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaTipoPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaTipoPermiso" message="tns:IService1_ModificaTipoPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaTipoPermisoResponse" message="tns:IService1_ModificaTipoPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaTipoPermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaTipoPermiso" message="tns:IService1_EliminaTipoPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaTipoPermisoResponse" message="tns:IService1_EliminaTipoPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso1" message="tns:IService1_ObtienepavTipoPermiso1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso1Response" message="tns:IService1_ObtienepavTipoPermiso1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso2" message="tns:IService1_ObtienepavTipoPermiso2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso2Response" message="tns:IService1_ObtienepavTipoPermiso2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso3" message="tns:IService1_ObtienepavTipoPermiso3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso3Response" message="tns:IService1_ObtienepavTipoPermiso3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso4" message="tns:IService1_ObtienepavTipoPermiso4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso4Response" message="tns:IService1_ObtienepavTipoPermiso4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso5" message="tns:IService1_ObtienepavTipoPermiso5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavTipoPermiso5Response" message="tns:IService1_ObtienepavTipoPermiso5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEstadoLlave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneEstadoLlave" message="tns:IService1_ObtieneEstadoLlave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneEstadoLlaveResponse" message="tns:IService1_ObtieneEstadoLlave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEstadoLlave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaEstadoLlave" message="tns:IService1_AgregaEstadoLlave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaEstadoLlaveResponse" message="tns:IService1_AgregaEstadoLlave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEstadoLlave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaEstadoLlave" message="tns:IService1_ModificaEstadoLlave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaEstadoLlaveResponse" message="tns:IService1_ModificaEstadoLlave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEstadoLlave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaEstadoLlave" message="tns:IService1_EliminaEstadoLlave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaEstadoLlaveResponse" message="tns:IService1_EliminaEstadoLlave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave1" message="tns:IService1_ObtienepavEstadoLlave1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave1Response" message="tns:IService1_ObtienepavEstadoLlave1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave2" message="tns:IService1_ObtienepavEstadoLlave2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave2Response" message="tns:IService1_ObtienepavEstadoLlave2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave3" message="tns:IService1_ObtienepavEstadoLlave3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave3Response" message="tns:IService1_ObtienepavEstadoLlave3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave4" message="tns:IService1_ObtienepavEstadoLlave4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave4Response" message="tns:IService1_ObtienepavEstadoLlave4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave5" message="tns:IService1_ObtienepavEstadoLlave5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEstadoLlave5Response" message="tns:IService1_ObtienepavEstadoLlave5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneSistema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneSistema" message="tns:IService1_ObtieneSistema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneSistemaResponse" message="tns:IService1_ObtieneSistema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaSistema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaSistema" message="tns:IService1_AgregaSistema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaSistemaResponse" message="tns:IService1_AgregaSistema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaSistema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaSistema" message="tns:IService1_ModificaSistema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaSistemaResponse" message="tns:IService1_ModificaSistema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaSistema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaSistema" message="tns:IService1_EliminaSistema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaSistemaResponse" message="tns:IService1_EliminaSistema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema1" message="tns:IService1_ObtienepavSistema1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema1Response" message="tns:IService1_ObtienepavSistema1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema2" message="tns:IService1_ObtienepavSistema2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema2Response" message="tns:IService1_ObtienepavSistema2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema3" message="tns:IService1_ObtienepavSistema3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema3Response" message="tns:IService1_ObtienepavSistema3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema4" message="tns:IService1_ObtienepavSistema4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema4Response" message="tns:IService1_ObtienepavSistema4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema5" message="tns:IService1_ObtienepavSistema5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavSistema5Response" message="tns:IService1_ObtienepavSistema5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneReporte" message="tns:IService1_ObtieneReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneReporteResponse" message="tns:IService1_ObtieneReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaReporte" message="tns:IService1_AgregaReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaReporteResponse" message="tns:IService1_AgregaReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaReporte" message="tns:IService1_ModificaReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaReporteResponse" message="tns:IService1_ModificaReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaReporte" message="tns:IService1_EliminaReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaReporteResponse" message="tns:IService1_EliminaReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte1" message="tns:IService1_ObtienepavReporte1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte1Response" message="tns:IService1_ObtienepavReporte1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte2" message="tns:IService1_ObtienepavReporte2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte2Response" message="tns:IService1_ObtienepavReporte2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte3" message="tns:IService1_ObtienepavReporte3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte3Response" message="tns:IService1_ObtienepavReporte3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte4" message="tns:IService1_ObtienepavReporte4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte4Response" message="tns:IService1_ObtienepavReporte4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte5" message="tns:IService1_ObtienepavReporte5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavReporte5Response" message="tns:IService1_ObtienepavReporte5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneEquipo" message="tns:IService1_ObtieneEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneEquipoResponse" message="tns:IService1_ObtieneEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaEquipo" message="tns:IService1_AgregaEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaEquipoResponse" message="tns:IService1_AgregaEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaEquipo" message="tns:IService1_ModificaEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaEquipoResponse" message="tns:IService1_ModificaEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaEquipo" message="tns:IService1_EliminaEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaEquipoResponse" message="tns:IService1_EliminaEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo1" message="tns:IService1_ObtienepavEquipo1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo1Response" message="tns:IService1_ObtienepavEquipo1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo2" message="tns:IService1_ObtienepavEquipo2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo2Response" message="tns:IService1_ObtienepavEquipo2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo3" message="tns:IService1_ObtienepavEquipo3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo3Response" message="tns:IService1_ObtienepavEquipo3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo4" message="tns:IService1_ObtienepavEquipo4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo4Response" message="tns:IService1_ObtienepavEquipo4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo5" message="tns:IService1_ObtienepavEquipo5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipo5Response" message="tns:IService1_ObtienepavEquipo5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEquipoDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneEquipoDetalle" message="tns:IService1_ObtieneEquipoDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneEquipoDetalleResponse" message="tns:IService1_ObtieneEquipoDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEquipoDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaEquipoDetalle" message="tns:IService1_AgregaEquipoDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaEquipoDetalleResponse" message="tns:IService1_AgregaEquipoDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEquipoDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaEquipoDetalle" message="tns:IService1_ModificaEquipoDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaEquipoDetalleResponse" message="tns:IService1_ModificaEquipoDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEquipoDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaEquipoDetalle" message="tns:IService1_EliminaEquipoDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaEquipoDetalleResponse" message="tns:IService1_EliminaEquipoDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle1" message="tns:IService1_ObtienepavEquipoDetalle1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle1Response" message="tns:IService1_ObtienepavEquipoDetalle1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle2" message="tns:IService1_ObtienepavEquipoDetalle2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle2Response" message="tns:IService1_ObtienepavEquipoDetalle2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle3" message="tns:IService1_ObtienepavEquipoDetalle3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle3Response" message="tns:IService1_ObtienepavEquipoDetalle3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle4" message="tns:IService1_ObtienepavEquipoDetalle4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle4Response" message="tns:IService1_ObtienepavEquipoDetalle4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle5" message="tns:IService1_ObtienepavEquipoDetalle5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavEquipoDetalle5Response" message="tns:IService1_ObtienepavEquipoDetalle5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtieneMenu" message="tns:IService1_ObtieneMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtieneMenuResponse" message="tns:IService1_ObtieneMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregaMenu" message="tns:IService1_AgregaMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregaMenuResponse" message="tns:IService1_AgregaMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModificaMenu" message="tns:IService1_ModificaMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModificaMenuResponse" message="tns:IService1_ModificaMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminaMenu" message="tns:IService1_EliminaMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminaMenuResponse" message="tns:IService1_EliminaMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu1" message="tns:IService1_ObtienepavMenu1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu1Response" message="tns:IService1_ObtienepavMenu1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu2" message="tns:IService1_ObtienepavMenu2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu2Response" message="tns:IService1_ObtienepavMenu2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu3" message="tns:IService1_ObtienepavMenu3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu3Response" message="tns:IService1_ObtienepavMenu3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu4" message="tns:IService1_ObtienepavMenu4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu4Response" message="tns:IService1_ObtienepavMenu4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu5" message="tns:IService1_ObtienepavMenu5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtienepavMenu5Response" message="tns:IService1_ObtienepavMenu5_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtieneUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuario1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuario3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuario4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuario5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuario5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneUsuarioLogueado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneUsuarioLogueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaUsuarioLogueado">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaUsuarioLogueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaUsuarioLogueado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaUsuarioLogueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaUsuarioLogueado">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaUsuarioLogueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuarioLogueado1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuarioLogueado2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuarioLogueado3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuarioLogueado4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavUsuarioLogueado5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavUsuarioLogueado5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcedureParametro">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProcedureParametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaConsulta">
+      <soap:operation soapAction="http://tempuri.org/IService1/EjecutaConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRolUsuario1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRolUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRolUsuario3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRolUsuario4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRolUsuario5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRolUsuario5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRol">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaRol">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaRol">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRol">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRol1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRol2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRol3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRol4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavRol5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavRol5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneTipoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTipoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaTipoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaTipoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaTipoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaTipoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaTipoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoRolUsuario1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoRolUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoRolUsuario3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoRolUsuario4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoRolUsuario5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoRolUsuario5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoUsuario1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoUsuario3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoUsuario4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoUsuario5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoUsuario5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEstadoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneEstadoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEstadoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaEstadoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEstadoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaEstadoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEstadoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaEstadoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoUsuario1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoUsuario3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoUsuario4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoUsuario5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoUsuario5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEstadoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneEstadoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEstadoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaEstadoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEstadoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaEstadoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEstadoRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaEstadoRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoRolUsuario5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoRolUsuario5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienePermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavPermiso1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavPermiso2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavPermiso3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavPermiso4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavPermiso5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavPermiso5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneTipoPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTipoPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaTipoPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaTipoPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaTipoPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaTipoPermiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaTipoPermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoPermiso1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoPermiso2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoPermiso3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoPermiso4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavTipoPermiso5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavTipoPermiso5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEstadoLlave">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneEstadoLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEstadoLlave">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaEstadoLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEstadoLlave">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaEstadoLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEstadoLlave">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaEstadoLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoLlave1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoLlave2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoLlave3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoLlave4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEstadoLlave5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEstadoLlave5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneSistema">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaSistema">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaSistema">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaSistema">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavSistema1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavSistema2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavSistema3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavSistema4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavSistema5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavSistema5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneReporte">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaReporte">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaReporte">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaReporte">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavReporte1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavReporte2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavReporte3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavReporte4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavReporte5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavReporte5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEquipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEquipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEquipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEquipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipo1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipo3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipo4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipo5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipo5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneEquipoDetalle">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneEquipoDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaEquipoDetalle">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaEquipoDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaEquipoDetalle">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaEquipoDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaEquipoDetalle">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaEquipoDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipoDetalle1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipoDetalle2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipoDetalle3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipoDetalle4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavEquipoDetalle5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavEquipoDetalle5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneMenu">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtieneMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaMenu">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregaMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaMenu">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModificaMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaMenu">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminaMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu1">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavMenu1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu2">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavMenu2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu3">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavMenu3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu4">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavMenu4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienepavMenu5">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtienepavMenu5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost/WcfSeguridad/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

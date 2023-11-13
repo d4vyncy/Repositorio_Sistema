@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfSeguridad.Negocios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfSeguridad.Negocios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/WcfSeguridad/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" />
+  <xs:complexType name="clsUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q1:clsUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsUsuario" nillable="true" type="tns:clsUsuario" />
+  <xs:complexType name="clsUsuarioLogueado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q2:clsUsuarioLogueadoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsUsuarioLogueado" nillable="true" type="tns:clsUsuarioLogueado" />
+  <xs:complexType name="clsRolUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q3:clsRolUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRolUsuario" nillable="true" type="tns:clsRolUsuario" />
+  <xs:complexType name="clsRol">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q4:clsRolDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRol" nillable="true" type="tns:clsRol" />
+  <xs:complexType name="clsTipoRolUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q5:clsTipoRolUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoRolUsuario" nillable="true" type="tns:clsTipoRolUsuario" />
+  <xs:complexType name="clsTipoUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q6:clsTipoUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoUsuario" nillable="true" type="tns:clsTipoUsuario" />
+  <xs:complexType name="clsEstadoUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q7:clsEstadoUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoUsuario" nillable="true" type="tns:clsEstadoUsuario" />
+  <xs:complexType name="clsEstadoRolUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q8:clsEstadoRolUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoRolUsuario" nillable="true" type="tns:clsEstadoRolUsuario" />
+  <xs:complexType name="clsPermiso">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q9:clsPermisoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPermiso" nillable="true" type="tns:clsPermiso" />
+  <xs:complexType name="clsTipoPermiso">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q10:clsTipoPermisoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTipoPermiso" nillable="true" type="tns:clsTipoPermiso" />
+  <xs:complexType name="clsEstadoLlave">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q11:clsEstadoLlaveDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoLlave" nillable="true" type="tns:clsEstadoLlave" />
+  <xs:complexType name="clsSistema">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q12:clsSistemaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsSistema" nillable="true" type="tns:clsSistema" />
+  <xs:complexType name="clsReporte">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q13:clsReporteDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsReporte" nillable="true" type="tns:clsReporte" />
+  <xs:complexType name="clsEquipo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q14:clsEquipoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEquipo" nillable="true" type="tns:clsEquipo" />
+  <xs:complexType name="clsEquipoDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q15:clsEquipoDetalleDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEquipoDetalle" nillable="true" type="tns:clsEquipoDetalle" />
+  <xs:complexType name="clsMenu">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/WcfSeguridad.Datos" base="q16:clsMenuDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsMenu" nillable="true" type="tns:clsMenu" />
+</xs:schema>

@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPConectado.master.cs"
+    Inherits="rwebSeguridad.MPConectado" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .Head
+        {
+            background-color: #fdb714;
+            z-index: 1;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            background-image: url('/Imagenes/head2.png');
+            background-repeat: no-repeat;
+            height: 50px;
+            text-align: center;
+            table-layout: fixed;
+            color: White;
+            font-size: 18px;
+            text-decoration: blink;
+            font-family: Britannic Bold;
+        }
+        .footer
+        {
+            background-image: url('../Imagenes/footer.png');
+            background-repeat: repeat-x;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 35px;
+            width: 100%;
+            text-align: center;
+            color: White;
+            font-size: 12px;
+            text-decoration: blink;
+            font-family: Calibri;
+        }
+        .body
+        {
+            background-image: url("../Imagenes/fondoM2.png");
+            top: auto;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
+    <telerik:RadSkinManager ID="RadSkinManager1" runat="server" Skin="Default">
+    </telerik:RadSkinManager>
+    <div class="body">        
+        <br />
+        <br />
+        <table class="style1">
+            <tr>
+                <td colspan="2" class="Head">
+                    <strong>
+                        <br />
+                        SERECI SANTA CRUZ</strong>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label id="rlblUsuarioNombre" runat="server" style="font-size: large; font-weight: bold;
+                        color: #000000;">
+                    </label>
+                </td>
+                <td rowspan="4" valign="top" width="100%">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                        </p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <asp:LinkButton ID="lblCerrarSession" runat="server" 
+                        onclick="lblCerrarSession_Click">Cerrar Sesión</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/logoo.png" />
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" height="100%">
+                    <telerik:RadMenu ID="rmPrincipal" runat="server" Flow="Vertical" Skin="Glow" Width="180px">
+                        <Items>
+                        </Items>
+                        <DefaultGroupSettings RepeatDirection="Horizontal" />
+                    </telerik:RadMenu>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <br />
+                    © 2016, Santa Cruz de la Sierra
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

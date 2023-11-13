@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e44b84dd-3cd8-4863-815c-dba98f34114b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.71.15.97/Generico/Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="595fd17b-30dc-4183-8ad6-2d6ac5271dd4" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service151.xsd" MetadataType="Schema" ID="812b65ae-6c4c-4b04-a484-0f7fb6d21b9a" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service152.xsd" MetadataType="Schema" ID="eef7656a-534a-4b67-8f48-a7c82c1e71d0" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service153.xsd" MetadataType="Schema" ID="706a2c02-82a9-4562-8a91-8e378b6eb621" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service154.xsd" MetadataType="Schema" ID="3c08847c-ede5-4cfc-8015-38d8b0a91b5a" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="00df4945-9267-4816-ab74-c15e53cd063c" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="fbe503e6-4279-4646-81f9-a09d5e6f0e29" SourceId="1" SourceUrl="http://10.71.15.97/Generico/Service1.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

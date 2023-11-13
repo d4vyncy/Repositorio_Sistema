@@ -1,0 +1,86 @@
+﻿
+
+.body
+{
+    background-image: url("/Imagenes/fondoM2.png");
+    top: auto;
+    background-position: center;
+}
+.head
+{
+    background-color: #fdb714;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-image: url('/Imagenes/head2.png');
+    background-repeat: no-repeat;
+    height: 50px;
+    text-align: center;
+    table-layout: fixed;
+    color: White;
+    font-size: 18px;
+    text-decoration: blink;
+    font-family: 'Times New Roman' , Times, serif;
+}
+.footer
+{
+    background-image: url('/Imagenes/footer.png');
+    background-repeat: repeat-x;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    color: White;
+    font-size: 12px;
+    text-decoration: blink;
+    font-family: 'Times New Roman' , Times, serif;
+}
+.MenuLateral
+{
+   
+    left: 0px;
+    width: 180px;
+    height: 80%;
+    top: 260px;
+    z-index: 1;
+    position: fixed;
+}
+.usuario
+{
+    left: 0px;
+    width: 180px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 260px;
+}
+.logoOEP
+{
+    z-index: 1;
+    position: fixed;
+    max-width: 980px;
+    margin: auto;
+    background-image: url('/Imagenes/logoo.png');
+    background-repeat: no-repeat;
+    background-position: -10px center;
+    background-attachment: inherit;
+    left: 0px;
+    top: -130px;
+    width: 960px;
+    height: 560px;
+}
+
+.contenido
+{
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    width: 80%;
+    height: 100%;
+}
+
+

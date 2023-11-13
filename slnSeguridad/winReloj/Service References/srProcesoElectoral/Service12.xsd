@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Negocios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Negocios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.71.103.50/WcfProcesoElectoral/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" />
+  <xs:complexType name="clsObservacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q1:clsObservacionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsObservacion" nillable="true" type="tns:clsObservacion" />
+  <xs:complexType name="clsObservacionMesa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q2:clsObservacionMesaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsObservacionMesa" nillable="true" type="tns:clsObservacionMesa" />
+  <xs:complexType name="clsRecinto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q3:clsRecintoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRecinto" nillable="true" type="tns:clsRecinto" />
+  <xs:complexType name="clsLibroUnidad">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q4:clsLibroUnidadDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsLibroUnidad" nillable="true" type="tns:clsLibroUnidad" />
+  <xs:complexType name="clsasiento">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q5:clsasientoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsasiento" nillable="true" type="tns:clsasiento" />
+  <xs:complexType name="clsLibroUnidadRegistro">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q6:clsLibroUnidadRegistroDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsLibroUnidadRegistro" nillable="true" type="tns:clsLibroUnidadRegistro" />
+  <xs:complexType name="clsProcesoE">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q7:clsProcesoEDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsProcesoE" nillable="true" type="tns:clsProcesoE" />
+  <xs:complexType name="clsNotarioMesa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q8:clsNotarioMesaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsNotarioMesa" nillable="true" type="tns:clsNotarioMesa" />
+  <xs:complexType name="clsRecintoNotario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q9:clsRecintoNotarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRecintoNotario" nillable="true" type="tns:clsRecintoNotario" />
+  <xs:complexType name="clsRecintoEsquela">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q10:clsRecintoEsquelaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRecintoEsquela" nillable="true" type="tns:clsRecintoEsquela" />
+  <xs:complexType name="clsEstadoRecintoNotario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q11:clsEstadoRecintoNotarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoRecintoNotario" nillable="true" type="tns:clsEstadoRecintoNotario" />
+  <xs:complexType name="clsRutaPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q12:clsRutaPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRutaPersona" nillable="true" type="tns:clsRutaPersona" />
+  <xs:complexType name="clsRecintoCorresponde">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q13:clsRecintoCorrespondeDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRecintoCorresponde" nillable="true" type="tns:clsRecintoCorresponde" />
+  <xs:complexType name="clsIntegrante">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q14:clsIntegranteDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsIntegrante" nillable="true" type="tns:clsIntegrante" />
+  <xs:complexType name="clsRuta">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q15:clsRutaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRuta" nillable="true" type="tns:clsRuta" />
+  <xs:complexType name="clsCertificadoLibro">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q16:clsCertificadoLibroDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsCertificadoLibro" nillable="true" type="tns:clsCertificadoLibro" />
+  <xs:complexType name="clsCertificado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q17:clsCertificadoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsCertificado" nillable="true" type="tns:clsCertificado" />
+  <xs:complexType name="clsEstadoCertificado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q18:clsEstadoCertificadoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEstadoCertificado" nillable="true" type="tns:clsEstadoCertificado" />
+  <xs:complexType name="clsIntegranteArchivo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q19:clsIntegranteArchivoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsIntegranteArchivo" nillable="true" type="tns:clsIntegranteArchivo" />
+  <xs:complexType name="clsMesaGeografia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/WcfProcesoElectoral.Datos" base="q20:clsMesaGeografiaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsMesaGeografia" nillable="true" type="tns:clsMesaGeografia" />
+</xs:schema>
