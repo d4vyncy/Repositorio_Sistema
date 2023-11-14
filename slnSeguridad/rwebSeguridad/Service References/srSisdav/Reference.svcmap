@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="259e4cb0-5f0e-4e79-886c-a6217ad4024b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Wcfsisdav/Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="2b1d7186-2931-47bb-8006-80341e38726d" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="451d1023-02ec-45a9-a228-914c5959e587" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="88b9b563-ec2b-4aec-a476-25c2c014d86b" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="97d4854b-8fab-4795-bf3d-82e5b08dbc48" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="033349c4-412a-4ebb-852c-d1dfd2b9500e" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd6" />
+    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="0ee512f2-f130-4a1c-a9c0-55083b560968" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="caebcae5-b88d-41e3-84ab-c96a347311dd" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?disco" />
+    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="3e58daa6-059e-4a56-95f4-63e704342c40" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service16.xsd" MetadataType="Schema" ID="1a3fbd0b-bb7b-4c84-8e85-aa5962312cd7" SourceId="1" SourceUrl="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

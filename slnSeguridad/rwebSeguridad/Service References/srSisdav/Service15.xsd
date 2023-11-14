@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" />
+  <xs:complexType name="clsRolUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q1:clsRolUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRolUsuario" nillable="true" type="tns:clsRolUsuario" />
+  <xs:complexType name="clsPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q2:clsPersonaDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersona" nillable="true" type="tns:clsPersona" />
+  <xs:complexType name="clsInstitucion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q3:clsInstitucionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsInstitucion" nillable="true" type="tns:clsInstitucion" />
+  <xs:complexType name="clsItemInstitucion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q4:clsItemInstitucionDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsItemInstitucion" nillable="true" type="tns:clsItemInstitucion" />
+  <xs:complexType name="clsUnidad">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q5:clsUnidadDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsUnidad" nillable="true" type="tns:clsUnidad" />
+  <xs:complexType name="clsUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q6:clsUsuarioDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsUsuario" nillable="true" type="tns:clsUsuario" />
+  <xs:complexType name="clsUsuarioLogueado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q7:clsUsuarioLogueadoDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsUsuarioLogueado" nillable="true" type="tns:clsUsuarioLogueado" />
+  <xs:complexType name="clsRol">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Wcfsisdav.Datos" base="q8:clsRolDA">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsRol" nillable="true" type="tns:clsRol" />
+</xs:schema>

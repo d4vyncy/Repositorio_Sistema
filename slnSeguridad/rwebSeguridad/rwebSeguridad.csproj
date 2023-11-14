@@ -74,44 +74,39 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="Telerik.Web.Spreadsheet, Version=2021.3.1111.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2020.3.1020.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\AdditionalLibraries\Bin40\Telerik.Web.Spreadsheet.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\AdditionalLibraries\Bin40\Telerik.Web.Spreadsheet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Web.UI, Version=2021.3.1111.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI, Version=2020.3.1021.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\Telerik.Web.UI.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\Telerik.Web.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins, Version=2021.3.1111.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI.Skins, Version=2020.3.1021.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\Telerik.Web.UI.Skins.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Core.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2020.3.1019.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2020.3.1019.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2020.3.1019.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2020.3.1019.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2021.3.1111.40\AdditionalLibraries\Bin40\Telerik.Windows.Zip.dll</HintPath>
+    <Reference Include="Telerik.Windows.Zip, Version=2020.3.1019.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.3.1021.40\AdditionalLibraries\Bin40\Telerik.Windows.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -312,12 +307,33 @@
     <Compile Include="ControlesUsuario\GestionSistema\CU_SistemaGestion.ascx.designer.cs">
       <DependentUpon>CU_SistemaGestion.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ControlUser\CUW_Autenticar.ascx.cs">
+      <DependentUpon>CUW_Autenticar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlUser\CUW_Autenticar.ascx.designer.cs">
+      <DependentUpon>CUW_Autenticar.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\fwfAutenticar.aspx.cs">
+      <DependentUpon>fwfAutenticar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\fwfAutenticar.aspx.designer.cs">
+      <DependentUpon>fwfAutenticar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\wfFolio.aspx.cs">
       <DependentUpon>wfFolio.aspx</DependentUpon>
@@ -479,6 +495,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\srSisdav\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\RadCaptcha\0.wav" />
@@ -545,12 +566,16 @@
     <Content Include="ControlesUsuario\GestionarUsuario\CU_UsuarioPasswordGestion.ascx" />
     <Content Include="ControlesUsuario\GestionSistema\CU_Sistema.ascx" />
     <Content Include="ControlesUsuario\GestionSistema\CU_SistemaGestion.ascx" />
+    <Content Include="ControlUser\CUW_Autenticar.ascx" />
+    <Content Include="ControlUser\CUW_Autenticar.css" />
     <Content Include="Default.aspx" />
     <Content Include="Dll\AjaxControlToolkit.dll" />
     <Content Include="Dll\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
     <Content Include="Dll\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
     <Content Include="Estilo\ssEstilo.css" />
     <Content Include="Estilo\w3.css" />
+    <Content Include="forms\fwfAutenticar.aspx" />
+    <Content Include="forms\WebForm1.aspx" />
     <Content Include="Formularios\wfFolio.aspx" />
     <Content Include="Formularios\wfRefrigerio.aspx" />
     <Content Include="Formularios\wfReporteLlamadas.aspx" />
@@ -569,28 +594,33 @@
     <Content Include="Formularios\wfRol.aspx" />
     <Content Include="Formularios\wfSistema.aspx" />
     <Content Include="Formularios\wfUsuario.aspx" />
-    <Content Include="Imagenes\avatar.png" />
-    <Content Include="Imagenes\avatar3.png" />
-    <Content Include="Imagenes\avatarof.png" />
-    <Content Include="Imagenes\error.png" />
-    <Content Include="Imagenes\folder.gif" />
-    <Content Include="Imagenes\fon10.png" />
-    <Content Include="Imagenes\fondoM2.png" />
-    <Content Include="Imagenes\footer.png" />
-    <Content Include="Imagenes\head.png" />
-    <Content Include="Imagenes\head1.png" />
-    <Content Include="Imagenes\head2.png" />
-    <Content Include="Imagenes\Jellyfish.jpg" />
-    <Content Include="Imagenes\Lighthouse.jpg" />
-    <Content Include="Imagenes\linea.png" />
-    <Content Include="Imagenes\logoo.png" />
-    <Content Include="Imagenes\logoOf.png" />
-    <Content Include="Imagenes\menu1.png" />
-    <Content Include="Imagenes\sesion.png" />
-    <Content Include="Imagenes\sesion1.png" />
-    <Content Include="Imagenes\tasks.gif" />
-    <Content Include="Imagenes\user0.png" />
-    <Content Include="Imagenes\usuario.png" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.js" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Imagenes\img\cropped-1366-768-320144.jpg" />
+    <Content Include="Imagenes\img\cropped-1366-768-329050.jpg" />
+    <Content Include="Imagenes\img\Panel.png" />
+    <Content Include="Imagenes\img\Transparent Panel 2.png" />
+    <Content Include="Imagenes\img\Transparent Panel 3.png" />
     <Content Include="Img\alert.png" />
     <Content Include="Img\alert_icon.png" />
     <Content Include="Img\Botones\a_Aceptar1.gif" />
@@ -627,6 +657,28 @@
     <Content Include="Img\imgUsuario.jpg" />
     <Content Include="Img\warning.png" />
     <Content Include="MPConectado.Master" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Imagenes\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Imagenes\bootstrap\js\bootstrap.min.js.map" />
     <None Include="Img\IconPersonal\Thumbs.db" />
     <None Include="Reporte\dtoReporte.xsc">
       <DependentUpon>dtoReporte.xsd</DependentUpon>
@@ -946,6 +998,52 @@
     <None Include="Service References\srSeguridad\Service166.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsInstitucion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsItemInstitucion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsPersona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsRol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsRolUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsUnidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srSisdav\rwebSeguridad.srSisdav.clsUsuarioLogueado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\srSisdav\Service1.wsdl" />
+    <None Include="Service References\srSisdav\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\srSisdav\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\srSisdav\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\srSisdav\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\srSisdav\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\srSisdav\Service15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\srSisdav\Service16.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\RadSpell\de-DE.tdf" />
@@ -960,6 +1058,13 @@
     <None Include="Service References\srBio\Service11.disco" />
     <None Include="Service References\srSeguridad\Service11.disco" />
     <None Include="Service References\srPersonal\Service11.disco" />
+    <None Include="Service References\srSisdav\Service1.disco" />
+    <None Include="Service References\srSisdav\configuration91.svcinfo" />
+    <None Include="Service References\srSisdav\configuration.svcinfo" />
+    <None Include="Service References\srSisdav\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -976,10 +1081,12 @@
     <WCFMetadataStorage Include="Service References\srBio\" />
     <WCFMetadataStorage Include="Service References\srPersonal\" />
     <WCFMetadataStorage Include="Service References\srSeguridad\" />
+    <WCFMetadataStorage Include="Service References\srSisdav\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1011,7 +1118,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

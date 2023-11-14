@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/clsPersonal.Negocios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/clsPersonal.Negocios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.71.15.97/Generico/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/clsPersonal.Entidades" />
+  <xs:complexType name="clsPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/clsPersonal.Entidades" base="q1:clsPersonaBE">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPersona" nillable="true" type="tns:clsPersona" />
+</xs:schema>

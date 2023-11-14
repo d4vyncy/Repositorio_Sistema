@@ -1,0 +1,82 @@
+USE [master]
+GO
+/****** Object:  UserDefinedFunction [dbo].[fnDevuelveCondicion]    Script Date: 06/29/2017 09:58:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+ALTER FUNCTION [dbo].[fnDevuelveCondicion] (@Campo varchar(150),@Valor varchar(150))
+returns varchar(300)
+AS
+BEGIN
+/*
+select 'asd,.'''
+select replace('asd,.''','''','')
+*/
+set @Campo= replace(@Campo,'''','')
+set @Valor= replace(@Valor,'''','')
+	DECLARE @Condicion VARCHAR(150)
+	IF(Substring(@Valor,1, 1) <>'.')	
+	BEGIN
+		SET @Condicion=' WHERE '
+	END
+	ELSE
+	BEGIN
+		IF(Substring(@Valor,2, 1) =',')	
+		BEGIN
+			SET @Condicion=' OR '
+			SET	@Valor=Substring(@Valor,3,LEN(@Valor ))
+		END
+		ELSE
+		BEGIN
+			SET @Condicion=' AND '
+			SET @Valor=Substring(@Valor,2,LEN(@Valor ))
+		END
+	END
+    IF (Substring(@Campo,1, 1) = 'C')  --seleccionamos el tipo de dato caracter
+      SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] like ' + '''' + '%' + @Valor + '%' + ''''
+    IF (Substring(@Campo,1, 1) = 'I')  --seleccionamos el tipo de dato caracter
+      SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] like ' + '''' + @Valor + '%' + ''''
+    IF (Substring(@Campo,1, 1) = 'N')  --seleccionamos el tipo de dato numerico
+    BEGIN
+		IF(isnumeric(@Valor)=1)
+			begin			  
+			  IF(@Valor<>'0')
+				SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] = ' + @Valor 
+			  else
+				SET @Condicion = ''
+			  end
+		ELSE
+		  SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] = 0' 
+    END
+    IF (Substring(@Campo,1, 1) = 'D')  --seleccionamos el tipo de campo datetime
+    BEGIN
+    	IF(isdate(@Valor)=1)
+			SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] = ' + '''' +  @Valor +  ''''    
+		else
+			SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] = ' + '''' +  '01/01/1990' +  ''''    
+    end
+	if (Substring(@Campo,1, 1) = 'T')  --seleccionarmos todo
+      SET @Condicion = ''  
+    if (Substring(@Campo,1, 1) = 'L')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion +  '[' +  Substring(@Campo,2, len(@Campo)) + '] = ' + '''' +  @Valor +  ''''              
+	if (Substring(@Campo,1, 1) = 'P')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion +   Substring(@Campo,2, len(@Campo)) + ' = '  +  @Valor              
+    if (Substring(@Campo,1, 1) = 'E')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] <> ' + '''' +  @Valor +  ''''              
+	if (Substring(@Campo,1, 1) = 'O')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = ' order by ' + Substring(@Campo,2, len(@Campo)) + ' ' + @Valor
+    if (Substring(@Campo,1, 1) = 'Z')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion + 'Substring(' + Substring(@Campo,2, len(@Campo)) + ',2, len(' + Substring(@Campo,2, len(@Campo))+ ')) = ' +   @Valor              
+    if (Substring(@Campo,1, 1) = '>')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] >= ' + '''' +  @Valor +  ''''              
+    if (Substring(@Campo,1, 1) = '<')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] <= ' + '''' +  @Valor +  ''''              
+    if (Substring(@Campo,1, 1) = 'M')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion + 'month([' + Substring(@Campo,2, len(@Campo)) + ']) = ' + '''' +  @Valor +  ''''  
+    if (Substring(@Campo,1, 1) = 'B')  --seleccionarmos todos los registros que coincidan a un valor enviado
+      SET @Condicion = @Condicion + '[' + Substring(@Campo,2, len(@Campo)) + '] in (' +  @Valor +  ')'  
+RETURN @Condicion;
+END

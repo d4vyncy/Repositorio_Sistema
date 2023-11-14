@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Wcfsisdav/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" />
+  <xs:element name="ProcedureConParametro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Procedimiento" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pParametros" nillable="true" type="q1:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcedureConParametroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcedureConParametroResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcedureParametro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Procedimiento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcedureParametroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcedureParametroResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaConsulta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Consulta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaConsultaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjecutaConsultaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRolUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneRolUsuarioResult" nillable="true" type="q2:clsRolUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oRolUsuario" nillable="true" type="q3:clsRolUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaRolUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oRolUsuario" nillable="true" type="q4:clsRolUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaRolUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRolUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaRolUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRolUsuario1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRolUsuario2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRolUsuario3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRolUsuario4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRolUsuario5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRolUsuario5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtienePersonaResult" nillable="true" type="q5:clsPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oPersona" nillable="true" type="q6:clsPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaPersonaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oPersona" nillable="true" type="q7:clsPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaPersonaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaPersonaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavPersona1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavPersona2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavPersona3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavPersona4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavPersona5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavPersona5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdInstitucion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneInstitucionResult" nillable="true" type="q8:clsInstitucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oInstitucion" nillable="true" type="q9:clsInstitucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaInstitucionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oInstitucion" nillable="true" type="q10:clsInstitucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaInstitucionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdInstitucion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaInstitucionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavInstitucion1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavInstitucion2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavInstitucion3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavInstitucion4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavInstitucion5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavInstitucion5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneItemInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdItemInstitucion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneItemInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneItemInstitucionResult" nillable="true" type="q11:clsItemInstitucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaItemInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oItemInstitucion" nillable="true" type="q12:clsItemInstitucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaItemInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaItemInstitucionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaItemInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oItemInstitucion" nillable="true" type="q13:clsItemInstitucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaItemInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaItemInstitucionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaItemInstitucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdItemInstitucion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaItemInstitucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaItemInstitucionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavItemInstitucion1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavItemInstitucion2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavItemInstitucion3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavItemInstitucion4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavItemInstitucion5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavItemInstitucion5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneUnidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUnidad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneUnidadResult" nillable="true" type="q14:clsUnidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaUnidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oUnidad" nillable="true" type="q15:clsUnidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaUnidadResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaUnidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oUnidad" nillable="true" type="q16:clsUnidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaUnidadResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUnidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUnidad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaUnidadResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUnidad1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUnidad2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUnidad3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUnidad4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUnidad5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUnidad5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneUsuarioResult" nillable="true" type="q17:clsUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oUsuario" nillable="true" type="q18:clsUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oUsuario" nillable="true" type="q19:clsUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuario1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuario2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuario3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuario4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuario5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuario5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneUsuarioLogueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuarioLogueado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneUsuarioLogueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneUsuarioLogueadoResult" nillable="true" type="q20:clsUsuarioLogueado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaUsuarioLogueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oUsuarioLogueado" nillable="true" type="q21:clsUsuarioLogueado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaUsuarioLogueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaUsuarioLogueadoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaUsuarioLogueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oUsuarioLogueado" nillable="true" type="q22:clsUsuarioLogueado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaUsuarioLogueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaUsuarioLogueadoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUsuarioLogueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuarioLogueado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUsuarioLogueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaUsuarioLogueadoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuarioLogueado1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuarioLogueado2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuarioLogueado3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuarioLogueado4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavUsuarioLogueado5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavUsuarioLogueado5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="ObtieneRolResult" nillable="true" type="q23:clsRol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oRol" nillable="true" type="q24:clsRol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaRolResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Wcfsisdav.Negocios" minOccurs="0" name="oRol" nillable="true" type="q25:clsRol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaRolResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminaRolResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRol1Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRol2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRol3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRol4Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Campo7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Valor7" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienepavRol5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienepavRol5Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
