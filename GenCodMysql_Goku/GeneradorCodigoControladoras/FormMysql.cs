@@ -481,6 +481,8 @@ namespace GeneradorCodigoControladoras
             return dato;
         }
         #endregion
+
+        string tasktemporal = "1";
         public void CrearLasEntidades()
         {
             string ComillaSimple, tipoDato, tipoSql;
@@ -500,9 +502,16 @@ namespace GeneradorCodigoControladoras
             //    NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString().Substring(5)));
             //else
             //    NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString().Substring(6)));
-            acronimoretorna(ref NombreTabla, LBTablas.SelectedValue.ToString());
 
-            RTBCodigoGenerado.Text += "export class " + NombreTabla + "Model" + Environment.NewLine;
+            acronimoretorna(ref NombreTabla, CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString()));
+            //if(tasktemporal=="1")
+            //{
+            //    tasktemporal = "2";
+            //    MessageBox.Show(NombreTabla);
+            //    MessageBox.Show(LBTablas.SelectedValue.ToString());
+            //    MessageBox.Show(CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString()));
+            //}
+            RTBCodigoGenerado.Text += "export class " + CultureInfo.InvariantCulture.TextInfo.ToTitleCase(NombreTabla) + "Model" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{";
 
             //LLenamos los campos atributos de la entidad
@@ -891,17 +900,19 @@ namespace GeneradorCodigoControladoras
             tipoSql = "";
             //codigo para el modelo
             string NombreTabla = "";
+            string NombreTablaIniMayuscula = "";
             //if (LBTablas.SelectedValue.ToString().Substring(0, 5) == "almcl")
             //    NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString().Substring(5)));
             //else
             //    NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString().Substring(6)));
             acronimoretorna(ref NombreTabla, LBTablas.SelectedValue.ToString());
+            NombreTablaIniMayuscula = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(NombreTabla);
             RTBCodigoGenerado.Text += "import { Injectable } from '@angular/core';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { map, tap } from 'rxjs/operators';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { Observable } from 'rxjs';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { ProcedureParam } from '../models/usuariotoken.models';" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "import { " + NombreTabla + "Model } from '../models/" + NombreTabla.ToLower() + ".models';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "import { " + NombreTablaIniMayuscula + "Model } from '../models/" + NombreTabla.ToLower() + ".models';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { environment } from '../../environments/environment';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { DatePipe } from '@angular/common';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "const apiUlr = environment.apiUlr;" + Environment.NewLine;
@@ -950,7 +961,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//termina sel" + NombreTabla + "" + Environment.NewLine;
             //create
             RTBCodigoGenerado.Text += "//create" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "add" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTabla + "Model) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "add" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTablaIniMayuscula + "Model) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "const myheader = new HttpHeaders().set('Content-Type', 'application/form-data')" + Environment.NewLine;
             RTBCodigoGenerado.Text += "let body = new HttpParams();" + Environment.NewLine;
             RTBCodigoGenerado.Text += "body = body.set('idusuario', localStorage.getItem('parmid')||'');" + Environment.NewLine;
@@ -993,7 +1004,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//termina create" + Environment.NewLine;
             //read
             RTBCodigoGenerado.Text += "//read" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "get" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTabla + "Model) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "get" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTablaIniMayuscula + "Model) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "const myheader = new HttpHeaders().set('Content-Type', 'application/form-data')" + Environment.NewLine;
             RTBCodigoGenerado.Text += "let body = new HttpParams();" + Environment.NewLine;
             RTBCodigoGenerado.Text += "body = body.set('idusuario', localStorage.getItem('parmid')||'');" + Environment.NewLine;
@@ -1035,7 +1046,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//termina read" + Environment.NewLine;
             //update
             RTBCodigoGenerado.Text += "//update" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "upd" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTabla + "Model) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "upd" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTablaIniMayuscula + "Model) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "const myheader = new HttpHeaders().set('Content-Type', 'application/form-data')" + Environment.NewLine;
             RTBCodigoGenerado.Text += "let body = new HttpParams();" + Environment.NewLine;
             RTBCodigoGenerado.Text += "body = body.set('idusuario', localStorage.getItem('parmid')||'');" + Environment.NewLine;
@@ -1077,7 +1088,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "//termina update" + Environment.NewLine;
             //personalizado
             RTBCodigoGenerado.Text += "//personalizado" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "pap" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTabla + "Model,tipo:string,procedure:string) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "pap" + NombreTabla + "(" + NombreTabla.ToLower() + ": " + NombreTablaIniMayuscula + "Model,tipo:string,procedure:string) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "const myheader = new HttpHeaders().set('Content-Type', 'application/form-data')" + Environment.NewLine;
             RTBCodigoGenerado.Text += "let body = new HttpParams();" + Environment.NewLine;
             RTBCodigoGenerado.Text += "body = body.set('idusuario', localStorage.getItem('parmid')||'');" + Environment.NewLine;
