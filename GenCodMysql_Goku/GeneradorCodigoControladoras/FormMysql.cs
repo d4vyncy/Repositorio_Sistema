@@ -915,10 +915,11 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "import { " + NombreTablaIniMayuscula + "Model } from '../models/" + NombreTabla.ToLower() + ".models';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { environment } from '../../environments/environment';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "import { DatePipe } from '@angular/common';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "import { Router }from '@angular/router';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "const apiUlr = environment.apiUlr;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "@Injectable({  providedIn: 'root'})" + Environment.NewLine;
             RTBCodigoGenerado.Text += "export class S" + NombreTabla.ToLower() + "Service {" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "constructor(private http: HttpClient,public datepipe: DatePipe) { }" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "constructor(private http: HttpClient,public datepipe: DatePipe,private router: Router) { }" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//" + NombreTabla.ToLower() + ": " + NombreTabla + "Model;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//select" + Environment.NewLine;
             RTBCodigoGenerado.Text += "sel" + NombreTabla + "(procedureParam: ProcedureParam) {" + Environment.NewLine;
@@ -950,6 +951,9 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "if (resp['info'] != null) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "if (resp['mesaje'] != null) {" + Environment.NewLine;
             //RTBCodigoGenerado.Text += "return resp['info'].item;" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if (resp['mesaje'] == '201')" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "this.router.navigateByUrl('/login');" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "else" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return resp;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "} else {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "console.log('FAILD');" + Environment.NewLine;
@@ -986,6 +990,9 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "if (resp['mesaje'] != null)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             //RTBCodigoGenerado.Text += "return resp['info'].item;" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if (resp['mesaje'] == '201')" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "this.router.navigateByUrl('/login');" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "else" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return resp;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             RTBCodigoGenerado.Text += "else" + Environment.NewLine;
@@ -1018,7 +1025,7 @@ namespace GeneradorCodigoControladoras
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
 
             }
-            RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
+            //RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return this.http.post(apiUlr + 'get" + NombreTabla + "', body)" + Environment.NewLine;
             RTBCodigoGenerado.Text += ".pipe(map((resp:any) => {" + Environment.NewLine;
@@ -1028,6 +1035,9 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "if (resp['mesaje'] != null)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             //RTBCodigoGenerado.Text += "return resp['info'].item;" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if (resp['mesaje'] == '201')" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "this.router.navigateByUrl('/login');" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "else" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return resp;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             RTBCodigoGenerado.Text += "else" + Environment.NewLine;
@@ -1060,7 +1070,7 @@ namespace GeneradorCodigoControladoras
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
 
             }
-            RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
+            //RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return this.http.post(apiUlr + 'upd" + NombreTabla + "', body)" + Environment.NewLine;
             RTBCodigoGenerado.Text += ".pipe(map((resp:any) => {" + Environment.NewLine;
@@ -1070,6 +1080,9 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "if (resp['mesaje'] != null)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             //RTBCodigoGenerado.Text += "return resp['info'].item;" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if (resp['mesaje'] == '201')" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "this.router.navigateByUrl('/login');" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "else" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return resp;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             RTBCodigoGenerado.Text += "else" + Environment.NewLine;
@@ -1104,7 +1117,7 @@ namespace GeneradorCodigoControladoras
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
 
             }
-            RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
+            //RTBCodigoGenerado.Text += "console.log('llamar el post');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//realizar consulta" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return this.http.post(apiUlr + 'pap" + NombreTabla + "', body)" + Environment.NewLine;
             RTBCodigoGenerado.Text += ".pipe(map((resp:any) => {" + Environment.NewLine;
@@ -1114,6 +1127,9 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "if (resp['mesaje'] != null)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             //RTBCodigoGenerado.Text += "return resp['info'].item;" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if (resp['mesaje'] == '201')" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "this.router.navigateByUrl('/login');" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "else" + Environment.NewLine;
             RTBCodigoGenerado.Text += "return resp;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             RTBCodigoGenerado.Text += "else" + Environment.NewLine;
