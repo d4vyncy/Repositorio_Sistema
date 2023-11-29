@@ -822,7 +822,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             //personazalida
             RTBCodigoGenerado.Text += "" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "public function " + NombreTablaSQL.Substring(0, 4) + "pap" + NombreTabla + "($f3)" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "public function pap" + NombreTabla + "($f3)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
@@ -1381,6 +1381,7 @@ namespace GeneradorCodigoControladoras
                 }
                 //dav
                 RTBCodigoGenerado.Text += "DELIMITER //" + Environment.NewLine;
+                RTBCodigoGenerado.Text += "DROP PROCEDURE `" + NombreTabla.Substring(0, 4) + "pag" + NombreTablaSQL + "`;" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "CREATE PROCEDURE `" + NombreTabla.Substring(0, 4) + "pag" + NombreTablaSQL + "`(" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "IN `pTipo` VARCHAR(1)," + Environment.NewLine;
                 //trabajando
@@ -1397,11 +1398,11 @@ namespace GeneradorCodigoControladoras
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                     RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + ",";
                 //RTBCodigoGenerado.Text += "fecharegistro,filaestado)	values (" + Environment.NewLine;
-                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ")	values (" + Environment.NewLine;
+                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ",fecharegistro,estadoregistro)	values (" + Environment.NewLine;
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                     RTBCodigoGenerado.Text += "p" + this.ImportarSQL.ColumnasI[i] + ",";
                 //RTBCodigoGenerado.Text += "NOW(),1);" + Environment.NewLine;
-                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ");" + Environment.NewLine;
+                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ",now(),1);" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "SELECT p" + this.ImportarSQL.ColumnasI[0].ToString() + " AS " + this.ImportarSQL.ColumnasI[0].ToString() + ";" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "END IF;" + Environment.NewLine;
                 //read
@@ -1420,7 +1421,7 @@ namespace GeneradorCodigoControladoras
                 RTBCodigoGenerado.Text += "END IF;" + Environment.NewLine;
                 //delete
                 RTBCodigoGenerado.Text += "IF pTipo = 'D' then" + Environment.NewLine;
-                RTBCodigoGenerado.Text += "	delete from " + NombreTabla + " WHERE p" + this.ImportarSQL.ColumnasI[0].ToString() + " = " + this.ImportarSQL.ColumnasI[0].ToString() + "; " + Environment.NewLine;
+                RTBCodigoGenerado.Text += "	update " + NombreTabla + " set estadoregistro=1 WHERE p" + this.ImportarSQL.ColumnasI[0].ToString() + " = " + this.ImportarSQL.ColumnasI[0].ToString() + "; " + Environment.NewLine;
                 RTBCodigoGenerado.Text += "END IF;" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "END//" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "DELIMITER ;" + Environment.NewLine;
